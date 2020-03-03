@@ -5,7 +5,8 @@ pages:
   - OPENVIO说明: openvio/index.md
 - 数学:
   - 矩阵: math/matrix.md
-- 关于: about.md
+- 关于: 
+  - 关于本站: about/about.md
 
 theme: readthedocs
 markdown_extensions:

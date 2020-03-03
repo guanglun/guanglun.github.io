@@ -1,21 +1,14 @@
-# Welcome to MkDocs
+# 欢迎来到 光轮电子的技术小站
 
-测试页面
+## 产品列表
 
-## Commands
+* 吃鸡开发板
+* openvio
+* CXK开发板
+* SLAM机器人
+* 四旋翼飞行器
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## 技术笔记
 
-## Project layout
+* 矩阵
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-
-
-$\sum_{i=0}^{n}i^2$  
-$\sum_{i=1}^n a_i$

@@ -13,3 +13,10 @@
 
 * [矩阵](math/matrix.md#matrix)
 
+## 链接
+
+* [博客](https://www.cnblogs.com/guanglun)
+* [B站](https://space.bilibili.com/20909602)
+* [淘宝](https://shop130446973.taobao.com/)
+* [光轮电子交流群(群号:558343678)](https://jq.qq.com/?_wv=1027&k=5YPH1CV)
+

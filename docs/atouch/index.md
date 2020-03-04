@@ -55,7 +55,7 @@ APP下载地址：
 演示视频：  
 [https://www.bilibili.com/video/av53687214](https://www.bilibili.com/video/av53687214)  
 
-<iframe height="480" width="640" src="//player.bilibili.com/player.html?aid=53687214&cid=93910781&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
+<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=53687214&cid=93910781&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
 <br />  
 
 图片：  

@@ -3,7 +3,7 @@
    
 ## 产品列表
 
-* 吃鸡开发板
+* [吃鸡开发板(ATouch)](atouch/index.md#atouch)
 * [OPENVIO](openvio/index.md#openvio)
 * CXK开发板
 * SLAM机器人

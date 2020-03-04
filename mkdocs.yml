@@ -1,6 +1,8 @@
 site_name: 光轮电子
 pages:
 - 主页: index.md
+- ATouch:
+  - ATouch说明: atouch/index.md
 - OPENVIO:
   - OPENVIO说明: openvio/index.md
 - 数学:

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>ATouch说明 - 光轮电子</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "ATouch\u8bf4\u660e";
+    var mkdocs_page_input_path = "atouch\\index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> 光轮电子</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">主页</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">ATouch</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">ATouch说明</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">开发板简介</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">教程列表</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">源码和资料</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#github">代码托管 github</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gitee">代码托管 gitee</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">OPENVIO</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../openvio/">OPENVIO说明</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">数学</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../math/matrix/">矩阵</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">关于</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/about/">关于本站</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">光轮电子</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>ATouch &raquo;</li>
+        
+      
+    
+    <li>ATouch说明</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="atouch">吃鸡开发板 ATouch说明</h1>
+<p><a id = "atouch"></a></p>
+<h2 id="_1">开发板简介</h2>
+<p>说起这个项目的起源，可能大概也许是源于自己用手搓手机菜的抠脚吧，也或许是因为对开发的热情大过于玩的热情哈哈，反正这个东西反反复复得折腾了半年之久了，对这个东西的定位也渐渐从做一个人人都能玩的商品到单纯做一个有吃鸡功能的开发板。现在把他开源出来，也算是回报互联网上良多开源的资料教程吧！  </p>
+<p>吃鸡开发板目前使用ESP32+CH374U方案，为实现通过键鼠操作Android手机（模拟触屏），通过USB线与Android连接，使用ADB协议进行通讯控制。  </p>
+<h2 id="_2">教程列表</h2>
+<ul>
+<li>使用说明  </li>
+<li>实现原理说明  </li>
+</ul>
+<h2 id="_3">源码和资料</h2>
+<h3 id="github">代码托管 github</h3>
+<p>ATouch安卓APP源码：<br />
+<a href="https://github.com/guanglun/ATouch">https://github.com/guanglun/ATouch</a> <br />
+【开发环境：AndroidStudio】  </p>
+<p>ATouch板子源码：<br />
+<a href="https://github.com/guanglun/ESP32_CH374U">https://github.com/guanglun/ESP32_CH374U</a> <br />
+【开发环境：Linux SDK:ESP-DIF3.2】</p>
+<p>ATouch安卓后台程序源码： <br />
+<a href="https://github.com/guanglun/ATouchService">https://github.com/guanglun/ATouchService</a><br />
+【开发环境：android-ndk-r13b】  </p>
+<p>APP下载地址： <br />
+<a href="https://github.com/guanglun/ATouch/blob/master/app/release/ATouchV1.0.apk">https://github.com/guanglun/ATouch/blob/master/app/release/ATouchV1.0.apk</a>  </p>
+<h3 id="gitee">代码托管 gitee</h3>
+<p>ATouch安卓APP源码：<br />
+<a href="https://gitee.com/guanglunking/ATouch">https://gitee.com/guanglunking/ATouch</a><br />
+【开发环境：AndroidStudio】</p>
+<p>ATouch板子源码：<br />
+<a href="https://gitee.com/guanglunking/ESP32_CH374U">https://gitee.com/guanglunking/ESP32_CH374U</a><br />
+【开发环境：Linux SDK:ESP-DIF3.2】</p>
+<p>ATouch安卓后台程序源码： <br />
+<a href="https://gitee.com/guanglunking/ATouchService">https://gitee.com/guanglunking/ATouchService</a> <br />
+【开发环境：android-ndk-r13b】</p>
+<p>APP下载地址： <br />
+<a href="https://gitee.com/guanglunking/ATouch/blob/master/app/release/ATouchV1.0.apk">https://gitee.com/guanglunking/ATouch/blob/master/app/release/ATouchV1.0.apk</a></p>
+<p>淘宝店铺：<br />
+<a href="https://item.taobao.com/item.htm?id=595635571591">https://item.taobao.com/item.htm?id=595635571591</a>  </p>
+<p>演示视频：<br />
+<a href="https://www.bilibili.com/video/av53687214">https://www.bilibili.com/video/av53687214</a>  </p>
+<iframe height="480" width="640" src="//player.bilibili.com/player.html?aid=53687214&cid=93910781&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p><br />  </p>
+<p>图片：<br />
+<img alt="ATouch" src="img/atouch1.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../openvio/" class="btn btn-neutral float-right" title="OPENVIO说明">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="主页"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../openvio/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

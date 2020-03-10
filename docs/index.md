@@ -12,7 +12,8 @@
 ## 技术笔记
 
 * [矩阵](math/matrix.md#matrix)
-
+* [数学符号](math/symbol.md#symbol)
+  
 ## 链接
 
 * [博客](https://www.cnblogs.com/guanglun)

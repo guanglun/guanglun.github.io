@@ -55,9 +55,14 @@ APP下载地址：
 演示视频：  
 [https://www.bilibili.com/video/av53687214](https://www.bilibili.com/video/av53687214)  
 
+* 键鼠操作
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=53687214&cid=93910781&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
 <br />  
 
+* ATouch通过wifi连接手机 手机typec转HDMI投屏
+<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=412674734&bvid=BV1JV411o7QV&cid=174816385&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<br />  
 图片：  
 ![ATouch](img/atouch1.png)
  

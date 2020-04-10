@@ -5,6 +5,9 @@ pages:
   - ATouch说明: atouch/index.md
 - OPENVIO:
   - OPENVIO说明: openvio/index.md
+  - OPENMV兼容性: openvio/openmv.md
+  - OPENVIO功能: openvio/openvio.md
+  - SLAM VIO功能: openvio/slam_vio.md      
 - 数学:
   - 矩阵: math/matrix.md
   - 数学符号: math/symbol.md
@@ -31,3 +34,5 @@ markdown_extensions:
   - pymdownx.tilde 
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'  
+extra_css:
+  - css/style.css

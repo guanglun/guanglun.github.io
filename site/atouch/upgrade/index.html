@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>数学符号 - 光轮电子</title>
+  <title>ATouch升级 - 光轮电子</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -19,8 +19,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u6570\u5b66\u7b26\u53f7";
-    var mkdocs_page_input_path = "math\\symbol.md";
+    var mkdocs_page_name = "ATouch\u5347\u7ea7";
+    var mkdocs_page_input_path = "atouch\\upgrade.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -53,12 +53,28 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">ATouch</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../atouch/">ATouch说明</a>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../">ATouch说明</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../atouch/upgrade/">ATouch升级</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">ATouch升级</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">开发板升级</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1">1.开发板进入升级模式</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2wifi">2.手机连接WIFI</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3app">3.手机APP升级</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#app">APP升级</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">获取开发板日志</a>
+    </li>
+    </ul>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../atouch/features/">ATouch功能</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../features/">ATouch功能</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">OPENVIO</span></p>
@@ -73,12 +89,10 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">数学</span></p>
-                <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="../matrix/">矩阵</a>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../math/matrix/">矩阵</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">数学符号</a>
-    <ul class="current">
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../math/symbol/">数学符号</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">关于</span></p>
@@ -107,11 +121,11 @@
     
       
         
-          <li>数学 &raquo;</li>
+          <li>ATouch &raquo;</li>
         
       
     
-    <li>数学符号</li>
+    <li>ATouch升级</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -122,8 +136,43 @@
           <div role="main">
             <div class="section">
               
-                <p><a id = "symbol"></a>  </p>
-<h1 id="_1">数学符号总结</h1>
+                <h1 id="_1">吃鸡开发板 升级方法</h1>
+<p><a id = "atouch_upgrade"></a></p>
+<h2 id="_2">开发板升级</h2>
+<h4 id="1">1.开发板进入升级模式</h4>
+<p>如下图，开发板通电后按住左键不放按右键重启板子，此时板子会进入升级模式。
+<br /><br />
+<img alt="ATouch" src="../img/atouch4.png" /><br />
+<br />  </p>
+<h4 id="2wifi">2.手机连接WIFI</h4>
+<p>手机连接WIFI热点"upgrade",密码123456789</p>
+<h4 id="3app">3.手机APP升级</h4>
+<p>打开手机APP，点击升级设备，选择本地文件升级
+<br /><br />
+<img alt="ATouch" src="../img/atouch6.png" /><br />
+<br />  </p>
+<p>选择手机根目录下的/ATouch/ATouch.bin文件升级
+<br /><br />
+<img alt="ATouch" src="../img/atouch5.png" /><br />
+<br />  </p>
+<p>升级完成后会提示成功，至此板子固件更新完成</p>
+<h2 id="app">APP升级</h2>
+<p>目前仅支持手动下载固件安装</p>
+<h2 id="_3">获取开发板日志</h2>
+<p>使用USB线连接板子至电脑，如下两个usb都可以连接。下载CP2102驱动并安装<br />
+* <a href="https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers">驱动地址</a>
+* <a href="http://www.pc6.com/softview/SoftView_624283.html">串口调试助手</a></p>
+<p><br /><br />
+<img alt="ATouch" src="../img/atouch7.png" /><br />
+<br />  </p>
+<p>使用串口助手，波特率115200。打开后发送"olog"(注意取消发送回车行)
+<br /><br />
+<img alt="ATouch" src="../img/atouch1.jpg" /><br />
+<br />  </p>
+<p>正常的话接收窗口会接收到LOG，可将LOG保存为文件发送给我调试
+<br /><br />
+<img alt="ATouch" src="../img/atouch8.png" /><br />
+<br />  </p>
               
             </div>
           </div>
@@ -131,10 +180,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../about/about/" class="btn btn-neutral float-right" title="关于本站">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../features/" class="btn btn-neutral float-right" title="ATouch功能">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../matrix/" class="btn btn-neutral" title="矩阵"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../" class="btn btn-neutral" title="ATouch说明"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -160,10 +209,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../matrix/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../about/about/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../features/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

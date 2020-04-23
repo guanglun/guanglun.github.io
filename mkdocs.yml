@@ -3,6 +3,8 @@ pages:
 - 主页: index.md
 - ATouch:
   - ATouch说明: atouch/index.md
+  - ATouch升级: atouch/upgrade.md
+  - ATouch功能: atouch/features.md
 - OPENVIO:
   - OPENVIO说明: openvio/index.md
   - OPENMV兼容性: openvio/openmv.md

@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>关于本站 - 光轮电子</title>
+  <title>ATouch 硬件说明 - 光轮电子</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -19,8 +19,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u5173\u4e8e\u672c\u7ad9";
-    var mkdocs_page_input_path = "about\\about.md";
+    var mkdocs_page_name = "ATouch \u786c\u4ef6\u8bf4\u660e";
+    var mkdocs_page_input_path = "atouch\\board.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -53,18 +53,22 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">ATouch</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../atouch/">ATouch 说明</a>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../">ATouch 说明</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../atouch/upgrade/">ATouch 升级</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../upgrade/">ATouch 升级</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../atouch/features/">ATouch 功能</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../features/">ATouch 功能</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../atouch/board/">ATouch 硬件说明</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">ATouch 硬件说明</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">说明</a>
+    </li>
+    </ul>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../atouch/app/">ATouch APP说明</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../app/">ATouch APP说明</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../atouch/server/">ATouch 后台说明</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../server/">ATouch 后台说明</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">OPENVIO</span></p>
@@ -86,12 +90,8 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">关于</span></p>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">关于本站</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#_2">联系我</a>
-    </li>
-    </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../about/about/">关于本站</a>
                     </li>
                 </ul>
       </div>
@@ -115,11 +115,11 @@
     
       
         
-          <li>关于 &raquo;</li>
+          <li>ATouch &raquo;</li>
         
       
     
-    <li>关于本站</li>
+    <li>ATouch 硬件说明</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -130,10 +130,67 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="_1">关于</h1>
-<p>光轮电子致力于打造精品，致力于研发以技术为导向的优质产品。</p>
-<h2 id="_2">联系我</h2>
-<p>QQ:272073020</p>
+                <h1 id="_1">吃鸡开发板 硬件说明</h1>
+<p><a id = "board"></a></p>
+<h2 id="_2">说明</h2>
+<ul>
+<li>串口指令（波特率115200 不加回车换行符）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">效果</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">open</td>
+<td align="center">打开串口传输模式</td>
+<td align="center">将会只传输状态和键鼠信息（关闭log）</td>
+</tr>
+<tr>
+<td align="center">close</td>
+<td align="center">关闭串口传输模式</td>
+<td align="center">停止传输状态和键鼠信息</td>
+</tr>
+<tr>
+<td align="center">slogn</td>
+<td align="center">设置LOG级别 NONE</td>
+<td align="center">停止输出任何LOG</td>
+</tr>
+<tr>
+<td align="center">sloge</td>
+<td align="center">设置LOG级别 ERROR</td>
+<td align="center">只输出 ERROR LOG</td>
+</tr>
+<tr>
+<td align="center">slogw</td>
+<td align="center">设置LOG级别 WARN</td>
+<td align="center">输出 WARN 及以上 LOG</td>
+</tr>
+<tr>
+<td align="center">slogi</td>
+<td align="center">设置LOG级别 INFO</td>
+<td align="center">输出 INFO 及以上 LOG</td>
+</tr>
+<tr>
+<td align="center">slogd</td>
+<td align="center">设置LOG级别 DEBUG</td>
+<td align="center">输出 DEBUG 及以上 LOG</td>
+</tr>
+<tr>
+<td align="center">slogv</td>
+<td align="center">设置LOG级别 VERBOSE</td>
+<td align="center">输出所有LOG</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>上电默认LOG模式：INFO （slogi）  </li>
+</ul>
+<p><br/></p>
               
             </div>
           </div>
@@ -141,8 +198,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../app/" class="btn btn-neutral float-right" title="ATouch APP说明">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../../math/symbol/" class="btn btn-neutral" title="数学符号"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../features/" class="btn btn-neutral" title="ATouch 功能"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -168,8 +227,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../math/symbol/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../features/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../app/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

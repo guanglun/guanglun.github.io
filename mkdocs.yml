@@ -2,14 +2,17 @@ site_name: 光轮电子
 pages:
 - 主页: index.md
 - ATouch:
-  - ATouch说明: atouch/index.md
-  - ATouch升级: atouch/upgrade.md
-  - ATouch功能: atouch/features.md
+  - ATouch 说明: atouch/index.md
+  - ATouch 升级: atouch/upgrade.md
+  - ATouch 功能: atouch/features.md
+  - ATouch 硬件说明: atouch/board.md
+  - ATouch APP说明: atouch/app.md
+  - ATouch 后台说明: atouch/server.md
 - OPENVIO:
-  - OPENVIO说明: openvio/index.md
-  - OPENMV兼容性: openvio/openmv.md
-  - OPENVIO功能: openvio/openvio.md
-  - SLAM VIO功能: openvio/slam_vio.md      
+  - OPENVIO 说明: openvio/index.md
+  - OPENMV 兼容性: openvio/openmv.md
+  - OPENVIO 功能: openvio/openvio.md
+  - SLAM VIO 功能: openvio/slam_vio.md      
 - 数学:
   - 矩阵: math/matrix.md
   - 数学符号: math/symbol.md

@@ -9,8 +9,11 @@
 吃鸡开发板目前使用ESP32+CH374U方案，为实现通过键鼠操作Android手机（模拟触屏），通过USB线与Android连接，使用ADB协议进行通讯控制。  
 
 ## 教程列表
-* 使用说明  
-* 实现原理说明  
+* [功能描述](features.md#features)
+* [升级方法](upgrade.md#upgrade)
+* [硬件说明](board.md#board)
+* [APP说明](app.md#app)
+* [后台说明](server.md#server)
 
 ## 功能及研发进度
 | 功能 | 进度 |

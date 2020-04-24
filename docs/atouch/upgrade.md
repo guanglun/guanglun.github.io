@@ -1,6 +1,6 @@
 # 吃鸡开发板 升级方法
 
-<a id = "atouch_upgrade"></a>
+<a id = "upgrade"></a>
 
 ## 开发板升级
 

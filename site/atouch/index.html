@@ -56,31 +56,57 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">ATouch 说明</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#_1">开发板简介</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_1">下载资源</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_2">教程列表</a>
+    <li class="toctree-l2"><a class="reference internal" href="#atouch_1">ATouch项目旧版简介</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_3">功能及研发进度</a>
+    <li class="toctree-l2"><a class="reference internal" href="#atouch_2">ATouch项目新版简介</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_4">源码和资料</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">功能及研发进度</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">源码和资料</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#github">代码托管 github</a>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">键鼠操作</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#gitee">代码托管 gitee</a>
+    <li class="toctree-l3"><a class="reference internal" href="#atouchwifi-typechdmi">ATouch通过wifi连接手机 手机typec转HDMI投屏</a>
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">开发板升级</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1">1.开发板进入升级模式</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2wifi">2.手机连接WIFI</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3app">3.手机APP升级</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#app">APP使用</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1_1">1.安装</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2">2.连接</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3">3.设置</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#app_1">APP升级</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">获取开发板日志</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#esp32">ESP32版 硬件说明</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#esp32_1">ESP32版接口说明</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#115200">串口指令（波特率115200 不加回车换行符）</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">按键映射 操作说明</a>
+    </li>
     </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="upgrade/">ATouch 升级</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="features/">ATouch 功能</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="board/">ATouch 硬件说明</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="app/">ATouch APP说明</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="server/">ATouch 后台说明</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">OPENVIO</span></p>
@@ -142,20 +168,21 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="atouch">吃鸡开发板 ATouch说明</h1>
+                <h1 id="atouch">ATouch 开源项目</h1>
 <p><a id = "atouch"></a></p>
-<h2 id="_1">开发板简介</h2>
+<h2 id="_1">下载资源</h2>
+<p><a href="https://gitee.com/guanglunking/ATouch/releases">手机APP</a><br />
+<a href="https://gitee.com/guanglunking/ATouchClient/releases">WINDOWS客户端</a><br />
+<a href="https://gitee.com/guanglunking/ATouchClient">LINUX客户端【请自行编译】</a><br />
+<a href="https://gitee.com/guanglunking/ESP32_CH374U/releases">ESP32客户端固件</a><br />
+<a href="https://gitee.com/guanglunking/ATouchService/releases">Android后台固件</a>  </p>
+<h2 id="atouch_1">ATouch项目旧版简介</h2>
 <p>说起这个项目的起源，可能大概也许是源于自己用手搓手机菜的抠脚吧，也或许是因为对开发的热情大过于玩的热情哈哈，反正这个东西反反复复得折腾了半年之久了，对这个东西的定位也渐渐从做一个人人都能玩的商品到单纯做一个有吃鸡功能的开发板。现在把他开源出来，也算是回报互联网上良多开源的资料教程吧！  </p>
 <p>吃鸡开发板目前使用ESP32+CH374U方案，为实现通过键鼠操作Android手机（模拟触屏），通过USB线与Android连接，使用ADB协议进行通讯控制。  </p>
-<h2 id="_2">教程列表</h2>
-<ul>
-<li><a href="features/#features">功能描述</a></li>
-<li><a href="upgrade/#upgrade">升级方法</a></li>
-<li><a href="board/#board">硬件说明</a></li>
-<li><a href="app/#app">APP说明</a></li>
-<li><a href="server/#server">后台说明</a></li>
-</ul>
-<h2 id="_3">功能及研发进度</h2>
+<h2 id="atouch_2">ATouch项目新版简介</h2>
+<p>这个项目的出发点本来如上简介所说的为了做个开发板，结果一发不可收拾。本来不计划做WIN或者LINUX的支持的，结果为了把项目做完整做成熟索性WIN和LINUX平台都支持了，并且将ESP32的硬件平拍升级为嵌入式LINUX平台，支持更过的键鼠设备。（后期可能尝试支持IOS平台，目前暂无精力）   </p>
+<p>祝大家玩的愉快^^</p>
+<h2 id="_2">功能及研发进度</h2>
 <table>
 <thead>
 <tr>
@@ -164,6 +191,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td align="center">ESP32硬件</td>
+<td align="center">已完成</td>
+</tr>
 <tr>
 <td align="center">键鼠USB连接</td>
 <td align="center">已完成</td>
@@ -189,7 +220,19 @@
 <td align="center">已完成</td>
 </tr>
 <tr>
+<td align="center">WIN客户端</td>
+<td align="center">初版发布</td>
+</tr>
+<tr>
+<td align="center">LINUX客户端</td>
+<td align="center">初版发布</td>
+</tr>
+<tr>
 <td align="center">体感模拟</td>
+<td align="center">正在研发(可能流产)</td>
+</tr>
+<tr>
+<td align="center">LINUX嵌入式硬件</td>
 <td align="center">正在研发</td>
 </tr>
 <tr>
@@ -199,49 +242,335 @@
 </tbody>
 </table>
 <p><br />  </p>
-<h2 id="_4">源码和资料</h2>
-<h3 id="github">代码托管 github</h3>
-<p>ATouch安卓APP源码：<br />
-<a href="https://github.com/guanglun/ATouch">https://github.com/guanglun/ATouch</a> <br />
-【开发环境：AndroidStudio】  </p>
-<p>ATouch板子源码：<br />
-<a href="https://github.com/guanglun/ESP32_CH374U">https://github.com/guanglun/ESP32_CH374U</a> <br />
-【开发环境：Linux SDK:ESP-DIF3.2】</p>
-<p>ATouch安卓后台程序源码： <br />
-<a href="https://github.com/guanglun/ATouchService">https://github.com/guanglun/ATouchService</a><br />
-【开发环境：android-ndk-r13b】  </p>
-<p>APP下载地址： <br />
-<a href="https://github.com/guanglun/ATouch/blob/master/app/release/ATouchV1.0.apk">https://github.com/guanglun/ATouch/blob/master/app/release/ATouchV1.0.apk</a>  </p>
-<h3 id="gitee">代码托管 gitee</h3>
-<p>ATouch安卓APP源码：<br />
-<a href="https://gitee.com/guanglunking/ATouch">https://gitee.com/guanglunking/ATouch</a><br />
-【开发环境：AndroidStudio】</p>
-<p>ATouch板子源码：<br />
-<a href="https://gitee.com/guanglunking/ESP32_CH374U">https://gitee.com/guanglunking/ESP32_CH374U</a><br />
-【开发环境：Linux SDK:ESP-DIF3.2】</p>
-<p>ATouch安卓后台程序源码： <br />
-<a href="https://gitee.com/guanglunking/ATouchService">https://gitee.com/guanglunking/ATouchService</a> <br />
-【开发环境：android-ndk-r13b】</p>
-<p>APP下载地址： <br />
-<a href="https://gitee.com/guanglunking/ATouch/blob/master/app/release/ATouchV1.0.apk">https://gitee.com/guanglunking/ATouch/blob/master/app/release/ATouchV1.0.apk</a></p>
-<p>淘宝店铺：<br />
-<a href="https://item.taobao.com/item.htm?id=595635571591">https://item.taobao.com/item.htm?id=595635571591</a>  </p>
-<p>演示视频：<br />
-<a href="https://www.bilibili.com/video/av53687214">https://www.bilibili.com/video/av53687214</a>  </p>
-<ul>
-<li>
-<p>键鼠操作
-<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=53687214&cid=93910781&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br />
+<h2 id="_3">源码和资料</h2>
+<p><a href="https://gitee.com/guanglunking/ATouch">ATouch安卓APP源码</a>【开发环境：AndroidStudio】  </p>
+<p><a href="https://gitee.com/guanglunking/ATouchClient">ATouch WIN&amp;LINUX客户端源码（支持嵌入式LINUX）</a>【开发环境：gcc or MinGW】  </p>
+<p><a href="https://gitee.com/guanglunking/ESP32_CH374U">ATouch板子源码</a> 【开发环境：Linux SDK:ESP-DIF3.2】  </p>
+<p><a href="https://gitee.com/guanglunking/ATouchService">ATouch安卓后台程序源码</a>【开发环境：android-ndk-r13b】  </p>
+<p><a href="https://item.taobao.com/item.htm?id=595635571591">淘宝店铺</a>  </p>
+<p><a href="https://www.bilibili.com/video/av53687214">演示视频</a>  </p>
+<p><img alt="效果图" src="https://images.gitee.com/uploads/images/2020/0408/110002_b982beff_683968.png" title="atouch2.png" /></p>
+<h4 id="_4">键鼠操作</h4>
+<p><iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=53687214&cid=93910781&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br />
 <br />  </p>
-</li>
-<li>
-<p>ATouch通过wifi连接手机 手机typec转HDMI投屏
-<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=412674734&bvid=BV1JV411o7QV&cid=174816385&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></p>
-</li>
-</ul>
+<h4 id="atouchwifi-typechdmi">ATouch通过wifi连接手机 手机typec转HDMI投屏</h4>
+<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=412674734&bvid=BV1JV411o7QV&cid=174816385&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p><br />  </p>
+<h2 id="_5">开发板升级</h2>
+<h4 id="1">1.开发板进入升级模式</h4>
+<p>如下图，开发板通电后按住左键不放按右键重启板子，此时板子会进入升级模式。
+<br /><br />
+<img alt="ATouch" src="img/atouch4.png" /><br />
+<br />  </p>
+<h4 id="2wifi">2.手机连接WIFI</h4>
+<p>手机连接WIFI热点"upgrade",密码123456789</p>
+<h4 id="3app">3.手机APP升级</h4>
+<p>打开手机APP，点击升级设备，选择本地文件升级
+<br /><br />
+<img alt="ATouch" src="img/atouch6.png" /><br />
+<br />  </p>
+<p>选择手机根目录下的/ATouch/ATouch.bin文件升级
+<br /><br />
+<img alt="ATouch" src="img/atouch5.png" /><br />
+<br />  </p>
+<p>升级完成后会提示成功，至此板子固件更新完成</p>
+<h2 id="app">APP使用</h2>
+<h3 id="1_1">1.安装</h3>
+<p>手机安装ATouch APP，并将手机的开发者模式（必须）打开。不同机型打开方式可能各有差异，详情百度。<br />
+ATouch软件需要悬浮窗口的权限，如果开启软件后申请失败请再次打开尝试。</p>
 <p><br /><br />
-图片：<br />
-<img alt="ATouch" src="img/atouch1.png" /></p>
+<img alt="ATouch" src="img/atouch10.png" /><br />
+<br />  </p>
+<h3 id="2">2.连接</h3>
+<p>软件打开后会出现悬浮窗口，悬浮窗口所表示的状态如下表格所示。手机APP打开后，ATouch开发板插上电源，并将开发板与手机通过USB连接（此时必须已经打开开发者模式），如果是第一次插入会弹出窗口询问是否加入秘钥，点击确定后B和A将会变成绿色（连接成功），如果此时为变绿说明连接失败，应检查开发板和APP的连接与开发者模式是否开启。
+<br /><br />
+<img alt="ATouch" src="img/atouch11.png" /><br />
+<img alt="ATouch" src="img/atouch12.png" /><br />
+<br />  </p>
+<table>
+<thead>
+<tr>
+<th align="center">功能</th>
+<th align="center">进度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">A</td>
+<td align="center">手机APP与ATouch后台服务程序连接状态指示，连接成功将变成绿色</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">手机APP与ATouch开发板USB连接状态指示，连接成功将变成绿色</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">手机APP与ATouch开发板蓝牙连接状态指示，连接成功将变成绿色</td>
+</tr>
+<tr>
+<td align="center">D</td>
+<td align="center">ATouch开发板与鼠标连接状态指示，连接成功将变成绿色</td>
+</tr>
+<tr>
+<td align="center">E</td>
+<td align="center">ATouch开发板与键盘连接状态指示，连接成功将变成绿色</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3">3.设置</h3>
+<p>打开吃鸡软件进入按键设置界面
+<br /><br />
+<img alt="ATouch" src="img/atouch13.png" /><br />
+<br />  </p>
+<table>
+<thead>
+<tr>
+<th align="center">功能</th>
+<th align="center">进度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">A</td>
+<td align="center">设置（未开发）</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">映射库操作，可以对映射进行新建删除修改操作</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">对映射进行编辑，使其适应自己的手机</td>
+</tr>
+<tr>
+<td align="center">D</td>
+<td align="center">保存数据库</td>
+</tr>
+</tbody>
+</table>
+<p>新建映射库并编辑保存，务必将映射库的单元拖动到正确的触摸位置，否则无法使用正常功能！
+<br /><br />
+<img alt="ATouch" src="img/atouch3.png" /><br />
+<br /><br />
+<img alt="ATouch" src="img/atouch14.png" /> 
+<br />  </p>
+<h2 id="app_1">APP升级</h2>
+<p>目前仅支持手动下载固件安装</p>
+<h2 id="_6">获取开发板日志</h2>
+<p>使用USB线连接板子至电脑，如下两个usb都可以连接。下载CP2102驱动并安装<br />
+* <a href="https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers">驱动地址</a>
+* <a href="http://www.pc6.com/softview/SoftView_624283.html">串口调试助手</a></p>
+<p><br /><br />
+<img alt="ATouch" src="img/atouch7.png" /><br />
+<br />  </p>
+<p>使用串口助手，波特率115200。打开后发送"olog"(注意取消发送回车行)
+<br /><br />
+<img alt="ATouch" src="img/atouch1.jpg" /><br />
+<br />  </p>
+<p>正常的话接收窗口会接收到LOG，可将LOG保存为文件发送给我调试
+<br /><br />
+<img alt="ATouch" src="img/atouch8.png" /><br />
+<br />  </p>
+<h2 id="esp32">ESP32版 硬件说明</h2>
+<h3 id="esp32_1">ESP32版接口说明</h3>
+<p><img alt="ATouch" src="img/atouch9.png" />  </p>
+<table>
+<thead>
+<tr>
+<th align="center">编号</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">A</td>
+<td align="center">MicroUSB端口，5V供电或串口调试（A与B只使用其一）</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">TypeC端口，5V供电或串口调试（A与B只使用其一）</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">USB1端口，插入键盘、鼠标或者手机</td>
+</tr>
+<tr>
+<td align="center">D</td>
+<td align="center">USB2端口，插入键盘、鼠标或者手机</td>
+</tr>
+<tr>
+<td align="center">E</td>
+<td align="center">USB3端口，插入键盘、鼠标或者手机</td>
+</tr>
+<tr>
+<td align="center">F</td>
+<td align="center">功能按键</td>
+</tr>
+<tr>
+<td align="center">G</td>
+<td align="center">功能按键，GPIO0</td>
+</tr>
+<tr>
+<td align="center">H</td>
+<td align="center">复位按键</td>
+</tr>
+</tbody>
+</table>
+<p><br />  </p>
+<h3 id="115200">串口指令（波特率115200 不加回车换行符）</h3>
+<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">效果</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">open</td>
+<td align="center">打开串口传输模式</td>
+<td align="center">将会只传输状态和键鼠信息（关闭log）</td>
+</tr>
+<tr>
+<td align="center">close</td>
+<td align="center">关闭串口传输模式</td>
+<td align="center">停止传输状态和键鼠信息</td>
+</tr>
+<tr>
+<td align="center">slogn</td>
+<td align="center">设置LOG级别 NONE</td>
+<td align="center">停止输出任何LOG</td>
+</tr>
+<tr>
+<td align="center">sloge</td>
+<td align="center">设置LOG级别 ERROR</td>
+<td align="center">只输出 ERROR LOG</td>
+</tr>
+<tr>
+<td align="center">slogw</td>
+<td align="center">设置LOG级别 WARN</td>
+<td align="center">输出 WARN 及以上 LOG</td>
+</tr>
+<tr>
+<td align="center">slogi</td>
+<td align="center">设置LOG级别 INFO</td>
+<td align="center">输出 INFO 及以上 LOG</td>
+</tr>
+<tr>
+<td align="center">slogd</td>
+<td align="center">设置LOG级别 DEBUG</td>
+<td align="center">输出 DEBUG 及以上 LOG</td>
+</tr>
+<tr>
+<td align="center">slogv</td>
+<td align="center">设置LOG级别 VERBOSE</td>
+<td align="center">输出所有LOG</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<ul>
+<li>上电默认LOG模式：INFO （slogi）  </li>
+</ul>
+<p><br/></p>
+<h2 id="_7">按键映射 操作说明</h2>
+<table>
+<thead>
+<tr>
+<th align="center">按键</th>
+<th align="center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">鼠标左键</td>
+<td align="center">射击（攻击）或触摸指针位置（唤醒鼠标指针的模式下）</td>
+</tr>
+<tr>
+<td align="center">鼠标中键</td>
+<td align="center">唤醒鼠标指针 和 隐藏鼠标指针切换</td>
+</tr>
+<tr>
+<td align="center">鼠标右键</td>
+<td align="center">打开瞄准镜</td>
+</tr>
+<tr>
+<td align="center">W</td>
+<td align="center">前进（W+Shift为加速向前跑）</td>
+</tr>
+<tr>
+<td align="center">S</td>
+<td align="center">后退</td>
+</tr>
+<tr>
+<td align="center">A</td>
+<td align="center">左走</td>
+</tr>
+<tr>
+<td align="center">D</td>
+<td align="center">右走</td>
+</tr>
+<tr>
+<td align="center">Ctrl(左)</td>
+<td align="center">趴下</td>
+</tr>
+<tr>
+<td align="center">Alt(左)</td>
+<td align="center">蹲下</td>
+</tr>
+<tr>
+<td align="center">空格</td>
+<td align="center">跳跃</td>
+</tr>
+<tr>
+<td align="center">Z</td>
+<td align="center">开车</td>
+</tr>
+<tr>
+<td align="center">X</td>
+<td align="center">上副驾驶</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">下车</td>
+</tr>
+<tr>
+<td align="center">Q</td>
+<td align="center">左武器切换</td>
+</tr>
+<tr>
+<td align="center">E</td>
+<td align="center">右武器切换</td>
+</tr>
+<tr>
+<td align="center">R</td>
+<td align="center">换弹药</td>
+</tr>
+<tr>
+<td align="center">M</td>
+<td align="center">地图显示、关闭</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">背包显示、关闭</td>
+</tr>
+<tr>
+<td align="center">F</td>
+<td align="center">环视（身体及行动的方向不变看四周情况）</td>
+</tr>
+<tr>
+<td align="center">G</td>
+<td align="center">用药</td>
+</tr>
+<tr>
+<td align="center">H</td>
+<td align="center">救援</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
               
             </div>
           </div>
@@ -249,7 +578,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="upgrade/" class="btn btn-neutral float-right" title="ATouch 升级">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../openvio/" class="btn btn-neutral float-right" title="OPENVIO 说明">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href=".." class="btn btn-neutral" title="主页"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -281,7 +610,7 @@
         <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="upgrade/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../openvio/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

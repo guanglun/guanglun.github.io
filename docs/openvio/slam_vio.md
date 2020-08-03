@@ -7,6 +7,8 @@
 * ubuntu16 
 * ros版本kinetic
 
+![OPENVIO](img/Screenshot from 2020-08-04 12-59-07.png)
+
 ## ROS安装
 
 

@@ -5,9 +5,6 @@ pages:
   - ATouch 说明: atouch/index.md
 - OPENVIO:
   - OPENVIO 说明: openvio/index.md
-  - OPENMV 兼容性: openvio/openmv.md
-  - OPENVIO 功能: openvio/openvio.md
-  - SLAM VIO 功能: openvio/slam_vio.md      
 - 数学:
   - 矩阵: math/matrix.md
   - 数学符号: math/symbol.md

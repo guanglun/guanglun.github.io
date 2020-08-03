@@ -63,21 +63,57 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#_1">简介</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">源码和资料</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#openmv">与OPENMV固件兼容性说明</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_2">功能及研发进度</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">功能及研发进度</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_3">已有模块及正在研发模块</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">已有模块及正在研发模块</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_4">图片</a>
+    <li class="toctree-l2"><a class="reference internal" href="#vins-mono">Vins-Mono 安装和使用</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ros">ROS安装</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vins-mono_1">VINS-MONO安装编译</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#ceres">安装Ceres</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#eigen333">Eigen3.3.3 安装</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#opencv-331">OpenCV-3.3.1 安装</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ros_openvio">ROS_OPENVIO 编译</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">执行</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ros_1">ROS常用命令</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">图片</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#v10">V1.0版本</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#v12">V1.2版本</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#v13">V1.3版本</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#v14">V1.4版本</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#v15">V1.5版本</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#v16">V1.6版本</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pc">PC上位机</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vins-mono_2">VINS-Mono</a>
+    </li>
+        </ul>
     </li>
     </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="openmv/">OPENMV 兼容性</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="openvio/">OPENVIO 功能</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="slam_vio/">SLAM VIO 功能</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">数学</span></p>
@@ -128,12 +164,17 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="openvio">OPENVIO说明</h1>
+                <h1 id="openvio">OPENVIO使用说明</h1>
 <p><a id = "openvio"></a></p>
-<h3 id="_1">简介</h3>
+<h2 id="_1">简介</h2>
 <p>OPENVIO 一款脱胎于OPENMV的智能摄像头。</p>
-<p>在OPENMV硬件基础上增加了USB2.0芯片(USB3315）和IMU芯片（ICM20948），除却兼容OPENMV固件外，还可以将摄像头原始图像（未压缩图像）和IMU九轴数据高速传输至PC，可以作为SLAM单目IMU方案研究的低廉传感器方案（如港科大的VINS-MONO）.多种接口方便扩展更多功能，比如扩展超声波或激光模块后作为PX4光流模块使用（暂未实现 还在研发中）。</p>
-<h3 id="openmv">与OPENMV固件兼容性说明</h3>
+<p>在OPENMV硬件基础上增加了USB2.0芯片(USB3315）和IMU芯片（MPU6050），除却兼容OPENMV固件外，还可以将摄像头原始图像（未压缩图像）和IMU九轴数据高速传输至PC，可以作为SLAM单目IMU方案研究的低廉传感器方案（如港科大的VINS-MONO）.多种接口方便扩展更多功能，比如扩展超声波或激光模块后作为PX4光流模块使用（暂未实现 还在研发中）。</p>
+<h2 id="_2">源码和资料</h2>
+<p><a href="https://gitee.com/guanglunking/OPENVIO_BOARD">OPENVIO源码</a>【开发环境：Keil5】  </p>
+<p><a href="https://gitee.com/guanglunking/OPENVIO_PC">OPENVIO PC上位机</a>【开发环境：QT5.6.0 qt-opensource-windows-x86-mingw492-5.6.0】  </p>
+<p><a href="https://gitee.com/guanglunking/OPENVIO_ROS">OPENVIO ROS源码</a></p>
+<p><a href="https://item.taobao.com/item.htm?id=615919130291">淘宝店铺</a>  </p>
+<h2 id="openmv">与OPENMV固件兼容性说明</h2>
 <p>可以直接刷入OPENMV H7的官方固件使用，也就是说，摄像头的功能皆兼容。但是由于扩展接口不同，所以不对官方固件做兼容。  </p>
 <table>
 <thead>
@@ -154,7 +195,7 @@
 </tbody>
 </table>
 <p></br></p>
-<h3 id="_2">功能及研发进度</h3>
+<h2 id="_3">功能及研发进度</h2>
 <table>
 <thead>
 <tr>
@@ -190,7 +231,7 @@
 </tbody>
 </table>
 <p></br></p>
-<h3 id="_3">已有模块及正在研发模块</h3>
+<h2 id="_4">已有模块及正在研发模块</h2>
 <table>
 <thead>
 <tr>
@@ -225,12 +266,206 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_4">图片</h3>
+<h2 id="vins-mono">Vins-Mono 安装和使用</h2>
+<p><a href="https://github.com/HKUST-Aerial-Robotics/VINS-Mono">VINS-MONO链接</a></p>
+<ul>
+<li>ubuntu16 </li>
+<li>ros版本kinetic</li>
+</ul>
+<p><img alt="OPENVIO" src="img/Screenshot%20from%202020-08-04%2012-59-07.png" /></p>
+<h3 id="ros">ROS安装</h3>
+<ul>
+<li>
+<p>设置Ubuntu的sources.list
+<pre class="highlight"><code>sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" &gt; /etc/apt/sources.list.d/ros-latest.list'</code></pre></p>
+</li>
+<li>
+<p>设置key
+<pre class="highlight"><code>sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654</code></pre></p>
+</li>
+<li>
+<p>更新package
+<pre class="highlight"><code>sudo apt-get update</code></pre></p>
+</li>
+<li>
+<p>安装ROS kinetic完整版
+<pre class="highlight"><code>sudo apt-get install ros-kinetic-desktop-full</code></pre></p>
+</li>
+<li>
+<p>安装完可以查看可用的package
+<pre class="highlight"><code>apt-cache search ros-kinetic</code></pre></p>
+</li>
+<li>
+<p>更新环境
+<pre class="highlight"><code>echo "source /opt/ros/kinetic/setup.bash" &gt;&gt; ~/.bashrc
+source /opt/ros/kinetic/setup.bash</code></pre></p>
+</li>
+<li>
+<p>创建工作空间
+<pre class="highlight"><code>mkdir -p ~/catkin_ws/src
+mkdir -p ~/catkin_ws/build
+mkdir -p ~/catkin_ws/devel</code></pre></p>
+</li>
+</ul>
+<h3 id="vins-mono_1">VINS-MONO安装编译</h3>
+<ul>
+<li>安装package
+<pre class="highlight"><code>sudo apt-get install ros-kinetic-cv-bridge ros-kinetic-tf ros-kinetic-message-filters ros-kinetic-image-transport</code></pre></li>
+</ul>
+<h4 id="ceres">安装Ceres</h4>
+<p><a href="http://ceres-solver.org/installation.html">Ceres安装链接</a></p>
+<ul>
+<li>
+<p>编译准备
+<pre class="highlight"><code># CMake
+sudo apt-get install cmake
+# google-glog + gflags
+sudo apt-get install libgoogle-glog-dev
+# BLAS &amp; LAPACK
+sudo apt-get install libatlas-base-dev
+# Eigen3
+sudo apt-get install libeigen3-dev
+# SuiteSparse and CXSparse (optional)
+# - If you want to build Ceres as a *static* library (the default)
+#   you can use the SuiteSparse package in the main Ubuntu package
+#   repository:
+sudo apt-get install libsuitesparse-dev
+# - However, if you want to build Ceres as a *shared* library, you must
+#   add the following PPA:
+sudo add-apt-repository ppa:bzindovic/suitesparse-bugfix-1319687
+sudo apt-get update
+sudo apt-get install libsuitesparse-dev</code></pre></p>
+</li>
+<li>
+<p>编译安装
+<pre class="highlight"><code>wget http://ceres-solver.org/ceres-solver-1.14.0.tar.gz
+tar zxf ceres-solver-1.14.0.tar.gz
+mkdir ceres-bin
+cd ceres-bin
+cmake ../
+make -j4
+make test
+# Optionally install Ceres, it can also be exported using CMake which
+# allows Ceres to be used without requiring installation, see the documentation
+# for the EXPORT_BUILD_DIR option for more information.
+make install</code></pre></p>
+</li>
+</ul>
+<h4 id="eigen333">Eigen3.3.3 安装</h4>
+<ul>
+<li>Eigen3.3.3 安装
+<pre class="highlight"><code>wget https://codeload.github.com/eigenteam/eigen-git-mirror/tar.gz/3.3.3
+mv 3.3.3 eigen-git-mirror-3.3.3.tar.gz
+tar zxf eigen-git-mirror-3.3.3.tar.gz
+cd eigen-git-mirror-3.3.3
+
+mkdir build
+cd build
+cmake ..
+make
+make install
+</code></pre></li>
+</ul>
+<h4 id="opencv-331">OpenCV-3.3.1 安装</h4>
+<ul>
+<li>
+<p>OpenCV-3.3.1 安装
+<pre class="highlight"><code>wget https://codeload.github.com/opencv/opencv/tar.gz/3.3.1
+mv 3.3.1 opencv-3.3.1.tar.gz
+tar zxf opencv-3.3.1.tar.gz
+cd opencv-3.3.1
+
+mkdir build
+cd build
+cmake ..
+make -j8
+make install
+</code></pre></p>
+</li>
+<li>
+<p>编译
+<pre class="highlight"><code>cd ~/catkin_ws/src
+git clone https://github.com/HKUST-Aerial-Robotics/VINS-Mono.git
+cd ../
+catkin_make
+source ~/catkin_ws/devel/setup.bash</code></pre></p>
+</li>
+</ul>
+<h3 id="ros_openvio">ROS_OPENVIO 编译</h3>
+<ul>
+<li>ROS_OPENVIO 编译流程
+<pre class="highlight"><code>cd ~/catkin_ws/src
+git clone https://gitee.com/guanglunking/OPENVIO_ROS
+cd ../
+catkin_make
+source ~/catkin_ws/devel/setup.bash</code></pre></li>
+</ul>
+<h3 id="_5">执行</h3>
+<ul>
+<li>在三个终端中分别执行如下命令（如果单独执行rosrun openvio openvio_ros失败的话则需要先在一个新窗口中roscore）
+<pre class="highlight"><code>roslaunch vins_estimator euroc.launch
+roslaunch vins_estimator vins_rviz.launch
+rosrun openvio openvio_ros</code></pre></li>
+</ul>
+<h3 id="ros_1">ROS常用命令</h3>
+<ul>
+<li>
+<p>roscore 是你在运行所有ROS程序前首先要运行的命令
+<pre class="highlight"><code>roscore</code></pre></p>
+</li>
+<li>
+<p>列出正在运行的节点
+<pre class="highlight"><code>rosnode list</code></pre></p>
+</li>
+<li>
+<p>查看某个特定节点信息
+<pre class="highlight"><code>rosnode info [node_name]</code></pre></p>
+</li>
+<li>
+<p>列出所有的topic
+<pre class="highlight"><code>rostopic list -v</code></pre></p>
+</li>
+<li>
+<p>显示topics上发布的message
+<pre class="highlight"><code>rostopic echo [topic_name]</code></pre></p>
+</li>
+<li>
+<p>查看topic的message类型
+<pre class="highlight"><code>rostopic type [topic_name]</code></pre></p>
+</li>
+<li>
+<p>查看message数据结构
+<pre class="highlight"><code>rosmsg show [message_name]</code></pre></p>
+</li>
+</ul>
+<h2 id="_6">图片</h2>
+<h3 id="v10">V1.0版本</h3>
+<p><img alt="OPENVIO" src="img/v1.0-1.jpg" /></p>
+<p><img alt="OPENVIO" src="img/v1.0-2.jpg" /></p>
+<h3 id="v12">V1.2版本</h3>
+<p><img alt="OPENVIO" src="img/v1.2-1.jpg" /></p>
+<h3 id="v13">V1.3版本</h3>
+<p><img alt="OPENVIO" src="img/v1.3-1.jpg" /></p>
+<p><img alt="OPENVIO" src="img/v1.3-2.jpg" /></p>
+<p><img alt="OPENVIO" src="img/v1.3-3.jpg" /></p>
+<h3 id="v14">V1.4版本</h3>
+<p><img alt="OPENVIO" src="img/v1.4-1.jpg" /></p>
+<p><img alt="OPENVIO" src="img/v1.4-2.jpg" /></p>
+<h3 id="v15">V1.5版本</h3>
+<p><img alt="OPENVIO" src="img/v1.5-1.jpg" /></p>
+<p><img alt="OPENVIO" src="img/v1.5-2.jpg" /></p>
 <p><img alt="OPENVIO" src="img/OPENVIO.jpg" /></p>
 <p><img alt="OPENVIO" src="img/OPENVIO1.jpg" /></p>
 <p><img alt="OPENVIO" src="img/OPENVIO2.jpg" /></p>
 <p><img alt="OPENVIO" src="img/OPENVIO3.jpg" /></p>
+<h3 id="v16">V1.6版本</h3>
+<p><img alt="OPENVIO" src="img/v1.6-0.jpg" /></p>
+<p><img alt="OPENVIO" src="img/v1.6-1.jpg" /></p>
+<p><img alt="OPENVIO" src="img/v1.6-2.jpg" /></p>
+<h3 id="pc">PC上位机</h3>
 <p><img alt="OPENVIO" src="img/OPENVIO_PC.png" /></p>
+<h3 id="vins-mono_2">VINS-Mono</h3>
+<p><img alt="OPENVIO" src="img/Screenshot%20from%202020-08-04%2012-59-07.png" /></p>
               
             </div>
           </div>
@@ -238,7 +473,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="openmv/" class="btn btn-neutral float-right" title="OPENMV 兼容性">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../math/matrix/" class="btn btn-neutral float-right" title="矩阵">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../atouch/" class="btn btn-neutral" title="ATouch 说明"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -270,7 +505,7 @@
         <span><a href="../atouch/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="openmv/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../math/matrix/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

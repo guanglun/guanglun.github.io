@@ -1,14 +1,14 @@
 {
     "app": {
-        "serverVersion": "1.7",
+        "version": "1.7",
         "updateurl": "http://guanglundz.com/atouch/upgrade/ATouch.apk"
     },
     "service": {
-        "serverVersion": "1.1",
+        "version": "1.1",
         "updateurl": "http://guanglundz.com/atouch/upgrade/ATouchService.apk"
     },
     "firmware": {
-        "serverVersion": "1.2",
+        "version": "1.2",
         "updateurl": "http://guanglundz.com/atouch/upgrade/ATouchFirmware.apk"
     }
 }

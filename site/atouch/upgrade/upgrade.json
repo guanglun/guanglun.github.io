@@ -1,12 +1,14 @@
 {
-    "data": {
-        "appname": "hoolay.apk",
-        "serverVersion": "1.0.2",
-        "serverFlag": "1",
-        "lastForce": "1",
-        "updateurl": "http://releases.b0.upaiyun.com/hoolay.apk",
-        "upgradeinfo": "V1.0.2版本更新，你想不想要试一下哈！！！"
+    "app": {
+        "serverVersion": "1.7",
+        "updateurl": "http://guanglundz.com/atouch/upgrade/ATouch.apk"
     },
-    "error_code": "200",
-    "error_msg": "蛋疼的认识"
+    "service": {
+        "serverVersion": "1.1",
+        "updateurl": "http://guanglundz.com/atouch/upgrade/ATouchService.apk"
+    },
+    "firmware": {
+        "serverVersion": "1.2",
+        "updateurl": "http://guanglundz.com/atouch/upgrade/ATouchFirmware.apk"
+    }
 }

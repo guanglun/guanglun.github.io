@@ -5,9 +5,9 @@
 
 * [吃鸡开发板(ATouch)](atouch/index.md#atouch)
 * [OPENVIO](openvio/index.md#openvio)
-* CXK开发板
-* SLAM机器人
-* 四旋翼飞行器
+
+## 说明文档
+* [ATouch使用说明](atouch/readme.md#atouch)
 
 ## 技术笔记
 

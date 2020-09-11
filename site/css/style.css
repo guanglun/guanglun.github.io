@@ -6,11 +6,20 @@ table {
     border-collapse: collapse; /*使用单一线条的边框*/
     empty-cells: show; /*单元格无内容依旧绘制边框*/
 }
+
 table th,
 table td {
+  text-align: left !important;
   height: 35px; /*统一每一行的默认高度*/
   border: 1px solid #dedede; /*内部边框样式*/
-  padding: 0 10px; /*内边距*/
+  padding: 10px 10px; /*内边距*/
+}
+
+table td:first-child {
+    text-align: center;
+    height: 35px; /*统一每一行的默认高度*/
+    border: 1px solid #dedede; /*内部边框样式*/
+    padding: 10px 10px; /*内边距*/
 }
 
 table th {

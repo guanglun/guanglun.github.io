@@ -2,6 +2,11 @@
 
 <a id = "atouch"></a>
 
+## 最新APP和固件下载地址
+
+[最新APP和固件下载地址](http://guanglundz.com/atouch/download.html)  
+* 只需要下载第一个(APP)安装后即可在APP内下载剩余文件
+
 ## 下载资源
 [手机APP](https://gitee.com/guanglunking/ATouch/releases)  
 [WINDOWS客户端](https://gitee.com/guanglunking/ATouchClient/releases)  

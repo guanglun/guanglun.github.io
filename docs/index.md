@@ -7,7 +7,7 @@
 * [OPENVIO](openvio/index.md#openvio)
 
 ## 说明文档
-* [ATouch使用说明](atouch/readme.md#atouch)
+* [ATouch使用说明](atouch/guide.md#atouch)
 
 ## 技术笔记
 

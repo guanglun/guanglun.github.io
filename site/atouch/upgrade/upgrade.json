@@ -1,7 +1,7 @@
 {
     "app": {
-        "version": "1.7",
-        "updateurl": "http://guanglundz.com/atouch/upgrade/atouch_v1_7_release.apk"
+        "version": "1.8",
+        "updateurl": "http://guanglundz.com/atouch/upgrade/atouch_v1_8_release.apk"
     },
     "service": {
         "version": "1.1",

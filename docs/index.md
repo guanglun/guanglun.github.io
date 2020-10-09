@@ -5,6 +5,7 @@
 
 * [吃鸡开发板(ATouch)](atouch/index.md#atouch)
 * [OPENVIO](openvio/index.md#openvio)
+* [CXK开发板](cxk/index.md#cxk)
 
 ## 说明文档
 * [ATouch使用说明](atouch/guide.md#atouch)

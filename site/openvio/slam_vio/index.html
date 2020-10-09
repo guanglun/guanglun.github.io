@@ -64,6 +64,11 @@
                     <li class="toctree-l1"><a class="reference internal" href="../">OPENVIO 说明</a>
                     </li>
                 </ul>
+                <p class="caption"><span class="caption-text">CXK开发板</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../cxk/">CXK开发板 说明</a>
+                    </li>
+                </ul>
                 <p class="caption"><span class="caption-text">数学</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../../math/matrix/">矩阵</a>
@@ -120,55 +125,47 @@
 <ul>
 <li>
 <p>设置Ubuntu的sources.list
-<div class="highlight"><pre><span></span><code>sudo sh -c &#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;
-</code></pre></div></p>
+<pre class="highlight"><code>sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" &gt; /etc/apt/sources.list.d/ros-latest.list'</code></pre></p>
 </li>
 <li>
 <p>设置key
-<div class="highlight"><pre><span></span><code>sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-</code></pre></div></p>
+<pre class="highlight"><code>sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654</code></pre></p>
 </li>
 <li>
 <p>更新package
-<div class="highlight"><pre><span></span><code>sudo apt-get update
-</code></pre></div></p>
+<pre class="highlight"><code>sudo apt-get update</code></pre></p>
 </li>
 <li>
 <p>安装ROS kinetic完整版
-<div class="highlight"><pre><span></span><code>sudo apt-get install ros-kinetic-desktop-full
-</code></pre></div></p>
+<pre class="highlight"><code>sudo apt-get install ros-kinetic-desktop-full</code></pre></p>
 </li>
 <li>
 <p>安装完可以查看可用的package
-<div class="highlight"><pre><span></span><code>apt-cache search ros-kinetic
-</code></pre></div></p>
+<pre class="highlight"><code>apt-cache search ros-kinetic</code></pre></p>
 </li>
 <li>
 <p>更新环境
-<div class="highlight"><pre><span></span><code>echo &quot;source /opt/ros/kinetic/setup.bash&quot; &gt;&gt; ~/.bashrc
-source /opt/ros/kinetic/setup.bash
-</code></pre></div></p>
+<pre class="highlight"><code>echo "source /opt/ros/kinetic/setup.bash" &gt;&gt; ~/.bashrc
+source /opt/ros/kinetic/setup.bash</code></pre></p>
 </li>
 <li>
 <p>创建工作空间
-<div class="highlight"><pre><span></span><code>mkdir -p ~/catkin_ws/src
+<pre class="highlight"><code>mkdir -p ~/catkin_ws/src
 mkdir -p ~/catkin_ws/build
-mkdir -p ~/catkin_ws/devel
-</code></pre></div></p>
+mkdir -p ~/catkin_ws/devel</code></pre></p>
 </li>
 </ul>
 <h2 id="vins-mono">VINS-MONO安装编译</h2>
 <ul>
 <li>安装package
-<div class="highlight"><pre><span></span><code>sudo apt-get install ros-kinetic-cv-bridge ros-kinetic-tf ros-kinetic-message-filters ros-kinetic-image-transport
-</code></pre></div></li>
+<pre class="highlight"><code>sudo apt-get install ros-kinetic-cv-bridge ros-kinetic-tf ros-kinetic-message-filters ros-kinetic-image-transport</code></pre></li>
 </ul>
 <h3 id="ceres">安装Ceres</h3>
 <p><a href="http://ceres-solver.org/installation.html">Ceres安装链接</a></p>
 <ul>
 <li>
 <p>编译准备
-<div class="highlight"><pre><span></span><code># CMake
+<pre class="highlight"><code># CMake
 sudo apt-get install cmake
 # google-glog + gflags
 sudo apt-get install libgoogle-glog-dev
@@ -185,12 +182,11 @@ sudo apt-get install libsuitesparse-dev
 #   add the following PPA:
 sudo add-apt-repository ppa:bzindovic/suitesparse-bugfix-1319687
 sudo apt-get update
-sudo apt-get install libsuitesparse-dev
-</code></pre></div></p>
+sudo apt-get install libsuitesparse-dev</code></pre></p>
 </li>
 <li>
 <p>编译安装
-<div class="highlight"><pre><span></span><code>wget http://ceres-solver.org/ceres-solver-1.14.0.tar.gz
+<pre class="highlight"><code>wget http://ceres-solver.org/ceres-solver-1.14.0.tar.gz
 tar zxf ceres-solver-1.14.0.tar.gz
 mkdir ceres-bin
 cd ceres-bin
@@ -200,14 +196,13 @@ make test
 # Optionally install Ceres, it can also be exported using CMake which
 # allows Ceres to be used without requiring installation, see the documentation
 # for the EXPORT_BUILD_DIR option for more information.
-make install
-</code></pre></div></p>
+make install</code></pre></p>
 </li>
 </ul>
 <h3 id="eigen333">Eigen3.3.3 安装</h3>
 <ul>
 <li>Eigen3.3.3 安装
-<div class="highlight"><pre><span></span><code>wget https://codeload.github.com/eigenteam/eigen-git-mirror/tar.gz/3.3.3
+<pre class="highlight"><code>wget https://codeload.github.com/eigenteam/eigen-git-mirror/tar.gz/3.3.3
 mv 3.3.3 eigen-git-mirror-3.3.3.tar.gz
 tar zxf eigen-git-mirror-3.3.3.tar.gz
 cd eigen-git-mirror-3.3.3
@@ -217,13 +212,13 @@ cd build
 cmake ..
 make
 make install
-</code></pre></div></li>
+</code></pre></li>
 </ul>
 <h3 id="opencv-331">OpenCV-3.3.1 安装</h3>
 <ul>
 <li>
 <p>OpenCV-3.3.1 安装
-<div class="highlight"><pre><span></span><code>wget https://codeload.github.com/opencv/opencv/tar.gz/3.3.1
+<pre class="highlight"><code>wget https://codeload.github.com/opencv/opencv/tar.gz/3.3.1
 mv 3.3.1 opencv-3.3.1.tar.gz
 tar zxf opencv-3.3.1.tar.gz
 cd opencv-3.3.1
@@ -233,72 +228,62 @@ cd build
 cmake ..
 make -j8
 make install
-</code></pre></div></p>
+</code></pre></p>
 </li>
 <li>
 <p>编译
-<div class="highlight"><pre><span></span><code>cd ~/catkin_ws/src
+<pre class="highlight"><code>cd ~/catkin_ws/src
 git clone https://github.com/HKUST-Aerial-Robotics/VINS-Mono.git
 cd ../
 catkin_make
-source ~/catkin_ws/devel/setup.bash
-</code></pre></div></p>
+source ~/catkin_ws/devel/setup.bash</code></pre></p>
 </li>
 </ul>
 <h2 id="ros_openvio">ROS_OPENVIO 编译</h2>
 <ul>
 <li>ROS_OPENVIO 编译流程
-<div class="highlight"><pre><span></span><code>cd ~/catkin_ws/src
+<pre class="highlight"><code>cd ~/catkin_ws/src
 git clone https://gitee.com/guanglunking/OPENVIO_ROS
 cd ../
 catkin_make
-source ~/catkin_ws/devel/setup.bash
-</code></pre></div></li>
+source ~/catkin_ws/devel/setup.bash</code></pre></li>
 </ul>
 <h2 id="_1">执行</h2>
 <ul>
 <li>在三个终端中分别执行如下命令（如果单独执行rosrun openvio openvio_ros失败的话则需要先在一个新窗口中roscore）
-<div class="highlight"><pre><span></span><code>roslaunch vins_estimator euroc.launch
+<pre class="highlight"><code>roslaunch vins_estimator euroc.launch
 roslaunch vins_estimator vins_rviz.launch
-rosrun openvio openvio_ros
-</code></pre></div></li>
+rosrun openvio openvio_ros</code></pre></li>
 </ul>
 <h2 id="ros_1">ROS常用命令</h2>
 <ul>
 <li>
 <p>roscore 是你在运行所有ROS程序前首先要运行的命令
-<div class="highlight"><pre><span></span><code>roscore
-</code></pre></div></p>
+<pre class="highlight"><code>roscore</code></pre></p>
 </li>
 <li>
 <p>列出正在运行的节点
-<div class="highlight"><pre><span></span><code>rosnode list
-</code></pre></div></p>
+<pre class="highlight"><code>rosnode list</code></pre></p>
 </li>
 <li>
 <p>查看某个特定节点信息
-<div class="highlight"><pre><span></span><code>rosnode info [node_name]
-</code></pre></div></p>
+<pre class="highlight"><code>rosnode info [node_name]</code></pre></p>
 </li>
 <li>
 <p>列出所有的topic
-<div class="highlight"><pre><span></span><code>rostopic list -v
-</code></pre></div></p>
+<pre class="highlight"><code>rostopic list -v</code></pre></p>
 </li>
 <li>
 <p>显示topics上发布的message
-<div class="highlight"><pre><span></span><code>rostopic echo [topic_name]
-</code></pre></div></p>
+<pre class="highlight"><code>rostopic echo [topic_name]</code></pre></p>
 </li>
 <li>
 <p>查看topic的message类型
-<div class="highlight"><pre><span></span><code>rostopic type [topic_name]
-</code></pre></div></p>
+<pre class="highlight"><code>rostopic type [topic_name]</code></pre></p>
 </li>
 <li>
 <p>查看message数据结构
-<div class="highlight"><pre><span></span><code>rosmsg show [message_name]
-</code></pre></div></p>
+<pre class="highlight"><code>rosmsg show [message_name]</code></pre></p>
 </li>
 </ul>
               

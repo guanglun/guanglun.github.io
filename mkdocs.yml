@@ -6,6 +6,8 @@ pages:
   - ATouch 使用说明: atouch/guide.md
 - OPENVIO:
   - OPENVIO 说明: openvio/index.md
+- CXK开发板:
+  - CXK开发板 说明: cxk/index.md  
 - 数学:
   - 矩阵: math/matrix.md
   - 数学符号: math/symbol.md

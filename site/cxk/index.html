@@ -74,7 +74,9 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#_3">配置</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_4">图片及演示视频</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">说明</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">图片及演示视频</a>
     </li>
     </ul>
                     </li>
@@ -166,7 +168,16 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_4">图片及演示视频</h2>
+<h2 id="_4">说明</h2>
+<ul>
+<li>
+<p>音视频都未经压缩，目前视频是20帧每秒，音频是8KHz的采样，音频播放底噪比较大，效果不是太好。  </p>
+</li>
+<li>
+<p>上位机使用ffmpeg对输入的视频（理论上各种格式都可以）进行处理，最终生成一个.gl文件（我自定义的格式），将之通过串口烧写到板载的W25Q32 Flash上，目前使用的Flash比较小，所以限制了生成文件的大小，最大生成1min30s时长的烧写文件。  </p>
+</li>
+</ul>
+<h2 id="_5">图片及演示视频</h2>
 <p><img alt="CXK开发板" src="img/cxkboard.png" /><br />
 <br />  </p>
 <p><img alt="CXK上位机" src="img/pc.png" /><br />

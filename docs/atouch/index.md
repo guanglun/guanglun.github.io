@@ -39,9 +39,9 @@
 | 扩展坞投屏串口连接 | 已完成 |
 | WIN客户端 | 初版发布 |
 | LINUX客户端 | 初版发布 |
-| 体感模拟 | 正在研发(可能流产) |
-| LINUX嵌入式硬件 | 正在研发 |
-| 手柄连接 | 计划研发 |  
+| 体感模拟 | 初版发布 |
+| LINUX嵌入式硬件 | 已研发成功 未批量 |
+| 手柄连接 | 初版发布 |  
 
 <br />  
 
@@ -53,13 +53,23 @@
 
 [ATouch板子源码](https://gitee.com/guanglunking/ESP32_CH374U) 【开发环境：Linux SDK:ESP-DIF3.2】  
 
-[ATouch安卓后台程序源码](https://gitee.com/guanglunking/ATouchService)【开发环境：android-ndk-r13b】  
+[ATouch安卓后台程序源码（旧版）](https://gitee.com/guanglunking/ATouchService)【开发环境：android-ndk-r13b】  
+
+[ATouch安卓后台程序源码（新版）](https://gitee.com/guanglunking/atservice)【开发环境：AndroidStudio】  
+
+[ATouch外设程序源码](https://gitee.com/guanglunking/atouch-peripheral)【开发环境：cubemx keil】  
 
 [淘宝店铺](https://item.taobao.com/item.htm?id=595635571591)  
 
+[演示视频](https://www.bilibili.com/video/BV1tK4y1L7si)  
+
 [演示视频](https://www.bilibili.com/video/av53687214)  
 
-![效果图](https://images.gitee.com/uploads/images/2020/0408/110002_b982beff_683968.png "atouch2.png")
+![效果图](https://img.alicdn.com/imgextra/i4/1824403768/O1CN01cg36g91dhmzrwCiR1_!!1824403768.jpg "atouch2.png")
+
+#### 功能演示
+<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=885673644&bvid=BV1tK4y1L7si&cid=267660784&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
+<br />  
 
 #### 键鼠操作
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=53687214&cid=93910781&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  

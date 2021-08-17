@@ -8,7 +8,7 @@
 
 ## 源码和资料
 
-[Ts源码](https://github.com/guanglun/CodeNotes)  
+[TS源码](https://github.com/guanglun/CodeNotes)  
 [Vscode插件地址](https://marketplace.visualstudio.com/items?itemName=guanglun.codenotes)  
 
 ## CodeNotes(代码笔记)  
@@ -16,7 +16,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://vsmarketplacebadge.apphb.com/version-short/guanglun.codenotes.svg)](https://marketplace.visualstudio.com/items?itemName=guanglun.codenotes) 
 [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/guanglun.codenotes.svg)](https://marketplace.visualstudio.com/items?itemName=gaunglun.codenotes)   
-</br>
+</br> 
+
 * 添加注释
 * 代码标记
 * 快速跳转

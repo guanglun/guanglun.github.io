@@ -14,6 +14,11 @@ pages:
   - CXK开发板 说明: cxk/index.md  
 - PX4硬件方案:
   - PX4硬件方案 项目介绍: px4/index.md  
+- SLAM小车:
+  - SLAM小车 项目介绍: slam/index.md  
+- 其他软硬件项目:
+  - OPENMVS3: openmvs3/index.md    
+  - ATouch(V3s): atouchv3s/index.md      
 - 数学:
   - 矩阵: math/matrix.md
   - 数学符号: math/symbol.md

@@ -1,5 +1,7 @@
-# 光轮电子
-   
+# 光轮电子的开源小站
+* 本站所有项目皆为开源项目
+* 软件全部开源
+* 硬件原理图全部开源，PCB选择性开源
    
 ## 项目列表
 ### 已完成
@@ -7,10 +9,10 @@
 * [OPENVIO](openvio/index.md#openvio)
 * [CXK开发板](cxk/index.md#cxk)
 * [CodeNotes插件(Vscode)](codenotes/index.md#codenotes)
+* [其他小项目](openmvs3/index.md#openmvs3)
 ### 正在完善
 * [运动捕捉系统GLMocap](mocap/index.md#mocap)
 * [PX4硬件方案](px4/index.md#px4)
-
 ### 筹划中
 * 智能语音音响
 * 桌面机器人
@@ -46,6 +48,4 @@
 #### OPENVIO开源项目
 ![OPENVIO](https://img.alicdn.com/imgextra/i4/1824403768/O1CN01kKa13a1dhmyEs5jgs_!!1824403768.jpg)   
 
-#### 飞控
-
-![飞控](https://img9.doubanio.com/view/photo/l/public/p2628469086.webp)  
+## END

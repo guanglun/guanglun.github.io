@@ -8,6 +8,10 @@ pages:
   - OPENVIO 说明: openvio/index.md
 - CXK开发板:
   - CXK开发板 说明: cxk/index.md  
+- GLMocap:
+  - GLMocap 项目介绍: mocap/index.md  
+- CodeNotes:
+  - CodeNotes 项目介绍: codenotes/index.md 
 - 数学:
   - 矩阵: math/matrix.md
   - 数学符号: math/symbol.md

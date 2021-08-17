@@ -1,15 +1,15 @@
-# 光轮电子的技术小站
+# 光轮电子
    
    
-## 产品列表
+## 项目列表
 ### 已完成
 * [吃鸡开发板(ATouch)](atouch/index.md#atouch)
 * [OPENVIO](openvio/index.md#openvio)
 * [CXK开发板](cxk/index.md#cxk)
-* CodeNotes插件(Vscode)
+* [CodeNotes插件(Vscode)](codenotes/index.md#codenotes)
 ### 正在完善
-* 运动捕捉系统GLMocap
-* PX4硬件方案
+* [运动捕捉系统GLMocap](mocap/index.md#mocap)
+* [PX4硬件方案](px4/index.md#px4)
 
 ### 筹划中
 * 智能语音音响
@@ -31,7 +31,14 @@
 * [矩阵](math/matrix.md#matrix)
 * [数学符号](math/symbol.md#symbol)
 
+## 关于我
+
+* [关于我](about/about.md#about)
+
 ## 项目图册
+
+#### GLMocap开源项目
+![GLMocap](mocap/img/mocap2.jpg)   
 
 #### ATouch开源项目
 ![ATouch](https://img.alicdn.com/imgextra/i4/1824403768/O1CN01cg36g91dhmzrwCiR1_!!1824403768.jpg)    
@@ -42,7 +49,3 @@
 #### 飞控
 
 ![飞控](https://img9.doubanio.com/view/photo/l/public/p2628469086.webp)  
-
-#### SLAM
-
-![SLAM](img/微信图片_202102191248112.jpg)  

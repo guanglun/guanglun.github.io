@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>CXK开发板 说明 - 光轮电子</title>
+  <title>CodeNotes 项目介绍 - 光轮电子</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -19,8 +19,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "CXK\u5f00\u53d1\u677f \u8bf4\u660e";
-    var mkdocs_page_input_path = "cxk\\index.md";
+    var mkdocs_page_name = "CodeNotes \u9879\u76ee\u4ecb\u7ecd";
+    var mkdocs_page_input_path = "codenotes\\index.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -64,20 +64,8 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">CXK开发板</span></p>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">CXK开发板 说明</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#_1">简介</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_2">源码和资料</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_3">配置</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_4">说明</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_5">图片及演示视频</a>
-    </li>
-    </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../cxk/">CXK开发板 说明</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">GLMocap</span></p>
@@ -86,8 +74,22 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">CodeNotes</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../codenotes/">CodeNotes 项目介绍</a>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">CodeNotes 项目介绍</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">简介</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">源码和资料</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#codenotes">CodeNotes(代码笔记)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">快速使用</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">注意事项</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">演示</a>
+    </li>
+    </ul>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">数学</span></p>
@@ -123,11 +125,11 @@
     
       
         
-          <li>CXK开发板 &raquo;</li>
+          <li>CodeNotes &raquo;</li>
         
       
     
-    <li>CXK开发板 说明</li>
+    <li>CodeNotes 项目介绍</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -139,65 +141,41 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="cxk">CXK开发板</h1>
-<p><a id = "cxk"></a></p>
+                <h1 id="vscodecodenotes">VScode插件CodeNotes</h1>
+<p><a id = "codenotes"></a></p>
 <h2 id="_1">简介</h2>
-<p>CXK开发板就是一款基于STM32F103 MCU的开发板。</p>
+<p>处于阅读Linux内核源码时各种函数跳转繁琐且不方便记忆，所以自己写了这款VScode插件CodeNotes。代码标记、上下跳转功能强大（需要手动添加跳转）</p>
 <h2 id="_2">源码和资料</h2>
-<p><a href="https://gitee.com/guanglunking/cxkboard">开发板音视频播放源码</a>【开发环境：Vscode PIO】  </p>
-<p><a href="https://gitee.com/guanglunking/gldzpc">PC上位机</a>【开发环境：QT5.6.0 qt-opensource-windows-x86-mingw492-5.6.0】  </p>
-<p><a href="https://item.taobao.com/item.htm?ft=t&amp;id=629250846356">淘宝店铺</a>  </p>
-<h2 id="_3">配置</h2>
-<table>
-<thead>
-<tr>
-<th align="center">项目</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">STM32F103RCT6</td>
-<td align="center">ST MCU</td>
-</tr>
-<tr>
-<td align="center">W25Q32</td>
-<td align="center">4MB Flash</td>
-</tr>
-<tr>
-<td align="center">CH340N</td>
-<td align="center">串口调试通讯</td>
-</tr>
-<tr>
-<td align="center">NS8002</td>
-<td align="center">音频功率放大器</td>
-</tr>
-<tr>
-<td align="center">OLED</td>
-<td align="center">128*64</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_4">说明</h2>
+<p><a href="https://github.com/guanglun/CodeNotes">Ts源码</a><br />
+<a href="https://marketplace.visualstudio.com/items?itemName=guanglun.codenotes">Vscode插件地址</a>  </p>
+<h2 id="codenotes">CodeNotes(代码笔记)</h2>
+<p><a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-brightgreen.svg" /></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=guanglun.codenotes"><img alt="Version" src="https://vsmarketplacebadge.apphb.com/version-short/guanglun.codenotes.svg" /></a> 
+<a href="https://marketplace.visualstudio.com/items?itemName=gaunglun.codenotes"><img alt="Installs" src="https://vsmarketplacebadge.apphb.com/installs-short/guanglun.codenotes.svg" /></a> <br />
+</br>
+* 添加注释
+* 代码标记
+* 快速跳转
+* 支持标签间跳转</p>
+<h2 id="_3">快速使用</h2>
 <ul>
-<li>
-<p>音视频都未经压缩，目前视频是20帧每秒，音频是8KHz的采样，音频播放底噪比较大，效果不是太好。  </p>
-</li>
-<li>
-<p>上位机使用ffmpeg对输入的视频（理论上各种格式都可以）进行处理，最终生成一个.gl文件（我自定义的格式），将之通过串口烧写到板载的W25Q32 Flash上，目前使用的Flash比较小，所以限制了生成文件的大小，最大生成1min30s时长的烧写文件。  </p>
-</li>
+<li>打开一个工作区，在该工作区初始化CodeNotes(会在该工作区创建.codenotes文件夹存储标记)</li>
+<li>在需要做标记的位置(选择需要做标记的文件内容)右击CodeNotes Insert Mark将插入一则标记</li>
+<li>右侧可编辑标记名称、颜色、描述。描述内容支持markdown，将在鼠标在选择的文字上放置时显示</li>
 </ul>
-<h2 id="_5">图片及演示视频</h2>
-<p><img alt="CXK开发板" src="img/cxkboard.png" /><br />
-<br />  </p>
-<p><img alt="CXK上位机" src="img/pc.png" /><br />
-<br />  </p>
-<p><a href="https://www.bilibili.com/video/BV1vy4y1C7RY">演示视频 Bad Apple</a>    </p>
-<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=797410897&bvid=BV1vy4y1C7RY&cid=243857484&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p><br />  </p>
-<p><a href="https://www.bilibili.com/video/BV1F54y1C7SJ">演示视频 鸡你太美</a>    </p>
-<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=842408728&bvid=BV1F54y1C7SJ&cid=243858444&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p><br />  </p>
+<h2 id="_4">注意事项</h2>
+<ul>
+<li>目前为测试版本，不做后续兼容   </li>
+<li>项目在windows下开发，会在linux上做一般测试，mac木有所以没法测试，有BUG的话请在<a href="https://github.com/guanglun/CodeNotes/issues">Issues</a>上提  </li>
+</ul>
+<h2 id="_5">演示</h2>
+<p><br><br />
+<img alt="" src="https://gitee.com/guanglunking/code-notes/raw/master/images/show.gif" />  <br />
+<br><br />
+<img alt="" src="https://gitee.com/guanglunking/code-notes/raw/master/images/show.png" />  </p>
+<ul>
+<li>最新版软件界面和操作设置与README有所出入。</li>
+</ul>
               
             </div>
           </div>
@@ -205,10 +183,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../mocap/" class="btn btn-neutral float-right" title="GLMocap 项目介绍">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../math/matrix/" class="btn btn-neutral float-right" title="矩阵">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../openvio/" class="btn btn-neutral" title="OPENVIO 说明"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../mocap/" class="btn btn-neutral" title="GLMocap 项目介绍"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -234,10 +212,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../openvio/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../mocap/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../mocap/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../math/matrix/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

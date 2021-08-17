@@ -40,6 +40,8 @@
 ## 项目图册
 
 #### GLMocap开源项目
+![GLMocap](mocap/img/glmocap.gif)  
+<br /> 
 ![GLMocap](mocap/img/mocap2.jpg)   
 
 #### ATouch开源项目

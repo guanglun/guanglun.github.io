@@ -24,10 +24,10 @@
 
 ## 图片及演示视频
 
+![GLMocap](img/glmocap.gif)  
+<br />  
 ![GLMocap](img/mocap1.jpg)  
 <br />  
-
 ![GLMocap](img/mocap2.jpg)  
 <br />  
-
-
+<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=462396065&bvid=BV16L411J7ir&cid=391316899&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

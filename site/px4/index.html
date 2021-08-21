@@ -86,6 +86,12 @@
     <li class="toctree-l2"><a class="reference internal" href="#_1">简介</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#_2">硬件方案</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#glpx4_r329">GLPX4_R329开机自启动</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#armbianisolcpus">armbian添加isolcpus</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#_3">图片及演示视频</a>
     </li>
@@ -163,6 +169,14 @@
 <li>基于全志R329</li>
 <li>基于ESP32</li>
 </ul>
+<h3 id="glpx4_r329">GLPX4_R329开机自启动</h3>
+<p>脚本auto_run.sh
+<pre class="highlight"><code>nohup taskset -c 1 /root/px4/build/px4_raspberrypi_default/bin/px4 -s /root/px4/px4.config -d &amp;&gt; 1 &gt; /root/px4/px4.log</code></pre>
+添加至/etc/rc.local</p>
+<h3 id="armbianisolcpus">armbian添加isolcpus</h3>
+<p>vim /boot/armbianEnv.txt
+添加：
+<pre class="highlight"><code>extraargs=isolcpus=1</code></pre></p>
 <h2 id="_3">图片及演示视频</h2>
 <p><img alt="px4" src="img/px4_0.jpg" /><br />
 <br />  </p>

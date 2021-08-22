@@ -87,13 +87,31 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#_2">硬件方案</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#glpx4-f4">GLPX4-F4</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#glpx4-h7">GLPX4-H7</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#glpx4-r329">GLPX4-R329</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#glpx4-esp32">GLPX4-ESP32</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">图片及演示视频</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#glpx4-r329_1">GLPX4-R329</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#glpx4-f4_1">GLPX4-F4</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#glpx4-h7_1">GLPX4-H7</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#glpx4-esp32_1">GLPX4-ESP32</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#glpx4_r329">GLPX4_R329开机自启动</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#armbianisolcpus">armbian添加isolcpus</a>
     </li>
         </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_3">图片及演示视频</a>
     </li>
     </ul>
                     </li>
@@ -163,12 +181,88 @@
 <h2 id="_1">简介</h2>
 <p>基于px4做的几款飞控硬件方案</p>
 <h2 id="_2">硬件方案</h2>
+<table>
+<thead>
+<tr>
+<th align="center">命名</th>
+<th align="center">方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">GLPX4-F4</td>
+<td align="center">基于STM32F427VIT6</td>
+</tr>
+<tr>
+<td align="center">GLPX4-H7</td>
+<td align="center">基于STM32H743VIH6</td>
+</tr>
+<tr>
+<td align="center">GLPX4-R329</td>
+<td align="center">基于全志R329</td>
+</tr>
+<tr>
+<td align="center">GLPX4-ESP32</td>
+<td align="center">基于ESP32</td>
+</tr>
+</tbody>
+</table>
+<h3 id="glpx4-f4">GLPX4-F4</h3>
 <ul>
-<li>基于STM32F427VIT6</li>
-<li>基于STM32H743VIH6</li>
-<li>基于全志R329</li>
-<li>基于ESP32</li>
+<li>主控: STM32F427VIT6</li>
+<li>IMU： MPU9250 ICM-20602</li>
+<li>磁力计：LIS3MDL</li>
+<li>气压计：MS5611</li>
+<li>光流：PMW3901MB</li>
+<li>激光：VL53L1X</li>
 </ul>
+<h3 id="glpx4-h7">GLPX4-H7</h3>
+<ul>
+<li>主控：STM32H743VIH6</li>
+<li>IMU：MPU9250 ICM-20602</li>
+<li>磁力计：LIS3MDL</li>
+<li>气压计：MS5611</li>
+</ul>
+<h3 id="glpx4-r329">GLPX4-R329</h3>
+<ul>
+<li>主控：全志R329</li>
+<li>IMU: ICM-20689 ICM-20602</li>
+<li>磁力计：IST8310</li>
+<li>气压计：MS5611</li>
+<li>PWM: PCA9685PW</li>
+</ul>
+<h3 id="glpx4-esp32">GLPX4-ESP32</h3>
+<ul>
+<li>主控： ESP32-D2WD</li>
+<li>IMU： MPU9250</li>
+<li>光流：PMW3901MB</li>
+<li>激光：VL53L1X</li>
+</ul>
+<h2 id="_3">图片及演示视频</h2>
+<h3 id="glpx4-r329_1">GLPX4-R329</h3>
+<p><iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=847546378&bvid=BV1UL4y1a76o&cid=394305751&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br />
+<br />  </p>
+<p><img alt="px4" src="img/px4_2.jpg" /><br />
+<br />  </p>
+<p><img alt="px4" src="img/px4_4.jpg" /><br />
+<br />  </p>
+<p><img alt="px4" src="img/px4_5.jpg" /><br />
+<br />  </p>
+<p><img alt="px4" src="img/px4_6.jpg" /><br />
+<br />  </p>
+<h3 id="glpx4-f4_1">GLPX4-F4</h3>
+<p><iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=420006883&bvid=BV1d3411q7Dd&cid=394311072&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br />
+<br />  </p>
+<p><img alt="px4" src="img/px4_0.jpg" /><br />
+<br />  </p>
+<h3 id="glpx4-h7_1">GLPX4-H7</h3>
+<p><img alt="px4" src="img/px4_1.jpg" /><br />
+<br />  </p>
+<h3 id="glpx4-esp32_1">GLPX4-ESP32</h3>
+<p><iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=420001535&bvid=BV1N3411B7ig&cid=394308441&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br />
+<br />  </p>
+<p><img alt="px4" src="img/px4_3.jpg" /><br />
+<br />  </p>
 <h3 id="glpx4_r329">GLPX4_R329开机自启动</h3>
 <p>脚本auto_run.sh
 <pre class="highlight"><code>nohup taskset -c 1 /root/px4/build/px4_raspberrypi_default/bin/px4 -s /root/px4/px4.config -d &amp;&gt; 1 &gt; /root/px4/px4.log</code></pre>
@@ -177,15 +271,6 @@
 <p>vim /boot/armbianEnv.txt
 添加：
 <pre class="highlight"><code>extraargs=isolcpus=1</code></pre></p>
-<h2 id="_3">图片及演示视频</h2>
-<p><img alt="px4" src="img/px4_0.jpg" /><br />
-<br />  </p>
-<p><img alt="px4" src="img/px4_1.jpg" /><br />
-<br />  </p>
-<p><img alt="px4" src="img/px4_2.jpg" /><br />
-<br />  </p>
-<p><img alt="px4" src="img/px4_3.jpg" /><br />
-<br />  </p>
               
             </div>
           </div>

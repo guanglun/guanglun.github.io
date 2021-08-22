@@ -12,3 +12,6 @@ OPENMVS3
 ![openmvs3](img/openmvs3_1.jpg)  
 <br />  
 
+![openvio-s3](img/openmvs3_2.jpg)  
+<br />  
+

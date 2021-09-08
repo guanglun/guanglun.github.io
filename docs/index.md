@@ -9,7 +9,8 @@
 * [OPENVIO](openvio/index.md#openvio)
 * [CXK开发板](cxk/index.md#cxk)
 * [CodeNotes插件(Vscode)](codenotes/index.md#codenotes)
-* [其他小项目](openmvs3/index.md#openmvs3)
+* [OPENMVS3](openmvs3/index.md#openmvs3)
+* [ATouchV3s](atouchv3s/index.md#atouchv3s)
 ### 正在完善
 * [运动捕捉系统GLMocap](mocap/index.md#mocap)
 * [PX4硬件方案](px4/index.md#px4)
@@ -23,32 +24,20 @@
   
 ## 链接
 
+* [github](https://github.com/guanglun)
+* [gitee](https://gitee.com/guanglunking)
 * [博客(old)](https://www.cnblogs.com/guanglun)
 * [博客(new)](http://www.guanglundz.com:8086)
 * [B站](https://space.bilibili.com/20909602)
 * [淘宝](https://shop130446973.taobao.com/)
-* [光轮电子交流群(群号:558343678)](https://jq.qq.com/?_wv=1027&k=5YPH1CV)
+* [光轮电子交流群(QQ群号:558343678)](https://jq.qq.com/?_wv=1027&k=5YPH1CV)
 
 ## 技术笔记
 
 * [矩阵](math/matrix.md#matrix)
 * [数学符号](math/symbol.md#symbol)
 
-## 关于我
+## 关于本站
 
-* [关于我](about/about.md#about)
+* [关于本站](about/about.md#about)
 
-## 项目图册
-
-#### GLMocap开源项目
-![GLMocap](mocap/img/glmocap.gif)  
-<br /> 
-![GLMocap](mocap/img/mocap2.jpg)   
-
-#### ATouch开源项目
-![ATouch](https://img.alicdn.com/imgextra/i4/1824403768/O1CN01cg36g91dhmzrwCiR1_!!1824403768.jpg)    
-
-#### OPENVIO开源项目
-![OPENVIO](https://img.alicdn.com/imgextra/i4/1824403768/O1CN01kKa13a1dhmyEs5jgs_!!1824403768.jpg)   
-
-## END

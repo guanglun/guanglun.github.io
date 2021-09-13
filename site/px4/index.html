@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
   <link href="../css/style.css" rel="stylesheet" />
   
   <script>
@@ -26,8 +26,9 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
+  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,7 +42,7 @@
         <a href=".." class="icon icon-home"> 光轮电子</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -112,6 +113,8 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#px4_1">PX4 飞控稳定调试</a>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -172,7 +175,6 @@
   
   <hr/>
 </div>
-
           <div role="main">
             <div class="section">
               
@@ -240,8 +242,8 @@
 </ul>
 <h2 id="_3">图片及演示视频</h2>
 <h3 id="glpx4-r329_1">GLPX4-R329</h3>
-<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=847546378&bvid=BV1UL4y1a76o&cid=394305751&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p><br />  </p>
+<p><iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=847546378&bvid=BV1UL4y1a76o&cid=394305751&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br />
+<br />  </p>
 <p><img alt="px4" src="img/px4_2.jpg" /><br />
 <br />  </p>
 <p><img alt="px4" src="img/px4_4.jpg" /><br />
@@ -251,28 +253,44 @@
 <p><img alt="px4" src="img/px4_6.jpg" /><br />
 <br />  </p>
 <h3 id="glpx4-f4_1">GLPX4-F4</h3>
-<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=420006883&bvid=BV1d3411q7Dd&cid=394311072&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p><br />  </p>
+<p><iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=420006883&bvid=BV1d3411q7Dd&cid=394311072&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br />
+<br />  </p>
 <p><img alt="px4" src="img/px4_0.jpg" /><br />
 <br />  </p>
 <h3 id="glpx4-h7_1">GLPX4-H7</h3>
 <p><img alt="px4" src="img/px4_1.jpg" /><br />
 <br />  </p>
 <h3 id="glpx4-esp32_1">GLPX4-ESP32</h3>
-<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=420001535&bvid=BV1N3411B7ig&cid=394308441&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<p><br />  </p>
+<p><iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=420001535&bvid=BV1N3411B7ig&cid=394308441&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br />
+<br />  </p>
 <p><img alt="px4" src="img/px4_3.jpg" /><br />
 <br />  </p>
 <h3 id="glpx4_r329">GLPX4_R329开机自启动</h3>
 <p>脚本auto_run.sh
-<div class="highlight"><pre><span></span><code>nohup taskset -c 1 /root/px4/build/px4_raspberrypi_default/bin/px4 -s /root/px4/px4.config -d &amp;&gt; 1 &gt; /root/px4/px4.log
-</code></pre></div>
+<pre class="highlight"><code>nohup taskset -c 1 /root/px4/build/px4_raspberrypi_default/bin/px4 -s /root/px4/px4.config -d &amp;&gt; 1 &gt; /root/px4/px4.log</code></pre>
 添加至/etc/rc.local</p>
 <h3 id="armbianisolcpus">armbian添加isolcpus</h3>
 <p>vim /boot/armbianEnv.txt
 添加：
-<div class="highlight"><pre><span></span><code>extraargs=isolcpus=1
-</code></pre></div></p>
+<pre class="highlight"><code>extraargs=isolcpus=1</code></pre></p>
+<h2 id="px4_1">PX4 飞控稳定调试</h2>
+<ul>
+<li>
+<p>首先在自稳模式下将PID参数调稳定，调试<code>Multicopter Rate Control</code>菜单下<code>MC_ROLLRATE_P</code>, <code>MC_ROLLRATE_I</code>, <code>MC_ROLLRATE_D</code>,<code>MC_PITCHRATE_P</code>,<code>MC_PITCHRATE_I</code>,<code>MC_PITCHRATE_D</code>这六个参数即可<br />
+<br />  </p>
+</li>
+<li>
+<p>自稳PID调试完成后，此时飞行会发现飞行器总是会朝某个方向“倾斜”飞行，此时最好先将机体各部位都固定稳定，中心最好在机体中心（电池位置最好也固定，不然电池的拆卸也是影响重心的一个要点）。然后调试<code>Sensors</code>菜单下的<code>SENS_BOARD_X_OFF</code>和<code>SENS_BOARD_Y_OFF</code>两个参数，最完美的状态是调试到roll和pitch不总是朝一个方向飞行，只会随机朝某个方向缓慢飞行<br />
+<br />  </p>
+</li>
+<li>
+<p>随后切换到offboard模式进行定位调试，如果设置指定高度后飞行器一直飞行不到指定高度，请增大<code>Multicopter Position Control</code>菜单下的<code>MPC_THR_HOVER</code>和<code>MPC_Z_P</code>参数<br />
+<br />  </p>
+</li>
+<li>
+<p>随后调试定位的参数，<code>Multicopter Position Control</code>菜单下的<code>MPC_XY_P</code>,<code>MPC_XY_TRAJ_P</code>,<code>MPC_XY_VEL_D_ACC</code>,<code>MPC_XY_VEL_I_ACC</code>,<code>MPC_XY_VEL_P_ACC</code>这几个参数，注意增大其中<code>MPC_XY_VEL_I_ACC</code>参数对减小偏移有显著效果</p>
+</li>
+</ul>
               
             </div>
           </div>
@@ -306,18 +324,17 @@
   </div>
 
   <div class="rst-versions" role="note" aria-label="versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-      <span><a href="../cxk/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../slam/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../cxk/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../slam/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
 </div>
     <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
       <script src="../search/main.js" defer></script>

@@ -2,20 +2,20 @@ site_name: 光轮电子
 pages:
 - 主页: index.md
 - ATouch:
-  - ATouch 项目介绍: atouch/index.md
+  - ATouch: atouch/index.md
   - ATouch 使用说明: atouch/guide.md
 - OPENVIO:
-  - OPENVIO 说明: openvio/index.md
+  - OPENVIO: openvio/index.md
 - GLMocap:
-  - GLMocap 项目介绍: mocap/index.md  
+  - GLMocap: mocap/index.md  
 - CodeNotes:
-  - CodeNotes 项目介绍: codenotes/index.md 
+  - CodeNotes: codenotes/index.md 
 - CXK开发板:
-  - CXK开发板 说明: cxk/index.md  
+  - CXK开发板: cxk/index.md  
 - PX4硬件方案:
-  - PX4硬件方案 项目介绍: px4/index.md  
+  - PX4硬件方案: px4/index.md  
 - SLAM小车:
-  - SLAM小车 项目介绍: slam/index.md  
+  - SLAM小车: slam/index.md  
 - 其他软硬件项目:
   - OPENMVS3: openmvs3/index.md    
   - ATouch(V3s): atouchv3s/index.md      

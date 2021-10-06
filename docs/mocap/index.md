@@ -6,6 +6,10 @@
 
 运动捕捉系统GLMocap包括多相机硬件开源方案和上位机软件算法方案的低成本运动捕捉系统。目前设计指标为低成本实现毫米级空间定位，辅助无人机等有室内定位需求的装置和设备。  
 
+## 源码地址
+[https://github.com/guanglun/GLMocap](https://github.com/guanglun/GLMocap)  
+[https://gitee.com/guanglunking/GLMocap](https://gitee.com/guanglunking/GLMocap)  
+
 ## 软硬件基本说明
 * 上位机基于QT5，C++编程
 * 硬件为加装红外装置的[OPENVIO摄像头](../openvio/index.md#openvio)
@@ -68,6 +72,9 @@
 * 定位未加滤波
 * 定位点初始化后一旦丢失或者重合，数据点将永远丢失或者错乱，此处程序需要优化
 * 摄像头本身分辨率和帧率限制
+
+## 感谢
+[https://github.com/gwjensen/SnakeStrike](https://github.com/gwjensen/SnakeStrike)  
 
 ## 图片及演示视频
 <br />  

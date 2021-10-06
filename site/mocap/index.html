@@ -70,23 +70,27 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#_1">简介</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_2">软硬件基本说明</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">源码地址</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_3">软件编译环境说明</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">软硬件基本说明</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_4">最终目标</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">软件编译环境说明</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_5">硬件功能研发进度</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">最终目标</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_6">上位机功能研发进度</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">硬件功能研发进度</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_7">硬件参数</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">上位机功能研发进度</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_8">关于图像捕捉同步</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_8">硬件参数</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_9">当前存在问题及待实现功能</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_9">关于图像捕捉同步</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_10">图片及演示视频</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_10">当前存在问题及待实现功能</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_11">感谢</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_12">图片及演示视频</a>
     </li>
     </ul>
                     </li>
@@ -170,12 +174,15 @@
 <p><a id = "mocap"></a></p>
 <h2 id="_1">简介</h2>
 <p>运动捕捉系统GLMocap包括多相机硬件开源方案和上位机软件算法方案的低成本运动捕捉系统。目前设计指标为低成本实现毫米级空间定位，辅助无人机等有室内定位需求的装置和设备。  </p>
-<h2 id="_2">软硬件基本说明</h2>
+<h2 id="_2">源码地址</h2>
+<p><a href="https://github.com/guanglun/GLMocap">https://github.com/guanglun/GLMocap</a><br />
+<a href="https://gitee.com/guanglunking/GLMocap">https://gitee.com/guanglunking/GLMocap</a>  </p>
+<h2 id="_3">软硬件基本说明</h2>
 <ul>
 <li>上位机基于QT5，C++编程</li>
 <li>硬件为加装红外装置的<a href="../openvio/#openvio">OPENVIO摄像头</a></li>
 </ul>
-<h2 id="_3">软件编译环境说明</h2>
+<h2 id="_4">软件编译环境说明</h2>
 <ul>
 <li>目前仅支持windows下编译使用，linux环境未经测试</li>
 <li>使用Qt5.12.11,mingw730_64编译</li>
@@ -187,12 +194,12 @@
 <li>release提供的编译好的exe和库皆为64位版本  </li>
 <li>使用vscode下的cmake tools插件可轻松编译</li>
 </ul>
-<h2 id="_4">最终目标</h2>
+<h2 id="_5">最终目标</h2>
 <ul>
 <li>毫米级室内定位</li>
 <li>室内多机编队</li>
 </ul>
-<h2 id="_5">硬件功能研发进度</h2>
+<h2 id="_6">硬件功能研发进度</h2>
 <table>
 <thead>
 <tr>
@@ -223,7 +230,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_6">上位机功能研发进度</h2>
+<h2 id="_7">上位机功能研发进度</h2>
 <table>
 <thead>
 <tr>
@@ -274,18 +281,18 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_7">硬件参数</h2>
+<h2 id="_8">硬件参数</h2>
 <p>* MCU : STM32H743VIT6<br />
 * sensor : MT9V034(目前在45fps帧率下捕捉)<br />
 * USB2.0<br />
 * 850nm红外光源  </p>
-<h2 id="_8">关于图像捕捉同步</h2>
+<h2 id="_9">关于图像捕捉同步</h2>
 <p>目前方案基于USB传输图像至PC做处理，根相机节点负责产生指定周期的采样触发信号给各个相机节点，相机在捕获到上升沿或下降沿后去触发感光芯片的capture功能，根据示波器测得的捕获到同一帧数据的延迟在100ns以内。  </p>
 <p>根节点-------------------------------------(45hz触发信号)<br />
 &#8195;&#8195;&#8195;&#8195;|&#8195;&#8195;&#8195;&#8195;|&#8195;&#8195;&#8195;&#8195;|&#8195;&#8195;&#8195;&#8195;|<br />
 &#8195;&#8195;&#8195;&#8195;|&#8195;&#8195;&#8195;&#8195;|&#8195;&#8195;&#8195;&#8195;|&#8195;&#8195;&#8195;&#8195;|<br />
 &#8195;&#8195;根节点&#8195;子节点&#8195;子节点&#8195;子节点  </p>
-<h2 id="_9">当前存在问题及待实现功能</h2>
+<h2 id="_10">当前存在问题及待实现功能</h2>
 <ul>
 <li>摄像头标定使用opencv的话对比matlab精度较低，速度也非常的慢</li>
 <li>目前标定使用棋盘标定，没有mark点标定灵活好用</li>
@@ -293,7 +300,9 @@
 <li>定位点初始化后一旦丢失或者重合，数据点将永远丢失或者错乱，此处程序需要优化</li>
 <li>摄像头本身分辨率和帧率限制</li>
 </ul>
-<h2 id="_10">图片及演示视频</h2>
+<h2 id="_11">感谢</h2>
+<p><a href="https://github.com/gwjensen/SnakeStrike">https://github.com/gwjensen/SnakeStrike</a>  </p>
+<h2 id="_12">图片及演示视频</h2>
 <p><br /><br />
 <img alt="GLMocap" src="img/mocap4.jpg" /> 
 <br /> 

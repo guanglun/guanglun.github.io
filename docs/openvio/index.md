@@ -10,6 +10,14 @@ OPENVIO 一款脱胎于OPENMV的智能摄像头。
 
 ## 源码和资料
 
+[新架构OPENVIO-APP源码(github)](https://github.com/guanglun/openvio)【开发环境：Vscode Makefile】  
+
+[新架构OPENVIO-BOOTLOADER源码(github)](https://github.com/guanglun/openvio_bootloader)【开发环境：Vscode Makefile】 
+
+[新架构OPENVIO-APP源码(gitee)](https://gitee.com/guanglunking/openvio)【开发环境：Vscode Makefile】  
+
+[新架构OPENVIO-BOOTLOADER源码(gitee)](https://gitee.com/guanglunking/openvio_bootloader)【开发环境：Vscode Makefile】  
+
 [OPENVIO源码](https://gitee.com/guanglunking/OPENVIO_BOARD)【开发环境：Keil5】  
 
 [OPENVIO PC上位机](https://gitee.com/guanglunking/OPENVIO_PC)【开发环境：QT5.6.0 qt-opensource-windows-x86-mingw492-5.6.0】  

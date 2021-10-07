@@ -79,6 +79,8 @@
 ## 图片及演示视频
 <br />  
 ![GLMocap](img/mocap4.jpg) 
+<br />  
+<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=505922419&bvid=BV1eg411F7gY&cid=420999050&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
 <br /> 
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=975472490&bvid=BV1f44y1t7sN&cid=408341305&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
 <br />  

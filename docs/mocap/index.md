@@ -78,7 +78,7 @@
 
 ## 图片及演示视频
 <br />  
-![GLMocap](img/mocap4.jpg) 
+![GLMocap](img/mocap5.jpg) 
 <br />  
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=719184650&bvid=BV1cQ4y1U7HJ&cid=442156475&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
 <br /> 
@@ -89,6 +89,8 @@
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=932869945&bvid=BV1WM4y1G7vQ&cid=403535074&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <br />  
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=462396065&bvid=BV16L411J7ir&cid=391316899&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<br />  
+![GLMocap](img/mocap4.jpg) 
 <br />  
 ![GLMocap](img/mocap3.jpg)  
 <br />  

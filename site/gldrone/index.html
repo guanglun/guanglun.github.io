@@ -75,7 +75,13 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#_1">简介</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_2">图片及演示视频</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">设计文件</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">说明</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">存在的问题</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">图片及演示视频</a>
     </li>
     </ul>
                     </li>
@@ -155,13 +161,39 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="gldrone">GLDRONE</h1>
+                <h1 id="gldrone">开源四旋翼飞行器GLDrone</h1>
 <p><a id = "gldrone"></a></p>
 <h2 id="_1">简介</h2>
 <p>GLDrone是独立自制机架和电调飞控的开源项目，轴距在140左右的小机型，为室内飞行与室内编队实验而研发。</p>
-<h2 id="_2">图片及演示视频</h2>
-<p><img alt="gldrone" src="img/gldrone1.jpg" /><br />
-<img alt="gldrone" src="img/gldrone2.jpg" /><br />
+<h2 id="_2">设计文件</h2>
+<p><a href="https://github.com/guanglun/GLDrone">机架设计文件(使用Fusion360)</a><br />
+<a href="https://oshwhub.com/guanglun/gldrone_blheli_esc">电调原理图PCB(立创EDA)</a><br />
+<a href="https://oshwhub.com/guanglun/gldrone_px4">飞控原理图PCB(立创EDA)</a><br />
+<a href="https://github.com/guanglun/PX4-Autopilot">修改后的PX4源码(见)</a><br />
+机架设计文件Fusion360分享地址：<a href="https://a360.co/30LNv4s">https://a360.co/30LNv4s</a>  </p>
+<h2 id="_3">说明</h2>
+<ul>
+<li>电调设计参考<a href="https://github.com/ckflight/ESC_BLDC_HARDWARE">https://github.com/ckflight/ESC_BLDC_HARDWARE</a>  </li>
+<li>飞控为PX4 FMUv4 </li>
+<li>由于电调飞控V1.1版本修改了V1.0版本发现的问题后未经打样测试，所以请谨慎使用！</li>
+</ul>
+<h2 id="_4">存在的问题</h2>
+<ul>
+<li>警告！电调PCB由于四合一电调采用了模块复制，所以丝印只有MOTO4的正确，其他MOTO请参考MOTO4放置元器件！其中未连接的网络是由于复制过程中没有改网络编号所致，无需连接。</li>
+<li>电调供给飞控的5V电源由于经过了在飞控PCB中经过了一个二极管导致压降至4.5V左右，应提高电调输出的电压。</li>
+</ul>
+<h2 id="_5">图片及演示视频</h2>
+<p><img alt="gldrone" src="img/gldrone1.jpg" /> <br />
+<br /><br />
+<img alt="gldrone" src="img/gldrone2.jpg" /> <br />
+<br /><br />
+<img alt="gldrone" src="img/gldrone3.jpg" /> <br />
+<br /><br />
+<img alt="gldrone" src="img/gldrone4.jpg" /> <br />
+<br /><br />
+<img alt="gldrone" src="img/gldrone5.jpg" /> <br />
+<br /><br />
+<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=719184650&bvid=BV1cQ4y1U7HJ&cid=442156475&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br />
 <br /><br />
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=891320934&bvid=BV1EP4y1L723&cid=432987595&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br />
 <br /><br />

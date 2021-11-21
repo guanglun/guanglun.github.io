@@ -13,6 +13,7 @@
 * [ATouchV3s](atouchv3s/index.md#atouchv3s)
 ### 正在完善
 * [运动捕捉系统GLMocap](mocap/index.md#mocap)
+* [开源四旋翼飞行器GLDrone](gldrone/index.md#gldrone)
 * [PX4硬件方案](px4/index.md#px4)
 ### 筹划中
 * 智能语音音响

@@ -8,12 +8,14 @@ pages:
   - OPENVIO: openvio/index.md
 - GLMocap:
   - GLMocap: mocap/index.md  
+- GLDrone:
+  - GLDrone: gldrone/index.md    
+- PX4硬件方案:
+  - PX4硬件方案: px4/index.md   
 - CodeNotes:
   - CodeNotes: codenotes/index.md 
 - CXK开发板:
   - CXK开发板: cxk/index.md  
-- PX4硬件方案:
-  - PX4硬件方案: px4/index.md  
 - SLAM小车:
   - SLAM小车: slam/index.md  
 - 其他软硬件项目:

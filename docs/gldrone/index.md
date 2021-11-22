@@ -33,9 +33,17 @@ GLDrone项目使用MIT协议，代码及机架、电调飞控PCB皆开放源文�
 * 电调供给飞控的5V电源由于经过了在飞控PCB中经过了一个二极管导致压降至4.5V左右，应提高电调输出的电压。
 * 由于电调飞控V1.1版本修改了V1.0版本发现的问题后未经打样测试，所以请谨慎使用！
 
-## 图片及演示视频
+## 图片及演示视频 
+* [【硬核开源】自制运动捕捉我的自制飞行器！自研开源项目GLMocap与GLDrone最新进展](https://www.bilibili.com/video/BV1cQ4y1U7HJ/)  
+* [自制机架GLMocap室内定位效果](https://www.bilibili.com/video/BV1EP4y1L723/)  
+* [>>硬核开源! GLDrone开源四旋翼无人机项目](https://www.bilibili.com/video/BV1vf4y1M7S2/)  
+<br />
 ![gldrone](img/gldrone7.jpg)   
 <br />  
+![gldrone](img/gldrone12.jpg)  
+<br /> 
+![gldrone](img/gldrone13.jpg)  
+<br /> 
 ![gldrone](img/gldrone1.jpg)   
 <br />  
 ![gldrone](img/gldrone2.jpg)   
@@ -55,8 +63,7 @@ GLDrone项目使用MIT协议，代码及机架、电调飞控PCB皆开放源文�
 ![gldrone](img/gldrone5.jpg)   
 <br />  
 ![gldrone](img/gldrone11.jpg)  
-<br />  
-
+<br /> 
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=719184650&bvid=BV1cQ4y1U7HJ&cid=442156475&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
 <br />  
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=891320934&bvid=BV1EP4y1L723&cid=432987595&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  

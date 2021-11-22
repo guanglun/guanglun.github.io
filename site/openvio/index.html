@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   <link href="../css/style.css" rel="stylesheet" />
   
   <script>
@@ -26,9 +26,8 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -42,7 +41,7 @@
         <a href=".." class="icon icon-home"> 光轮电子</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -200,6 +199,7 @@
   
   <hr/>
 </div>
+
           <div role="main">
             <div class="section">
               
@@ -320,47 +320,55 @@
 <ul>
 <li>
 <p>设置Ubuntu的sources.list
-<pre class="highlight"><code>sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" &gt; /etc/apt/sources.list.d/ros-latest.list'</code></pre></p>
+<div class="highlight"><pre><span></span><code>sudo sh -c &#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;
+</code></pre></div></p>
 </li>
 <li>
 <p>设置key
-<pre class="highlight"><code>sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654</code></pre></p>
+<div class="highlight"><pre><span></span><code>sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+</code></pre></div></p>
 </li>
 <li>
 <p>更新package
-<pre class="highlight"><code>sudo apt-get update</code></pre></p>
+<div class="highlight"><pre><span></span><code>sudo apt-get update
+</code></pre></div></p>
 </li>
 <li>
 <p>安装ROS kinetic完整版
-<pre class="highlight"><code>sudo apt-get install ros-kinetic-desktop-full</code></pre></p>
+<div class="highlight"><pre><span></span><code>sudo apt-get install ros-kinetic-desktop-full
+</code></pre></div></p>
 </li>
 <li>
 <p>安装完可以查看可用的package
-<pre class="highlight"><code>apt-cache search ros-kinetic</code></pre></p>
+<div class="highlight"><pre><span></span><code>apt-cache search ros-kinetic
+</code></pre></div></p>
 </li>
 <li>
 <p>更新环境
-<pre class="highlight"><code>echo "source /opt/ros/kinetic/setup.bash" &gt;&gt; ~/.bashrc
-source /opt/ros/kinetic/setup.bash</code></pre></p>
+<div class="highlight"><pre><span></span><code>echo &quot;source /opt/ros/kinetic/setup.bash&quot; &gt;&gt; ~/.bashrc
+source /opt/ros/kinetic/setup.bash
+</code></pre></div></p>
 </li>
 <li>
 <p>创建工作空间
-<pre class="highlight"><code>mkdir -p ~/catkin_ws/src
+<div class="highlight"><pre><span></span><code>mkdir -p ~/catkin_ws/src
 mkdir -p ~/catkin_ws/build
-mkdir -p ~/catkin_ws/devel</code></pre></p>
+mkdir -p ~/catkin_ws/devel
+</code></pre></div></p>
 </li>
 </ul>
 <h3 id="vins-mono_1">VINS-MONO安装编译</h3>
 <ul>
 <li>安装package
-<pre class="highlight"><code>sudo apt-get install ros-kinetic-cv-bridge ros-kinetic-tf ros-kinetic-message-filters ros-kinetic-image-transport</code></pre></li>
+<div class="highlight"><pre><span></span><code>sudo apt-get install ros-kinetic-cv-bridge ros-kinetic-tf ros-kinetic-message-filters ros-kinetic-image-transport
+</code></pre></div></li>
 </ul>
 <h4 id="ceres">安装Ceres</h4>
 <p><a href="http://ceres-solver.org/installation.html">Ceres安装链接</a></p>
 <ul>
 <li>
 <p>编译准备
-<pre class="highlight"><code># CMake
+<div class="highlight"><pre><span></span><code># CMake
 sudo apt-get install cmake
 # google-glog + gflags
 sudo apt-get install libgoogle-glog-dev
@@ -377,11 +385,12 @@ sudo apt-get install libsuitesparse-dev
 #   add the following PPA:
 sudo add-apt-repository ppa:bzindovic/suitesparse-bugfix-1319687
 sudo apt-get update
-sudo apt-get install libsuitesparse-dev</code></pre></p>
+sudo apt-get install libsuitesparse-dev
+</code></pre></div></p>
 </li>
 <li>
 <p>编译安装
-<pre class="highlight"><code>wget http://ceres-solver.org/ceres-solver-1.14.0.tar.gz
+<div class="highlight"><pre><span></span><code>wget http://ceres-solver.org/ceres-solver-1.14.0.tar.gz
 tar zxf ceres-solver-1.14.0.tar.gz
 mkdir ceres-bin
 cd ceres-bin
@@ -391,13 +400,14 @@ make test
 # Optionally install Ceres, it can also be exported using CMake which
 # allows Ceres to be used without requiring installation, see the documentation
 # for the EXPORT_BUILD_DIR option for more information.
-make install</code></pre></p>
+make install
+</code></pre></div></p>
 </li>
 </ul>
 <h4 id="eigen333">Eigen3.3.3 安装</h4>
 <ul>
 <li>Eigen3.3.3 安装
-<pre class="highlight"><code>wget https://codeload.github.com/eigenteam/eigen-git-mirror/tar.gz/3.3.3
+<div class="highlight"><pre><span></span><code>wget https://codeload.github.com/eigenteam/eigen-git-mirror/tar.gz/3.3.3
 mv 3.3.3 eigen-git-mirror-3.3.3.tar.gz
 tar zxf eigen-git-mirror-3.3.3.tar.gz
 cd eigen-git-mirror-3.3.3
@@ -407,13 +417,13 @@ cd build
 cmake ..
 make
 make install
-</code></pre></li>
+</code></pre></div></li>
 </ul>
 <h4 id="opencv-331">OpenCV-3.3.1 安装</h4>
 <ul>
 <li>
 <p>OpenCV-3.3.1 安装
-<pre class="highlight"><code>wget https://codeload.github.com/opencv/opencv/tar.gz/3.3.1
+<div class="highlight"><pre><span></span><code>wget https://codeload.github.com/opencv/opencv/tar.gz/3.3.1
 mv 3.3.1 opencv-3.3.1.tar.gz
 tar zxf opencv-3.3.1.tar.gz
 cd opencv-3.3.1
@@ -423,62 +433,72 @@ cd build
 cmake ..
 make -j8
 make install
-</code></pre></p>
+</code></pre></div></p>
 </li>
 <li>
 <p>编译
-<pre class="highlight"><code>cd ~/catkin_ws/src
+<div class="highlight"><pre><span></span><code>cd ~/catkin_ws/src
 git clone https://github.com/HKUST-Aerial-Robotics/VINS-Mono.git
 cd ../
 catkin_make
-source ~/catkin_ws/devel/setup.bash</code></pre></p>
+source ~/catkin_ws/devel/setup.bash
+</code></pre></div></p>
 </li>
 </ul>
 <h3 id="ros_openvio">ROS_OPENVIO 编译</h3>
 <ul>
 <li>ROS_OPENVIO 编译流程
-<pre class="highlight"><code>cd ~/catkin_ws/src
+<div class="highlight"><pre><span></span><code>cd ~/catkin_ws/src
 git clone https://gitee.com/guanglunking/OPENVIO_ROS
 cd ../
 catkin_make
-source ~/catkin_ws/devel/setup.bash</code></pre></li>
+source ~/catkin_ws/devel/setup.bash
+</code></pre></div></li>
 </ul>
 <h3 id="_5">执行</h3>
 <ul>
 <li>在三个终端中分别执行如下命令（如果单独执行rosrun openvio openvio_ros失败的话则需要先在一个新窗口中roscore）
-<pre class="highlight"><code>roslaunch vins_estimator euroc.launch
+<div class="highlight"><pre><span></span><code>roslaunch vins_estimator euroc.launch
 roslaunch vins_estimator vins_rviz.launch
-rosrun openvio openvio_ros</code></pre></li>
+rosrun openvio openvio_ros
+</code></pre></div></li>
 </ul>
 <h3 id="ros_1">ROS常用命令</h3>
 <ul>
 <li>
 <p>roscore 是你在运行所有ROS程序前首先要运行的命令
-<pre class="highlight"><code>roscore</code></pre></p>
+<div class="highlight"><pre><span></span><code>roscore
+</code></pre></div></p>
 </li>
 <li>
 <p>列出正在运行的节点
-<pre class="highlight"><code>rosnode list</code></pre></p>
+<div class="highlight"><pre><span></span><code>rosnode list
+</code></pre></div></p>
 </li>
 <li>
 <p>查看某个特定节点信息
-<pre class="highlight"><code>rosnode info [node_name]</code></pre></p>
+<div class="highlight"><pre><span></span><code>rosnode info [node_name]
+</code></pre></div></p>
 </li>
 <li>
 <p>列出所有的topic
-<pre class="highlight"><code>rostopic list -v</code></pre></p>
+<div class="highlight"><pre><span></span><code>rostopic list -v
+</code></pre></div></p>
 </li>
 <li>
 <p>显示topics上发布的message
-<pre class="highlight"><code>rostopic echo [topic_name]</code></pre></p>
+<div class="highlight"><pre><span></span><code>rostopic echo [topic_name]
+</code></pre></div></p>
 </li>
 <li>
 <p>查看topic的message类型
-<pre class="highlight"><code>rostopic type [topic_name]</code></pre></p>
+<div class="highlight"><pre><span></span><code>rostopic type [topic_name]
+</code></pre></div></p>
 </li>
 <li>
 <p>查看message数据结构
-<pre class="highlight"><code>rosmsg show [message_name]</code></pre></p>
+<div class="highlight"><pre><span></span><code>rosmsg show [message_name]
+</code></pre></div></p>
 </li>
 </ul>
 <h2 id="_6">图片</h2>
@@ -542,17 +562,18 @@ rosrun openvio openvio_ros</code></pre></li>
   </div>
 
   <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../atouch/guide/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../mocap/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../atouch/guide/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../mocap/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
       <script src="../search/main.js" defer></script>

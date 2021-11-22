@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   <link href="../css/style.css" rel="stylesheet" />
   
   <script>
@@ -26,9 +26,8 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -42,7 +41,7 @@
         <a href=".." class="icon icon-home"> 光轮电子</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -77,11 +76,13 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#_2">设计文件</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_3">说明</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">电调说明</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_4">存在的问题</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">飞控说明</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_5">图片及演示视频</a>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">存在的问题</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">图片及演示视频</a>
     </li>
     </ul>
                     </li>
@@ -158,46 +159,71 @@
   
   <hr/>
 </div>
+
           <div role="main">
             <div class="section">
               
                 <h1 id="gldrone">开源四旋翼飞行器GLDrone</h1>
 <p><a id = "gldrone"></a></p>
 <h2 id="_1">简介</h2>
-<p>GLDrone是独立自制机架和电调飞控的开源项目，轴距在140左右的小机型，为室内飞行与室内编队实验而研发。</p>
+<p>GLDrone是独立自制机架和电调飞控的开源项目，轴距在140左右的小机型，为GLMocap项目的室内飞行与室内编队实验而研发。<br />
+GLDrone项目使用MIT协议，代码及机架、电调飞控PCB皆开放源文件。</p>
 <h2 id="_2">设计文件</h2>
 <p><a href="https://github.com/guanglun/GLDrone">机架设计文件(使用Fusion360)</a><br />
 <a href="https://oshwhub.com/guanglun/gldrone_blheli_esc">电调原理图PCB(立创EDA)</a><br />
 <a href="https://oshwhub.com/guanglun/gldrone_px4">飞控原理图PCB(立创EDA)</a><br />
-<a href="https://github.com/guanglun/PX4-Autopilot">修改后的PX4源码(见)</a><br />
-机架设计文件Fusion360分享地址：<a href="https://a360.co/30LNv4s">https://a360.co/30LNv4s</a>  </p>
-<h2 id="_3">说明</h2>
+<a href="https://github.com/guanglun/PX4-Autopilot">修改后的PX4源码</a><br />
+机架设计文件Fusion360分享地址(在线查阅)：<a href="https://a360.co/30LNv4s">https://a360.co/30LNv4s</a>  </p>
+<h2 id="_3">电调说明</h2>
 <ul>
+<li>主控:EFM8BB21F16G，驱动:FD6288Q，MOS:TPN2R703NL</li>
+<li>电调使用BLHeli_S方案，固件使用C_H_30，详见<a href="https://github.com/bitdump/BLHeli">BLHeli</a>  </li>
 <li>电调设计参考<a href="https://github.com/ckflight/ESC_BLDC_HARDWARE">https://github.com/ckflight/ESC_BLDC_HARDWARE</a>  </li>
-<li>飞控为PX4 FMUv4 </li>
-<li>由于电调飞控V1.1版本修改了V1.0版本发现的问题后未经打样测试，所以请谨慎使用！</li>
 </ul>
-<h2 id="_4">存在的问题</h2>
+<h2 id="_4">飞控说明</h2>
+<ul>
+<li>飞控使用PX4方案：FMUv4,参考<a href="https://docs.px4.io/v1.12/en/flight_controller/pixracer.html">pixracer</a></li>
+<li>主控: STM32F427VIT6</li>
+<li>IMU： ICM-20602 ICM-20689</li>
+<li>磁力计：IST8310</li>
+<li>气压计：MS5611</li>
+<li>光流：PMW3901MB(未板载)</li>
+<li>激光：VL53L1X(未板载)</li>
+</ul>
+<h2 id="_5">存在的问题</h2>
 <ul>
 <li>警告！电调PCB由于四合一电调采用了模块复制，所以丝印只有MOTO4的正确，其他MOTO请参考MOTO4放置元器件！其中未连接的网络是由于复制过程中没有改网络编号所致，无需连接。</li>
 <li>电调供给飞控的5V电源由于经过了在飞控PCB中经过了一个二极管导致压降至4.5V左右，应提高电调输出的电压。</li>
+<li>由于电调飞控V1.1版本修改了V1.0版本发现的问题后未经打样测试，所以请谨慎使用！</li>
 </ul>
-<h2 id="_5">图片及演示视频</h2>
-<p><img alt="gldrone" src="img/gldrone1.jpg" /> <br />
+<h2 id="_6">图片及演示视频</h2>
+<p><img alt="gldrone" src="img/gldrone7.jpg" /> <br />
+<br /><br />
+<img alt="gldrone" src="img/gldrone1.jpg" /> <br />
 <br /><br />
 <img alt="gldrone" src="img/gldrone2.jpg" /> <br />
 <br /><br />
 <img alt="gldrone" src="img/gldrone3.jpg" /> <br />
 <br /><br />
+<img alt="gldrone" src="img/gldrone6.jpg" /> <br />
+<br /><br />
+<img alt="gldrone" src="img/gldrone10.jpg" /><br />
+<br /><br />
+<img alt="gldrone" src="img/gldrone8.jpg" /><br />
+<br /><br />
+<img alt="gldrone" src="img/gldrone9.jpg" /><br />
+<br /><br />
 <img alt="gldrone" src="img/gldrone4.jpg" /> <br />
 <br /><br />
 <img alt="gldrone" src="img/gldrone5.jpg" /> <br />
 <br /><br />
-<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=719184650&bvid=BV1cQ4y1U7HJ&cid=442156475&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br />
-<br /><br />
-<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=891320934&bvid=BV1EP4y1L723&cid=432987595&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br />
-<br /><br />
-<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=378817502&bvid=BV1vf4y1M7S2&cid=430310862&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  </p>
+<img alt="gldrone" src="img/gldrone11.jpg" /><br />
+<br />  </p>
+<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=719184650&bvid=BV1cQ4y1U7HJ&cid=442156475&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p><br />  </p>
+<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=891320934&bvid=BV1EP4y1L723&cid=432987595&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<p><br />  </p>
+<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=378817502&bvid=BV1vf4y1M7S2&cid=430310862&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
               
             </div>
           </div>
@@ -231,17 +257,18 @@
   </div>
 
   <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../mocap/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../px4/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../mocap/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../px4/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
       <script src="../search/main.js" defer></script>

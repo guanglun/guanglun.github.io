@@ -9,3 +9,6 @@
 
 * pip install mkdocs
 * pip install pymdown_extensions
+
+## 安装主题
+* pip install mkdocs-material

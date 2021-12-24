@@ -28,7 +28,7 @@ nav:
   - 关于本站: about/about.md
 
 theme:
-  name: mkdocs 
+  name: readthedocs 
 
 markdown_extensions:
   - pymdownx.arithmatex

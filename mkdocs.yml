@@ -28,7 +28,7 @@ nav:
   - 关于本站: about/about.md
 
 theme:
-  name: readthedocs 
+  name: 'material'
 
 markdown_extensions:
   - pymdownx.arithmatex
@@ -49,6 +49,6 @@ markdown_extensions:
   - pymdownx.tilde 
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'  
-extra_css:
-  - css/style.css
+# extra_css:
+#   - css/style.css
 copyright: 'Copyright &copy; 光轮电子 <a href="http://guanglundz.com">冀ICP备20000720号</a> '

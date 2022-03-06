@@ -1,0 +1,1605 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>GLMocap 使用说明 - 光轮电子</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#glmocap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="光轮电子" class="md-header__button md-logo" aria-label="光轮电子" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            光轮电子
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GLMocap 使用说明
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="光轮电子" class="md-nav__button md-logo" aria-label="光轮电子" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    光轮电子
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        ATouch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ATouch" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          ATouch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atouch/" class="md-nav__link">
+        ATouch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atouch/guide/" class="md-nav__link">
+        ATouch 使用说明
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        OPENVIO
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="OPENVIO" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          OPENVIO
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openvio/" class="md-nav__link">
+        OPENVIO
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openvio/slam_vio/" class="md-nav__link">
+        OPENVIO SLAM
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        GLMocap
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="GLMocap" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          GLMocap
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        GLMocap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          GLMocap 使用说明
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        GLMocap 使用说明
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    四相机套件使用教程
+  </a>
+  
+    <nav class="md-nav" aria-label="四相机套件使用教程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    概览说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    相机接口说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    同步电源板接口说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glmocap_1" class="md-nav__link">
+    GLMocap软件界面说明
+  </a>
+  
+    <nav class="md-nav" aria-label="GLMocap软件界面说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    主界面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-file" class="md-nav__link">
+    菜单栏-文件（file）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-view" class="md-nav__link">
+    菜单栏-窗口（view）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-cameras" class="md-nav__link">
+    菜单栏-相机（cameras）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    相机右击菜单
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    其他界面
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    使用说明
+  </a>
+  
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.设置相机序号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.校准
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5.飞行器控制
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        GLDrone
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="GLDrone" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          GLDrone
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/" class="md-nav__link">
+        GLDrone
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        PX4硬件方案
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="PX4硬件方案" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          PX4硬件方案
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../px4/" class="md-nav__link">
+        PX4硬件方案
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        CodeNotes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CodeNotes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          CodeNotes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codenotes/" class="md-nav__link">
+        CodeNotes
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        CXK开发板
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CXK开发板" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          CXK开发板
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cxk/" class="md-nav__link">
+        CXK开发板
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        SLAM小车
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="SLAM小车" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          SLAM小车
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slam/" class="md-nav__link">
+        SLAM小车
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      <label class="md-nav__link" for="__nav_10">
+        其他软硬件项目
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="其他软硬件项目" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          其他软硬件项目
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openmvs3/" class="md-nav__link">
+        OPENMVS3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atouchv3s/" class="md-nav__link">
+        ATouch(V3s)
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      <label class="md-nav__link" for="__nav_11">
+        数学
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="数学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/matrix/" class="md-nav__link">
+        矩阵
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/symbol/" class="md-nav__link">
+        数学符号
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      <label class="md-nav__link" for="__nav_12">
+        关于
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="关于" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          关于
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/about/" class="md-nav__link">
+        关于本站
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    四相机套件使用教程
+  </a>
+  
+    <nav class="md-nav" aria-label="四相机套件使用教程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    概览说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    相机接口说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    同步电源板接口说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glmocap_1" class="md-nav__link">
+    GLMocap软件界面说明
+  </a>
+  
+    <nav class="md-nav" aria-label="GLMocap软件界面说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    主界面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-file" class="md-nav__link">
+    菜单栏-文件（file）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-view" class="md-nav__link">
+    菜单栏-窗口（view）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-cameras" class="md-nav__link">
+    菜单栏-相机（cameras）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    相机右击菜单
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    其他界面
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    使用说明
+  </a>
+  
+    <nav class="md-nav" aria-label="使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.设置相机序号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.校准
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5.飞行器控制
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="glmocap">运动捕捉系统GLMocap使用说明</h1>
+<p><a id = "mocap"></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>本使用说明目前仅支持4相机套件，同时由于精力有限诸多功能和隐患无法顾及，敬请见谅。</p>
+</div>
+<h2 id="_1">四相机套件使用教程</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>不同版本套件使用会有所出入，教程会尽量顾及不同版本差异。</p>
+</div>
+<h3 id="_2">概览说明</h3>
+<p><img alt="GLMocap" src="../img/guide1.jpg" /> 
+<br /> </p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="left">说明</th>
+<th align="center">套件是否包含(不含则需自备)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">①</td>
+<td align="left">相机1(软件设置中为相机0)</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">②</td>
+<td align="left">相机2(软件设置中为相机1)</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">③</td>
+<td align="left">相机3(软件设置中为相机2)</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">④</td>
+<td align="left">相机4(软件设置中为相机3)</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">⑤</td>
+<td align="left">相机架(x4)</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">⑥</td>
+<td align="left">3长Typec USB2.0数据线(x4)</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">⑦</td>
+<td align="left">同步电源线(x4)</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">⑧</td>
+<td align="left">USB HUB</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">⑨</td>
+<td align="left">USB HUB</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">⑩</td>
+<td align="left">同步电源板</td>
+<td align="center">是</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">相机接口说明</h3>
+<p><img alt="GLMocap" src="../img/guide2.jpg" /> 
+<br /> </p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="left">说明</th>
+<th align="center">套件是否包含(不含则需自备)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">①</td>
+<td align="left">M4固定座</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">②</td>
+<td align="left">转接头，M4公转&frac14;母</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">③</td>
+<td align="left">Typec USB接口</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">④</td>
+<td align="left">XH2.54 3P同步电源接口</td>
+<td align="center">是</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">同步电源板接口说明</h3>
+<p><img alt="GLMocap" src="../img/guide3.jpg" /> 
+<br /> </p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="left">说明</th>
+<th align="center">套件是否包含(不含则需自备)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">①</td>
+<td align="left">XH2.54 3P同步电源接口(不分循序)</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">②</td>
+<td align="left">12V 1.5A直流电源输入接口(插头5.5mm)</td>
+<td align="center">是</td>
+</tr>
+</tbody>
+</table>
+<h3 id="glmocap_1">GLMocap软件界面说明</h3>
+<h4 id="_5">主界面</h4>
+<p><img alt="GLMocap" src="../img/guide4.jpg" /> 
+<br /> </p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="left">名称</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">①</td>
+<td align="left">菜单栏</td>
+<td align="left">文件，窗口，相机，关于</td>
+</tr>
+<tr>
+<td align="center">②</td>
+<td align="left">相机ID</td>
+<td align="left">短ID，用于区分设备</td>
+</tr>
+<tr>
+<td align="center">③</td>
+<td align="left">相机固件版本</td>
+<td align="left">固件版本</td>
+</tr>
+<tr>
+<td align="center">④</td>
+<td align="left">相机序号</td>
+<td align="left">从camera0开始排序，目前只支持四相机，所以序号为0-3</td>
+</tr>
+<tr>
+<td align="center">⑤</td>
+<td align="left">相机实时传输速度</td>
+<td align="left">单相机USB传输速度、图像帧率</td>
+</tr>
+<tr>
+<td align="center">⑥</td>
+<td align="left">相机状态</td>
+<td align="left">显示每个相机的状态</td>
+</tr>
+<tr>
+<td align="center">⑦</td>
+<td align="left">快速开始</td>
+<td align="left">用于快速打开四个相机窗口，并启动数据传输</td>
+</tr>
+<tr>
+<td align="center">⑧</td>
+<td align="left">初始化模型</td>
+<td align="left">用于快速重新识别绑定用于无人机的三个红外marks</td>
+</tr>
+<tr>
+<td align="center">⑨</td>
+<td align="left">图像捕捉</td>
+<td align="left">捕捉四个摄像头的图像，每0.5s捕捉一次，用于摄像头标定和图像分析</td>
+</tr>
+<tr>
+<td align="center">⑩</td>
+<td align="left">全部相机的实时传输速度</td>
+<td align="left">全部相机USB传输速度、定位速度</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-file">菜单栏-文件（file）</h4>
+<p><img alt="GLMocap" src="../img/guide5.jpg" /> 
+<br /> </p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="left">名称</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">①</td>
+<td align="left">位置窗口</td>
+<td align="left">显示无人机定位的位置和姿态（单位mm）</td>
+</tr>
+<tr>
+<td align="center">②</td>
+<td align="left">3D窗口</td>
+<td align="left">模拟现实3D空间中摄像头及红外marks位置</td>
+</tr>
+<tr>
+<td align="center">③</td>
+<td align="left">日志窗口</td>
+<td align="left">显示程序运行日志</td>
+</tr>
+<tr>
+<td align="center">④</td>
+<td align="left">PX4飞控控制窗口</td>
+<td align="left">进行PX4飞控控制</td>
+</tr>
+<tr>
+<td align="center">⑤</td>
+<td align="left">虚拟设备窗口</td>
+<td align="left">离线测试运行及识别验算算法时使用</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-view">菜单栏-窗口（view）</h4>
+<p><img alt="GLMocap" src="../img/guide6.jpg" /> 
+<br /> </p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="left">名称</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">①</td>
+<td align="left">设置</td>
+<td align="left">设置相机数量，图像阈值，图像存储路径等</td>
+</tr>
+<tr>
+<td align="center">②</td>
+<td align="left">标定</td>
+<td align="left">标定摄像头</td>
+</tr>
+<tr>
+<td align="center">③</td>
+<td align="left">加载视觉参数文件</td>
+<td align="left">加载视觉参数文件，ini后缀，默认文件名为vision.ini</td>
+</tr>
+<tr>
+<td align="center">④</td>
+<td align="left">存储当前视觉参数到文件</td>
+<td align="left">存储当前视觉的参数到文件，ini后缀，默认文件名为vision.ini</td>
+</tr>
+<tr>
+<td align="center">⑤</td>
+<td align="left">初始化大地</td>
+<td align="left">使用大地标定板标定"地"</td>
+</tr>
+<tr>
+<td align="center">⑥</td>
+<td align="left">初始化模型</td>
+<td align="left">初始化识别模型</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-cameras">菜单栏-相机（cameras）</h4>
+<p><img alt="GLMocap" src="../img/guide7.jpg" /> 
+<br /> </p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="left">名称</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">①</td>
+<td align="left">全部相机设置</td>
+<td align="left">一键打开全部相机设置界面</td>
+</tr>
+<tr>
+<td align="center">②</td>
+<td align="left">全部相机升级</td>
+<td align="left">一键打开全部相机升级界面</td>
+</tr>
+<tr>
+<td align="center">③</td>
+<td align="left">全部相机开始传输图像</td>
+<td align="left">一键打开全部相机开始传输图像界面</td>
+</tr>
+<tr>
+<td align="center">④</td>
+<td align="left">全部相机停止传输图像</td>
+<td align="left">一键打开全部相机停止传输图像界面</td>
+</tr>
+<tr>
+<td align="center">⑤</td>
+<td align="left">打开全部相机窗口</td>
+<td align="left">一键打开全部相机窗口</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">相机右击菜单</h4>
+<p><img alt="GLMocap" src="../img/guide8.jpg" /> 
+<br /> </p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="left">名称</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">①</td>
+<td align="left">相机设置</td>
+<td align="left">打开全部相机设置界面</td>
+</tr>
+<tr>
+<td align="center">②</td>
+<td align="left">设置相机序号</td>
+<td align="left">从0号开始</td>
+</tr>
+<tr>
+<td align="center">③</td>
+<td align="left">升级相机固件</td>
+<td align="left">选择固件开始升级</td>
+</tr>
+<tr>
+<td align="center">④</td>
+<td align="left">开始相机传输</td>
+<td align="left">开始相机图像传输</td>
+</tr>
+<tr>
+<td align="center">⑤</td>
+<td align="left">停止相机传输</td>
+<td align="left">停止相机图像传输</td>
+</tr>
+<tr>
+<td align="center">⑥</td>
+<td align="left">重启相机</td>
+<td align="left">相机重启</td>
+</tr>
+<tr>
+<td align="center">⑦</td>
+<td align="left">重启相机至bootloader</td>
+<td align="left">重启相机至bootloader</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">其他界面</h4>
+<ul>
+<li>
+<p>相机图像界面<br />
+<img alt="GLMocap" src="../img/000.png" /> </p>
+</li>
+<li>
+<p>软件配置界面<br />
+<img alt="GLMocap" src="../img/111.png" /> </p>
+</li>
+<li>
+<p>标定界面<br />
+<img alt="GLMocap" src="../img/222.png" /> </p>
+</li>
+<li>
+<p>定位姿态界面<br />
+<img alt="GLMocap" src="../img/333.png" /> </p>
+</li>
+<li>
+<p>3D界面<br />
+<img alt="GLMocap" src="../img/444.png" /> </p>
+</li>
+<li>
+<p>Log界面<br />
+<img alt="GLMocap" src="../img/555.png" /> </p>
+</li>
+<li>
+<p>PX4控制界面<br />
+<img alt="GLMocap" src="../img/666.png" /> </p>
+</li>
+<li>
+<p>虚拟界面<br />
+<img alt="GLMocap" src="../img/777.png" /> </p>
+</li>
+<li>
+<p>相机配置界面<br />
+<img alt="GLMocap" src="../img/888.png" /> </p>
+</li>
+</ul>
+<h3 id="_8">使用说明</h3>
+<h4 id="1">1.安装</h4>
+<ul>
+<li>请移步下载最新GLMocap软件 <a href="https://github.com/guanglun/GLMocap/releases">https://github.com/guanglun/GLMocap/releases</a>，首次使用请下载包含库的打包文件。</li>
+<li>请按照上图所示进行四相机的安装及固定，四个相机中的其中一个（仅一个，且一般是第一个编号为0的相机）需要短接同步接口。<br />
+<img alt="GLMocap" src="../img/guide4.png" /> </li>
+<li>由于尚在测试开发阶段，所以首先请使用较小的公共视野范围进行测试，推荐按照上图所示的空间进行测试，大概2x2x2m空间。</li>
+<li>USB2.0数据线使用质量好一些的线，为了保证USB接口数据吞吐量足够，请合理分配USB接口。  </li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>请按照四相机推荐位置摆放相机，使其同向且有公共视野。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>如果四个USB都插到一个HUB上进行图像传输可能会数据量过大导致无法使用！  </p>
+</div>
+<ul>
+<li>运行GLMocap的电脑请使用性能高些的电脑。</li>
+</ul>
+<h4 id="2">2.设置相机序号</h4>
+<p>推荐序号顺序如下：
+<img alt="GLMocap" src="../img/guide1.png" />  </p>
+<ul>
+<li>USB数据线全部断开，插入第一个摄像头（上图最左面），软件主界面会出现一个摄像头，右击设置相机序号为0，设置完毕后相机会出现camera0的说明字样。<br />
+<img alt="GLMocap" src="../img/guide2.png" />  </li>
+<li>拔出设置好的第一个摄像头，插入第二个摄像头（左数第二个），主界面软件主界面会出现一个摄像头，右击设置相机序号为1，设置完毕后相机会出现camera1的说明字样。  </li>
+<li>后面2个摄像头以此类推，就会将四个摄像头序号设置完毕。 
+<img alt="GLMocap" src="../img/guide3.png" />  
+<br /> </li>
+</ul>
+<h4 id="3">3.校准</h4>
+<ul>
+<li>点击主界面左下角的<code>QuickStart</code>快速打开四个摄像头。<br />
+<img alt="GLMocap" src="../img/guide7.png" />  </li>
+<li>相机工作正常情况下如下所示： 
+<img alt="GLMocap" src="../img/guide5.png" /> </li>
+<li>拿出准备好的校准棋盘(A4纸打印，<a href="../../file/calib.io_checker_297x210_7x10_25.pdf">棋盘文件</a>)，放在四个摄像头公共视野下面。</li>
+<li>点击主界面右下角<code>Capture</code>按键，开始捕捉。捕捉开始后默认会在可执行文件目录创建以时间命名的文件夹用来保存四个摄像头捕捉的画面，比如 <code>2022-03-06-13-27-37-678</code>。  </li>
+<li>在各个方向（保证四个摄像头都能看到）移动棋盘，待捕捉充分后点击右下角<code>Capture</code>（已经变成了<code>stop</code>）按键，结束捕捉。<br />
+<img alt="GLMocap" src="../img/guide6.png" />  </li>
+<li>打开<code>calibration</code>（标定）界面，选择刚刚捕捉的图片文件夹<code>2022-03-06-13-27-37-678</code>，然后点击下面的<code>Calibration</code>按键开始标定摄像头。</li>
+<li>标定完成后会打印误差数据，可以查阅参考。 
+<img alt="GLMocap" src="../img/guide8.png" /> </li>
+<li>此时需要将标定完的数据保存到文件，默认文件在可执行文件的所属文件夹下，名称为vision.ini。<br />
+<img alt="GLMocap" src="../img/guide9.png" /> </li>
+<li>保存校准文件以后，需要校准地面。使用三个红外mark制作地面标定板并放置在地面。
+<img alt="GLMocap" src="../img/guide10.png" />  </li>
+<li>点击地面校准按键。<br />
+<img alt="GLMocap" src="../img/guide11.png" />  </li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>务必确保四个相机的视野内只有标定板上的3个红外marks，否则误识别会曹成无法标定。如果光线问题请调试相机阈值</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>点击相机图像界面的vision界面可以切换显示效果<br />
+<img alt="GLMocap" src="../img/guide16.png" /> </p>
+</div>
+<ul>
+<li>校准地面完毕后可以打开3D界面看到摄像头的排布：<br />
+<img alt="GLMocap" src="../img/guide12.png" /> </li>
+<li>到这里校准完成。  </li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>务必确保四个相机的视野内只有模型上的3个红外marks，否则误识别会曹成无法标定。</p>
+</div>
+<ul>
+<li>此时移动模型（在公共视野内）可以看到3D界面中3个mnark在伴随移动。 
+<img alt="GLMocap" src="../img/guide15.png" /> </li>
+</ul>
+<h4 id="5">5.飞行器控制</h4>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: GLMocap" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              GLMocap
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../gldrone/" class="md-footer__link md-footer__link--next" aria-label="Next: GLDrone" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              GLDrone
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 光轮电子 <a href="https://beian.miit.gov.cn">冀ICP备20000720号</a> 
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

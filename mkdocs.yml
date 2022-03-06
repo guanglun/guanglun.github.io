@@ -6,8 +6,10 @@ nav:
   - ATouch 使用说明: atouch/guide.md
 - OPENVIO:
   - OPENVIO: openvio/index.md
+  - OPENVIO SLAM: openvio/slam_vio.md
 - GLMocap:
   - GLMocap: mocap/index.md  
+  - GLMocap 使用说明: mocap/guide.md
 - GLDrone:
   - GLDrone: gldrone/index.md    
 - PX4硬件方案:
@@ -31,6 +33,7 @@ theme:
   name: 'material'
 
 markdown_extensions:
+  - admonition
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all

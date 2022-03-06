@@ -8,10 +8,12 @@
 
 * [GLMocap使用说明](guide.md#mocap)
 
-## 源码地址
-[https://github.com/guanglun/GLMocap](https://github.com/guanglun/GLMocap)  
-[https://gitee.com/guanglunking/GLMocap](https://gitee.com/guanglunking/GLMocap)  
+## 源码和资料
+[github](https://github.com/guanglun/GLMocap)  
+[gitee](https://gitee.com/guanglunking/GLMocap)  
 [OPENVIO摄像头](../openvio/index.md#openvio)  
+[淘宝店铺](https://item.taobao.com/item.htm?id=669962150347)  
+
 ## 软硬件基本说明
 * 上位机基于QT5，C++编程
 * 硬件为加装红外装置的[OPENVIO摄像头](../openvio/index.md#openvio)

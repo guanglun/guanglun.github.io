@@ -479,6 +479,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4.追踪模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#5" class="md-nav__link">
     5.飞行器控制
   </a>
@@ -1008,6 +1015,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4.追踪模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#5" class="md-nav__link">
     5.飞行器控制
   </a>
@@ -1039,6 +1053,16 @@
                 
                 <h1 id="glmocap">运动捕捉系统GLMocap使用说明</h1>
 <p><a id = "mocap"></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>！！！郑重提醒<br />
+ 本来项目还在研发阶段没计划做套件出售的，但是不少朋友表示只想测试现在已有的功能效果，故在项目和功能还很鸡肋的情况下开始售卖。特此说明，请仔细阅读一下功能限制、区别于市面商用视觉捕捉系统的诸多不足。目前项目还在初步研发阶段，如果你在犹豫是否购买，我的建议是不要购买！<br />
+ 如下为当前的不足：  </p>
+<p>视觉区域过小，仅支持4相机定位  </p>
+<p>红外反光球每次使用需要初始化，且必须同时出现在四个相机视野内，且不能运动过快，且不能遮挡或者两个反光球重合  </p>
+<p>标定需要使用棋盘标定，四相机需要放置到同一侧  </p>
+<p>诸多未知BUG</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>本使用说明目前仅支持4相机套件，同时由于精力有限诸多功能和隐患无法顾及，敬请见谅。</p>
@@ -1503,12 +1527,19 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>点击相机图像界面的vision界面可以切换显示效果<br />
-<img alt="GLMocap" src="../img/guide16.png" /> </p>
+<img alt="GLMocap" src="../img/guide16.png" />  </p>
 </div>
 <ul>
-<li>校准地面完毕后可以打开3D界面看到摄像头的排布：<br />
-<img alt="GLMocap" src="../img/guide12.png" /> </li>
+<li>校准地面完毕后可以打开3D界面看到摄像头的排布：  <br />
+<img alt="GLMocap" src="../img/guide12.png" />  </li>
 <li>到这里校准完成。  </li>
+</ul>
+<h4 id="4">4.追踪模型</h4>
+<ul>
+<li>制作红外marks模型<br />
+<img alt="GLMocap" src="../img/guide13.png" /> </li>
+<li>将模型放置到公共视野内，点击主界面下面的<code>InitModule</code>按钮识别追踪模型（飞行器）。 
+<img alt="GLMocap" src="../img/guide14.png" />  </li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>

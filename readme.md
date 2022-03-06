@@ -11,4 +11,4 @@
 * pip install pymdown_extensions
 
 ## 安装主题
-* pip install mkdocs-material
+* pip install mkdocs-material=="7.2.2"

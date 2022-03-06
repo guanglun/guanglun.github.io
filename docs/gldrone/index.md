@@ -6,14 +6,14 @@
 
 GLDrone是独立自制机架和电调飞控的开源项目，轴距在140左右的小机型，为GLMocap项目的室内飞行与室内编队实验而研发。  
 GLDrone项目使用MIT协议，代码及机架、电调飞控PCB皆开放源文件。
-## 设计文件
+## 设计文件及资料
 
 [机架设计文件(使用Fusion360)](https://github.com/guanglun/GLDrone)  
 [电调原理图PCB(立创EDA)](https://oshwhub.com/guanglun/gldrone_blheli_esc)  
 [飞控原理图PCB(立创EDA)](https://oshwhub.com/guanglun/gldrone_px4)  
 [修改后的PX4源码](https://github.com/guanglun/PX4-Autopilot)  
 机架设计文件Fusion360分享地址(在线查阅)：[https://a360.co/30LNv4s](https://a360.co/30LNv4s)  
-
+[淘宝店铺](https://item.taobao.com/item.htm?669962534361)  
 ## 电调说明
 * 主控:EFM8BB21F16G，驱动:FD6288Q，MOS:TPN2R703NL
 * 电调使用BLHeli_S方案，固件使用C_H_30，详见[BLHeli](https://github.com/bitdump/BLHeli)  

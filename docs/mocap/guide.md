@@ -161,6 +161,10 @@
 ### 使用说明
 #### 1.安装
 * 请移步下载最新GLMocap软件 [https://github.com/guanglun/GLMocap/releases](https://github.com/guanglun/GLMocap/releases)，首次使用请下载包含库的打包文件。
+
+!!! warning
+    请务必将软件运行在中文路径下！
+
 * 请按照上图所示进行四相机的安装及固定，四个相机中的其中一个（仅一个，且一般是第一个编号为0的相机）需要短接同步接口。  
 ![GLMocap](img/guide4.png) 
 * 由于尚在测试开发阶段，所以首先请使用较小的公共视野范围进行测试，推荐按照上图所示的空间进行测试，大概2x2x2m空间。
@@ -230,7 +234,7 @@
 
 #### 5.飞行器控制  
 
-* 给飞行器上电，电脑连接WIFI:`DroneBridge ESP32`.  
+* 给飞行器上电，电脑连接WIFI:`DroneBridge ESP32`，密码:`dronebridge`. 
 * 将飞行器放置于坐标零点（方向对准正前方），按照`4.追踪模型`的说明校准模型，成功后3D界面显示如下：  
 ![GLMocap](img/guide17.png)  
 * 打开PX4上位机`QGC`,通过WIFI连接上无人机后将无人机飞行模式改为`Offboard`模式  

@@ -4,7 +4,10 @@
 
 ## 简介
 
-基于px4做的几款飞控硬件方案
+基于PX4做的几款飞控硬件方案  
+
+!!! note
+    GLDRONE-ESP32并非使用PX4固件。当前并未成功将PX4移植至ESP32,移植遇到诸多困难，仍在努力中。
 
 ## 硬件方案 
 
@@ -13,7 +16,7 @@
 | GLPX4-F4 | 基于STM32F427VIT6 |
 | GLPX4-H7 | 基于STM32H743VIH6 |
 | GLPX4-R329 | 基于全志R329 |
-| GLPX4-ESP32 | 基于ESP32 |
+| GLDRONE-ESP32 | 基于ESP32 |
 
 ### GLPX4-F4 
 * 主控: STM32F427VIT6
@@ -36,7 +39,7 @@
 * 气压计：MS5611
 * PWM: PCA9685PW
 
-### GLPX4-ESP32
+### GLDRONE-ESP32
 * 主控： ESP32-D2WD
 * IMU： MPU9250
 * 光流：PMW3901MB
@@ -71,7 +74,7 @@
 ![px4](img/px4_1.jpg)  
 <br />  
 
-### GLPX4-ESP32
+### GLDRONE-ESP32
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=420001535&bvid=BV1N3411B7ig&cid=394308441&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
 <br />  
 

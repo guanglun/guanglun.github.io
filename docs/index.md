@@ -4,18 +4,17 @@
 * 硬件原理图全部开源，PCB选择性开源
    
 ## 项目列表
-### 已完成
+### 已完成或开发中
 * [吃鸡开发板(ATouch)](atouch/index.md#atouch)
 * [OPENVIO](openvio/index.md#openvio)
 * [CXK开发板](cxk/index.md#cxk)
 * [CodeNotes插件(Vscode)](codenotes/index.md#codenotes)
 * [OPENMVS3](openmvs3/index.md#openmvs3)
 * [ATouchV3s](atouchv3s/index.md#atouchv3s)
-### 正在完善
+* [飞行器项目](gldrone/index.md)
 * [运动捕捉系统GLMocap](mocap/index.md#mocap)
-* [开源四旋翼飞行器GLDrone](gldrone/index.md#gldrone)
 * [PX4硬件方案](px4/index.md#px4)
-### 筹划中
+### 筹划
 * 智能语音音响
 * 桌面机器人
 * 天文追星系统

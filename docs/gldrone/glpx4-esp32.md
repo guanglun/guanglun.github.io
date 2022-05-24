@@ -60,6 +60,11 @@ run `top` cmd:
 run `uorb top` cmd:  
 ![px4](img/esp32_uorb_top.png)   
 
+## 视频
+<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=384299816&bvid=BV1VZ4y1h7sa&cid=728579243&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
+<br />  
+
+## 图片
 ![px4](img/DRONE.jpg) 
 ![px4](img/esp32.jpg) 
 ![px4](img/pcb.png) 

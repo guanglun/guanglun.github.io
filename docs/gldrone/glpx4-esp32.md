@@ -29,7 +29,7 @@
 !!! note
     请首先学习掌握PX4源码编译的方法！更多可阅读PX4文档[https://docs.px4.io/master/en/dev_setup/building_px4.html](https://docs.px4.io/master/en/dev_setup/building_px4.html)
 
-* 首先请安装`xtensa-esp-elf`编译器[xtensa-esp-elf](https://github.com/espressif/crosstool-NG/releases/download/esp-2022r1-RC1/xtensa-esp32-elf-gcc11_2_0-esp-2022r1-RC1-linux-amd64.tar.xz)   
+* 首先请安装`xtensa-esp-elf`编译器[xtensa-esp-elf](https://github.com/espressif/crosstool-NG/releases/download/esp-2021r2-patch3/xtensa-esp32-elf-gcc8_4_0-esp-2021r2-patch3-linux-amd64.tar.gz)   
 
 * 下载源码  
 ```

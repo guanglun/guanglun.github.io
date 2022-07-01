@@ -1,0 +1,1541 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>ATouch 使用说明 - 光轮电子</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#atouch" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="光轮电子" class="md-header__button md-logo" aria-label="光轮电子" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            光轮电子
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ATouch 使用说明
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="光轮电子" class="md-nav__button md-logo" aria-label="光轮电子" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    光轮电子
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        ATouch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ATouch" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          ATouch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        ATouch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ATouch 使用说明
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ATouch 使用说明
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-atouch" class="md-nav__link">
+    1. 使用ATouch所需基本前提
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 使用ATouch所需基本前提">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-atouch" class="md-nav__link">
+    1.1 ATouch硬件设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-android" class="md-nav__link">
+    1.2 Android手机
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3 至少两根数据线
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-android" class="md-nav__link">
+    2. 打开Android手机的调试模式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 手机安装所需软件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 查看安装软版本
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-atouch" class="md-nav__link">
+    5. 使用ATouch连接手机
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-atouch_1" class="md-nav__link">
+    5. 使用ATouch连接键盘鼠标
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 设计游戏映射
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7. 按键映射及操作说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    8. 已测试手机列表
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        OPENVIO
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="OPENVIO" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          OPENVIO
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openvio/" class="md-nav__link">
+        OPENVIO
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openvio/slam_vio/" class="md-nav__link">
+        OPENVIO SLAM
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        GLMocap
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="GLMocap" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          GLMocap
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mocap/" class="md-nav__link">
+        GLMocap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mocap/guide/" class="md-nav__link">
+        GLMocap 使用说明
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        GLDrone
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="GLDrone" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          GLDrone
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/" class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/gldrone/" class="md-nav__link">
+        GLDrone飞行器
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/glpx4-f4/" class="md-nav__link">
+        GLPX4-F4
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/glpx4-h7/" class="md-nav__link">
+        GLPX4-H7
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/glpx4-r329/" class="md-nav__link">
+        GLPX4-R329
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/glpx4-esp32/" class="md-nav__link">
+        GLPX4-ESP32
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/gldrone-esp32/" class="md-nav__link">
+        GLDRONE-ESP32
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        CodeNotes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CodeNotes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          CodeNotes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codenotes/" class="md-nav__link">
+        CodeNotes
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        CXK开发板
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CXK开发板" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          CXK开发板
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cxk/" class="md-nav__link">
+        CXK开发板
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        SLAM小车
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="SLAM小车" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          SLAM小车
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slam/" class="md-nav__link">
+        SLAM小车
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        其他软硬件项目
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="其他软硬件项目" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          其他软硬件项目
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../px4/" class="md-nav__link">
+        PX4硬件方案
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openmvs3/" class="md-nav__link">
+        OPENMVS3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atouchv3s/" class="md-nav__link">
+        ATouch(V3s)
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      <label class="md-nav__link" for="__nav_10">
+        数学
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="数学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/matrix/" class="md-nav__link">
+        矩阵
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/symbol/" class="md-nav__link">
+        数学符号
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      <label class="md-nav__link" for="__nav_11">
+        关于
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="关于" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          关于
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/about/" class="md-nav__link">
+        关于本站
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-atouch" class="md-nav__link">
+    1. 使用ATouch所需基本前提
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 使用ATouch所需基本前提">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-atouch" class="md-nav__link">
+    1.1 ATouch硬件设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-android" class="md-nav__link">
+    1.2 Android手机
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3 至少两根数据线
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-android" class="md-nav__link">
+    2. 打开Android手机的调试模式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 手机安装所需软件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 查看安装软版本
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-atouch" class="md-nav__link">
+    5. 使用ATouch连接手机
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-atouch_1" class="md-nav__link">
+    5. 使用ATouch连接键盘鼠标
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 设计游戏映射
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7. 按键映射及操作说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    8. 已测试手机列表
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="atouch">ATouch 使用说明</h1>
+<p><a id = "atouch_guide"></a></p>
+<ul>
+<li>为了使每一位小伙伴都能理解如何使用，请务必按顺序阅读。</li>
+<li>本教程是使用ATouch外壳版，有线连接手机(电脑数据线插手机)的方式提供说明的。</li>
+</ul>
+<h2 id="1-atouch">1. 使用ATouch所需基本前提</h2>
+<h3 id="11-atouch">1.1 ATouch硬件设备</h3>
+<p><img src="https://img.alicdn.com/imgextra/i4/1824403768/
+O1CN01cg36g91dhmzrwCiR1_!!1824403768.jpg" width = 50% height = 50% />
+<br>
+* 手上没有的话，请先购买: <a href="https://item.taobao.com/item.htm?id=595635571591">购买链接</a>  <br />
+* 旧版(无外壳版同样可以使用)  </p>
+<h3 id="12-android">1.2 Android手机</h3>
+<ul>
+<li>Anroid手机支持支持主流大厂手机，Android版本5.0及以上提供支持，5.0以下不管。</li>
+<li>由于目前测试机型较少，出现问题请及时反馈。<br />
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599773003657&di=30e6fb4335cd7d03cbecc0b628c08964&imgtype=0&src=http%3A%2F%2Fimage.hxyxt.com%2Fmedias%2Fsys_master%2Fimages%2Fimages%2Fh95%2Fh69%2F9425690591262.jpg" width = 50% height = 50% /></li>
+</ul>
+<h3 id="13">1.3 至少两根数据线</h3>
+<ul>
+<li>数据线一根是连接ATouch和手机的，另一根给ATouch提供用电。
+<img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3296274051,2260653511&fm=26&gp=0.jpg" width = 50% height = 50% /></li>
+</ul>
+<h2 id="2-android">2. 打开Android手机的调试模式</h2>
+<ul>
+<li>Android手机的调试模式是使ATouch与手机数据线连接进行ADB通讯的前提，所以务必打开。  </li>
+<li>
+<p>关于如何打开手机的调试模式，各厂家的操作入口可能都不同统一，下面提供一些常见厂商的手机调试模式打开方法的连接。<br />
+<br>
+<a href="https://jingyan.baidu.com/article/2a138328ec2c43074a134fb4.html">华为手机</a>  <br />
+<br>
+<a href="https://jingyan.baidu.com/article/af9f5a2d42a79143140a458d.html">小米手机</a>  <br />
+<br>
+<a href="https://jingyan.baidu.com/article/cb5d6105b0936a005d2fe052.html">OPPO手机</a>  <br />
+<br>
+<a href="https://jingyan.baidu.com/article/f54ae2fce2f0625e93b84959.html">VIVO手机</a>  <br />
+<br>
+<a href="https://jingyan.baidu.com/article/0aa223756d8aec88cc0d64ee.html">三星手机</a>  <br />
+<br>
+<a href="https://jingyan.baidu.com/article/67508eb47b824a9cca1ce48b.html">一加手机</a>  <br />
+<br>
+如果没有你的品牌手机打开调试模式方法链接提供，请自行<a href="https://www.baidu.com/s?wd=%E6%89%93%E5%BC%80%E8%B0%83%E8%AF%95%E6%A8%A1%E5%BC%8F">百度</a><br />
+<br>  </p>
+</li>
+<li>
+<p>打开调试模式后如图所示<br />
+<br><br />
+<img alt="ATouch" src="../img/android_debug.png" /> <br />
+<br>  </p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">&lt;1&gt;</td>
+<td align="center">务必打开USB调试</td>
+</tr>
+<tr>
+<td align="center">&lt;2&gt;</td>
+<td align="center">确保该处两项为关闭状态</td>
+</tr>
+<tr>
+<td align="center">&lt;3&gt;</td>
+<td align="center">在调试触摸位置的过程中，打开这个选项可以帮助调试</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>有位红魔5G用户必须将"通过USB验证应用"关闭才可以使用，所以请确保将其关闭。</li>
+</ul>
+<h2 id="3">3. 手机安装所需软件</h2>
+<ul>
+<li>
+<p><a href="http://guanglundz.com/atouch/download.html">安装包下载链接</a> 
+<br><br />
+<img alt="ATouch" src="../img/install.png" />  </p>
+</li>
+<li>
+<p>两个安装完成后你会发现手机出面出现了一个图标<br />
+<br> 
+<img alt="ATouch" src="../img/atouch_open.png" /> <br />
+<br>  </p>
+</li>
+<li>
+<p>打开软件会看到如下界面
+<br> </p>
+</li>
+</ul>
+<p><img alt="ATouch" src="../img/app.png" /> <br />
+<br>  </p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">&lt;1&gt;</td>
+<td align="center">悬浮状态指示/操作控制窗口</td>
+</tr>
+<tr>
+<td align="center">&lt;2&gt;</td>
+<td align="center">设置按键</td>
+</tr>
+<tr>
+<td align="center">&lt;3&gt;</td>
+<td align="center">软件更新按键</td>
+</tr>
+<tr>
+<td align="center">&lt;4&gt;</td>
+<td align="center">更多选项</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>关于悬浮窗口的说明</li>
+</ul>
+<p><img alt="ATouch" src="../img/atouch12.png" /> <br />
+<br>  </p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">A</td>
+<td align="center">手机APP与ATouch后台服务程序连接状态指示，连接成功将变成绿色</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">手机APP与ATouch开发板USB连接状态指示，连接成功将变成绿色</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">手机APP与ATouch开发板蓝牙连接状态指示，连接成功将变成绿色</td>
+</tr>
+<tr>
+<td align="center">D</td>
+<td align="center">ATouch开发板与鼠标连接状态指示，连接成功将变成绿色</td>
+</tr>
+<tr>
+<td align="center">E</td>
+<td align="center">ATouch开发板与键盘连接状态指示，连接成功将变成绿色</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4">4. 查看安装软版本</h2>
+<ul>
+<li>点击APP界面上的"软件更新"按钮会弹出安装状态
+<br> </li>
+</ul>
+<p><img alt="ATouch" src="../img/upgrade.png" /> <br />
+<br>  </p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">&lt;1&gt;</td>
+<td align="center">当前安装的APP版本</td>
+</tr>
+<tr>
+<td align="center">&lt;2&gt;</td>
+<td align="center">远程可安装下载的APP版本，如果远程版本大于本地版本，则可以点击"升级"按键进行APP升级</td>
+</tr>
+<tr>
+<td align="center">&lt;3&gt;</td>
+<td align="center">当前安装的后台服务软件版本，如果没有安装会显示"失败"，请务必确保已安装后台服务</td>
+</tr>
+<tr>
+<td align="center">&lt;4&gt;</td>
+<td align="center">远程可安装下载的后台软件版本，如果远程版本大于本地版本，则可以点击"升级"按键进行后台软件升级</td>
+</tr>
+<tr>
+<td align="center">&lt;5&gt;</td>
+<td align="center">ATouch的固件版本，此处一般为错误，因为还未实现-。-</td>
+</tr>
+<tr>
+<td align="center">&lt;6&gt;</td>
+<td align="center">ATouch的远程固件版本</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>确保 APP软件的本地版本不会出现"错误"，后台软件的本地版本不会出现"错误"，否则说明手机没有安装该软件。
+<br>  </li>
+</ul>
+<h2 id="5-atouch">5. 使用ATouch连接手机</h2>
+<p><img alt="ATouch" src="../img/atouch.png" /> <br />
+<br>  </p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">&lt;1&gt;</td>
+<td align="center">手机、鼠标、键盘插口</td>
+</tr>
+<tr>
+<td align="center">&lt;2&gt;</td>
+<td align="center">手机、鼠标、键盘插口</td>
+</tr>
+<tr>
+<td align="center">&lt;3&gt;</td>
+<td align="center">手机、鼠标、键盘插口</td>
+</tr>
+<tr>
+<td align="center">&lt;4&gt;</td>
+<td align="center">供电、调试插口</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>首先给供电口&lt;4&gt;使用Typec数据线5V供电（使用手机充电器供电即可）</li>
+<li>&lt;1&gt;/&lt;2&gt;/&lt;3&gt;三个插口随便选择一个使用数据线插入手机。</li>
+<li>
+<p>如果是第一次插入，会弹出下面窗口，请选择"一律允许使用这台计算机进行调试"，然后点击确定。<br />
+<br> 
+<img alt="ATouch" src="../img/USB.jpg" /> <br />
+<br>  </p>
+</li>
+<li>
+<p>进行完以上步骤后，正常的话悬浮窗口的中间和左上角标识会亮起来。如果没有亮起，请返回检查上面的步骤是否有误。如果多次尝试以后仍出现问题，请将问题描述给我。<br />
+<br> 
+<img alt="ATouch" src="../img/xf1.png" /> <br />
+<br>  </p>
+</li>
+</ul>
+<h2 id="5-atouch_1">5. 使用ATouch连接键盘鼠标</h2>
+<ul>
+<li>
+<p>将键盘和鼠标插入剩下两个接口，如果正常的话悬浮窗会亮成如下状态。<br />
+<br> 
+<img alt="ATouch" src="../img/xf2.png" /> <br />
+<br></p>
+</li>
+<li>
+<p>插线状态如下
+<br> 
+<img alt="ATouch" src="../img/zs.jpg" /> <br />
+<br>  </p>
+</li>
+</ul>
+<h2 id="6">6. 设计游戏映射</h2>
+<ul>
+<li>点击悬浮窗口将出现更多操作按钮</li>
+</ul>
+<p><img alt="ATouch" src="../img/atouch13.png" /> <br />
+<br>  </p>
+<table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">A</td>
+<td align="center">设置（未开发）</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">映射库操作，可以对映射进行新建删除修改操作</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">对映射进行编辑，使其适应自己的手机</td>
+</tr>
+<tr>
+<td align="center">D</td>
+<td align="center">保存映射</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>打开游戏的按键设置界面，点击悬浮按钮的（B）映射库操作  </li>
+</ul>
+<p><img alt="ATouch" src="../img/cz1.jpg" /> <br />
+<br><br />
+* 点击新建，将出现映射按钮的放置窗口，请根据自己的操作习惯将其放到对应的位置(可以使用鼠标操作)  </p>
+<p><img alt="ATouch" src="../img/atouch3.png" /> <br />
+<br> </p>
+<ul>
+<li>放置完毕后点击悬浮按钮的（D）保存映射,然后再点击悬浮按钮的（B）映射库操作选择创建保存的映射使用  </li>
+</ul>
+<p><img alt="ATouch" src="../img/atouch14.png" /> <br />
+<br> </p>
+<ul>
+<li>此时就可以打开进入游戏进行体验了！（建议先在训练营体验调试映射）</li>
+</ul>
+<p><img alt="ATouch" src="../img/play.jpg" /> <br />
+<br> </p>
+<h2 id="7">7. 按键映射及操作说明</h2>
+<ul>
+<li>目前不支持自定义按键，更加灵活的自定义按键会在以后更新</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">按键</th>
+<th align="center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">鼠标左键</td>
+<td align="center">射击（攻击）或触摸指针位置（唤醒鼠标指针的模式下）</td>
+</tr>
+<tr>
+<td align="center">鼠标中键</td>
+<td align="center">唤醒鼠标指针 和 隐藏鼠标指针切换</td>
+</tr>
+<tr>
+<td align="center">鼠标右键</td>
+<td align="center">打开瞄准镜</td>
+</tr>
+<tr>
+<td align="center">W</td>
+<td align="center">前进（W+Shift为加速向前跑）</td>
+</tr>
+<tr>
+<td align="center">S</td>
+<td align="center">后退</td>
+</tr>
+<tr>
+<td align="center">A</td>
+<td align="center">左走</td>
+</tr>
+<tr>
+<td align="center">D</td>
+<td align="center">右走</td>
+</tr>
+<tr>
+<td align="center">Ctrl(左)</td>
+<td align="center">趴下</td>
+</tr>
+<tr>
+<td align="center">Alt(左)</td>
+<td align="center">蹲下</td>
+</tr>
+<tr>
+<td align="center">空格</td>
+<td align="center">跳跃</td>
+</tr>
+<tr>
+<td align="center">Z</td>
+<td align="center">开车</td>
+</tr>
+<tr>
+<td align="center">X</td>
+<td align="center">上副驾驶</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">下车</td>
+</tr>
+<tr>
+<td align="center">Q</td>
+<td align="center">左武器切换</td>
+</tr>
+<tr>
+<td align="center">E</td>
+<td align="center">右武器切换</td>
+</tr>
+<tr>
+<td align="center">R</td>
+<td align="center">换弹药</td>
+</tr>
+<tr>
+<td align="center">M</td>
+<td align="center">地图显示、关闭</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">背包显示、关闭</td>
+</tr>
+<tr>
+<td align="center">F</td>
+<td align="center">环视（身体及行动的方向不变看四周情况）</td>
+</tr>
+<tr>
+<td align="center">G</td>
+<td align="center">用药</td>
+</tr>
+<tr>
+<td align="center">H</td>
+<td align="center">救援</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8">8. 已测试手机列表</h2>
+<ul>
+<li>如果经过你的测试支持你的手机，欢迎提供以下列表的信息给我</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">厂商</th>
+<th align="center">型号</th>
+<th align="center">类型</th>
+<th align="center">安卓版本</th>
+<th align="center">支持状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">华为</td>
+<td align="center">BTV-W09</td>
+<td align="center">平板</td>
+<td align="center">7.0</td>
+<td align="center">支持</td>
+</tr>
+<tr>
+<td align="center">小米</td>
+<td align="center">MI8Lite</td>
+<td align="center">手机</td>
+<td align="center">9.0</td>
+<td align="center">支持</td>
+</tr>
+<tr>
+<td align="center">锤子</td>
+<td align="center">坚果Pro2 OS105</td>
+<td align="center">手机</td>
+<td align="center">7.1.1</td>
+<td align="center">支持</td>
+</tr>
+<tr>
+<td align="center">锤子</td>
+<td align="center">坚果Pro3 DT1902A</td>
+<td align="center">手机</td>
+<td align="center">7.1.1</td>
+<td align="center">支持</td>
+</tr>
+</tbody>
+</table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: ATouch" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              ATouch
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../openvio/" class="md-footer__link md-footer__link--next" aria-label="Next: OPENVIO" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              OPENVIO
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 光轮电子 <a href="https://beian.miit.gov.cn">冀ICP备20000720号</a> 
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.709b4209.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

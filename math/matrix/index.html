@@ -1,0 +1,1317 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>矩阵 - 光轮电子</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="光轮电子" class="md-header__button md-logo" aria-label="光轮电子" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            光轮电子
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              矩阵
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="光轮电子" class="md-nav__button md-logo" aria-label="光轮电子" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    光轮电子
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        ATouch
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ATouch" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          ATouch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atouch/" class="md-nav__link">
+        ATouch
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atouch/guide/" class="md-nav__link">
+        ATouch 使用说明
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        OPENVIO
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="OPENVIO" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          OPENVIO
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openvio/" class="md-nav__link">
+        OPENVIO
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openvio/slam_vio/" class="md-nav__link">
+        OPENVIO SLAM
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        GLMocap
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="GLMocap" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          GLMocap
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mocap/" class="md-nav__link">
+        GLMocap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mocap/guide/" class="md-nav__link">
+        GLMocap 使用说明
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        GLDrone
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="GLDrone" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          GLDrone
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/" class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/gldrone/" class="md-nav__link">
+        GLDrone飞行器
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/glpx4-f4/" class="md-nav__link">
+        GLPX4-F4
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/glpx4-h7/" class="md-nav__link">
+        GLPX4-H7
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/glpx4-r329/" class="md-nav__link">
+        GLPX4-R329
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/glpx4-esp32/" class="md-nav__link">
+        GLPX4-ESP32
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gldrone/gldrone-esp32/" class="md-nav__link">
+        GLDRONE-ESP32
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        CodeNotes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CodeNotes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          CodeNotes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codenotes/" class="md-nav__link">
+        CodeNotes
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        CXK开发板
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CXK开发板" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          CXK开发板
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cxk/" class="md-nav__link">
+        CXK开发板
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        SLAM小车
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="SLAM小车" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          SLAM小车
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slam/" class="md-nav__link">
+        SLAM小车
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        其他软硬件项目
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="其他软硬件项目" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          其他软硬件项目
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../px4/" class="md-nav__link">
+        PX4硬件方案
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openmvs3/" class="md-nav__link">
+        OPENMVS3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atouchv3s/" class="md-nav__link">
+        ATouch(V3s)
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      <label class="md-nav__link" for="__nav_10">
+        数学
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="数学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          矩阵
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        矩阵
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    单位矩阵
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    方阵
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    逆矩阵
+  </a>
+  
+    <nav class="md-nav" aria-label="逆矩阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    内积（点积）
+  </a>
+  
+    <nav class="md-nav" aria-label="内积（点积）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    代数定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    几何定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    外积（叉积）
+  </a>
+  
+    <nav class="md-nav" aria-label="外积（叉积）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    代数性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    欧式变换
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    标准正交基
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../symbol/" class="md-nav__link">
+        数学符号
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      <label class="md-nav__link" for="__nav_11">
+        关于
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="关于" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          关于
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/about/" class="md-nav__link">
+        关于本站
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    单位矩阵
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    方阵
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    逆矩阵
+  </a>
+  
+    <nav class="md-nav" aria-label="逆矩阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    内积（点积）
+  </a>
+  
+    <nav class="md-nav" aria-label="内积（点积）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    代数定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    几何定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    外积（叉积）
+  </a>
+  
+    <nav class="md-nav" aria-label="外积（叉积）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    代数性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    欧式变换
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    标准正交基
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <p><a id = "matrix"></a>  </p>
+<h1 id="_1">矩阵总结</h1>
+<hr />
+<h3 id="_2">单位矩阵</h3>
+<p>在矩阵的乘法中，有一种矩阵起着特殊的作用，如同数的乘法中的1，这种矩阵被称为 <strong>单位矩阵</strong> 。它是个方阵，从左上角到右下角的对角线（称为主对角线）上的元素均为1。除此以外全都为0。   </p>
+<p>根据 <strong>单位矩阵</strong> 的特点，任何矩阵与 <strong>单位矩阵</strong> 相乘都等于本身，而且 <strong>单位矩阵</strong> 因此独特性在高等数学中也有广泛应用。  </p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{bmatrix}
+1 &amp; 0\\ 
+0 &amp; 1
+\end{bmatrix}   
+\begin{bmatrix}
+1 &amp; 0 &amp; 0\\ 
+0 &amp; 1 &amp; 0\\ 
+0 &amp; 0 &amp; 1
+\end{bmatrix}   
+\begin{bmatrix}   
+1 &amp; 0 &amp; 0 &amp; 0\\ 
+0 &amp; 1 &amp; 0 &amp; 0\\ 
+0 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}   
+</div>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+1 & 0\\ 
+0 & 1
+\end{bmatrix}   
+\begin{bmatrix}
+1 & 0 & 0\\ 
+0 & 1 & 0\\ 
+0 & 0 & 1
+\end{bmatrix}   
+\begin{bmatrix}   
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{bmatrix}   
+</script>
+</div>
+<hr />
+<h3 id="_3">方阵</h3>
+<p>方块矩阵，也称 <strong>方阵</strong>、方矩阵或正方矩阵，是行数及列数皆相同的矩阵。n×n阶矩阵被称为n阶 <strong>方阵</strong> </p>
+<hr />
+<h3 id="_4">逆矩阵</h3>
+<p><strong>逆矩阵</strong> （inverse matrix），又称反矩阵。在线性代数中，给定一个n阶方阵<span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>，若存在一个n阶方阵 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span> ，使得<span class="arithmatex"><span class="MathJax_Preview">\mathbf{AB}=\mathbf{BA}=\mathbf{I}_n</span><script type="math/tex">\mathbf{AB}=\mathbf{BA}=\mathbf{I}_n</script></span>，其中<span class="arithmatex"><span class="MathJax_Preview">\mathbf{I}_n</span><script type="math/tex">\mathbf{I}_n</script></span>为n阶单位矩阵，则称<span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>是可逆的，且<span class="arithmatex"><span class="MathJax_Preview">\mathbf{B}</span><script type="math/tex">\mathbf{B}</script></span>是<span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>的 <strong>逆矩阵</strong> ，记作<span class="arithmatex"><span class="MathJax_Preview">\mathbf{A} ^{-1}</span><script type="math/tex">\mathbf{A} ^{-1}</script></span>。</p>
+<p>只有方阵（n×n 的矩阵）才可能有 <strong>逆矩阵</strong> 。若方阵<span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>的 <strong>逆矩阵</strong> 存在，则称<span class="arithmatex"><span class="MathJax_Preview">\mathbf{A}</span><script type="math/tex">\mathbf{A}</script></span>为非奇异方阵或可逆方阵。</p>
+<p>与行列式类似，<strong>逆矩阵</strong> 一般用于求解联立方程组。</p>
+<h4 id="_5"><strong><em>性质</em></strong></h4>
+<ol>
+<li><span class="arithmatex"><span class="MathJax_Preview">\left (A^{-1}\right )^{-1}=A</span><script type="math/tex">\left (A^{-1}\right )^{-1}=A</script></span>  </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">(\lambda A)^{-1}=\frac{1}{\lambda}\times A^{-1}</span><script type="math/tex">(\lambda A)^{-1}=\frac{1}{\lambda}\times A^{-1}</script></span>  </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">(AB)^{-1}=B^{-1}A^{-1}</span><script type="math/tex">(AB)^{-1}=B^{-1}A^{-1}</script></span>  </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\left (A^\mathrm{T} \right )^{-1}=\left (A^{-1} \right )^{\mathrm{T}}（A^{\mathrm{T}}为A的转置）</span><script type="math/tex">\left (A^\mathrm{T} \right )^{-1}=\left (A^{-1} \right )^{\mathrm{T}}（A^{\mathrm{T}}为A的转置）</script></span>  </li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\det(A^{-1})=\frac{1}{\det(A)}（det为行列式）</span><script type="math/tex">\det(A^{-1})=\frac{1}{\det(A)}（det为行列式）</script></span>  </li>
+</ol>
+<hr />
+<h3 id="_6">内积（点积）</h3>
+<p>点积（Dot Product）又称数量积或标量积（Scalar Product），是一种接受两个等长的数字序列（通常是坐标向量）、返回单个数字的代数运算。在欧几里得几何中，两个笛卡尔坐标向量的点积常称为 <strong>内积</strong>   </p>
+<p>从代数角度看，先对两个数字序列中的每组对应元素求积，再对所有积求和，结果即为点积。从几何角度看，点积则是两个向量的长度与它们夹角余弦的积。这两种定义在笛卡尔坐标系中等价。  </p>
+<p>点积的名称源自表示点乘运算的点号（<span class="arithmatex"><span class="MathJax_Preview">{\displaystyle a\cdot b}</span><script type="math/tex">{\displaystyle a\cdot b}</script></span>），读作{<span class="arithmatex"><span class="MathJax_Preview">\displaystyle a\ dot\ b</span><script type="math/tex">\displaystyle a\ dot\ b</script></span>}，标量积的叫法则是在强调其运算结果为标量而非向量。向量的另一种乘法是叉乘（<span class="arithmatex"><span class="MathJax_Preview">{\displaystyle a\times b}</span><script type="math/tex">{\displaystyle a\times b}</script></span>），其结果为向量，称为叉积或向量积。</p>
+<p>点积是 <strong>内积</strong> 的一种特殊形式。  </p>
+<h4 id="_7"><strong><em>代数定义</em></strong></h4>
+<p>两个向量<span class="arithmatex"><span class="MathJax_Preview">{\displaystyle {\vec {a}}=[a_{1},a_{2},\cdots ,a_{n}]}</span><script type="math/tex">{\displaystyle {\vec {a}}=[a_{1},a_{2},\cdots ,a_{n}]}</script></span>和<span class="arithmatex"><span class="MathJax_Preview">{\displaystyle {\vec {b}}=[b_{1},b_{2},\cdots ,b_{n}]}</span><script type="math/tex">{\displaystyle {\vec {b}}=[b_{1},b_{2},\cdots ,b_{n}]}</script></span>的点积定义为：  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\vec{a}\cdot \vec{b}=\sum\limits_{i=1}^{n} a_ib_i = a_1b_1 + a_2b_2 + \cdots + a_nb_n</span><script type="math/tex">\vec{a}\cdot \vec{b}=\sum\limits_{i=1}^{n} a_ib_i = a_1b_1 + a_2b_2 + \cdots + a_nb_n</script></span>
+这里的Σ是求和符号，而n是向量空间的维数。</p>
+<p>例如，两个三维向量<span class="arithmatex"><span class="MathJax_Preview">{\displaystyle \left[1,3,-5\right]}和{\displaystyle \left[4,-2,-1\right]}</span><script type="math/tex">{\displaystyle \left[1,3,-5\right]}和{\displaystyle \left[4,-2,-1\right]}</script></span>的点积是</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle {\begin{aligned}\ [1,3,-5]\cdot [4,-2,-1]&amp;=(1)(4)+(3)(-2)+(-5)(-1)\\&amp;=4-6+5\\&amp;=3\end{aligned}}}</span><script type="math/tex">{\displaystyle {\begin{aligned}\ [1,3,-5]\cdot [4,-2,-1]&=(1)(4)+(3)(-2)+(-5)(-1)\\&=4-6+5\\&=3\end{aligned}}}</script></span>
+点积还可以写为：</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle {\vec {a}}\cdot {\vec {b}}={\vec {a}}{\vec {b}}^{T}}</span><script type="math/tex">{\displaystyle {\vec {a}}\cdot {\vec {b}}={\vec {a}}{\vec {b}}^{T}}</script></span>。
+这里，<span class="arithmatex"><span class="MathJax_Preview">{\displaystyle {\vec {b}}^{T}}</span><script type="math/tex">{\displaystyle {\vec {b}}^{T}}</script></span>是行向量<span class="arithmatex"><span class="MathJax_Preview">\vec{b}</span><script type="math/tex">\vec{b}</script></span>的转置。</p>
+<p>使用上面的例子，一个1×3矩阵（行向量）乘以一个3×1矩阵（列向量）的行列式就是结果(通过矩阵乘法得到1×1矩阵):</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle {\begin{bmatrix}1&amp;3&amp;-5\end{bmatrix}}{\begin{bmatrix}4\\-2\\-1\end{bmatrix}}={\begin{bmatrix}3\end{bmatrix}}=3}</span><script type="math/tex">{\displaystyle {\begin{bmatrix}1&3&-5\end{bmatrix}}{\begin{bmatrix}4\\-2\\-1\end{bmatrix}}={\begin{bmatrix}3\end{bmatrix}}=3}</script></span>。 </p>
+<h4 id="_8"><strong><em>几何定义</em></strong></h4>
+<p>在欧几里得空间中，点积可以直观地定义为  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\vec{a} \cdot \vec{b} = |\vec{a}| \, |\vec{b}| \cos \theta \;</span><script type="math/tex">\vec{a} \cdot \vec{b} = |\vec{a}| \, |\vec{b}| \cos \theta \;</script></span>  </p>
+<p>这里 <span class="arithmatex"><span class="MathJax_Preview">|\vec{x}|</span><script type="math/tex">|\vec{x}|</script></span> 表示<span class="arithmatex"><span class="MathJax_Preview">\vec{x}</span><script type="math/tex">\vec{x}</script></span>的模（长度），<span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> 表示两个向量之间的角度。  </p>
+<p>注意：点积的形式定义和这个定义不同；在形式定义中，<span class="arithmatex"><span class="MathJax_Preview">\vec{a}</span><script type="math/tex">\vec{a}</script></span>和<span class="arithmatex"><span class="MathJax_Preview">\vec{b}</span><script type="math/tex">\vec{b}</script></span>的夹角是通过上述等式定义的。  </p>
+<p>这样，两个互相垂直的向量的点积总是零。若<span class="arithmatex"><span class="MathJax_Preview">\vec{a}</span><script type="math/tex">\vec{a}</script></span>和<span class="arithmatex"><span class="MathJax_Preview">\vec{b}</span><script type="math/tex">\vec{b}</script></span>都是单位向量（长度为1），它们的点积就是它们的  夹角的余弦。那么，给定两个向量，它们之间的夹角可以通过下列公式得到：</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\cos{\theta} = \frac{\mathbf{a \cdot b}}{|\vec{a}| \, |\vec{b}|}</span><script type="math/tex">\cos{\theta} = \frac{\mathbf{a \cdot b}}{|\vec{a}| \, |\vec{b}|}</script></span>  </p>
+<p>这个运算可以简单地理解为：在点积运算中，第一个向量投影到第二个向量上（这里，向量的顺序是不重要的，点积运算是可交换的），然后通过除以它们的标量长度来“标准化”。这样，这个分数一定是小于等于1的，可以简单地转化成一个角度值。  </p>
+<h4 id="_9"><strong><em>性质</em></strong></h4>
+<p>点积具有以下性质。  </p>
+<ul>
+<li>
+<p>满足交换律：  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle {\vec {a}}\cdot {\vec {b}}={\vec {b}}\cdot {\vec {a}}}</span><script type="math/tex">{\displaystyle {\vec {a}}\cdot {\vec {b}}={\vec {b}}\cdot {\vec {a}}}</script></span>  </p>
+<p>从定义即可证明（<span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span>  为a与b的夹角）：  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle {\vec {a}}\cdot {\vec {b}}=\left\|{\vec {a}}\right\|\left\|{\vec {b}}\right\|\cos \theta =\left\|{\vec {b}}\right\|\left\|{\vec {a}}\right\|\cos \theta ={\vec {b}}\cdot {\vec {a}}}</span><script type="math/tex">{\displaystyle {\vec {a}}\cdot {\vec {b}}=\left\|{\vec {a}}\right\|\left\|{\vec {b}}\right\|\cos \theta =\left\|{\vec {b}}\right\|\left\|{\vec {a}}\right\|\cos \theta ={\vec {b}}\cdot {\vec {a}}}</script></span><br />
+<br />  </p>
+</li>
+<li>
+<p>对向量加法满足分配律：  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\vec{a} \cdot (\vec{b} + \vec{c}) = \vec{a} \cdot \vec{b} + \vec{a} \cdot \vec{c}</span><script type="math/tex">\vec{a} \cdot (\vec{b} + \vec{c}) = \vec{a} \cdot \vec{b} + \vec{a} \cdot \vec{c}</script></span><br />
+<br />  </p>
+</li>
+<li>
+<p>点积是双线性算子：  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle {\vec {a}}\cdot (r{\vec {b}}+{\vec {c}})=r({\vec {a}}\cdot {\vec {b}})+({\vec {a}}\cdot {\vec {c}})}</span><script type="math/tex">{\displaystyle {\vec {a}}\cdot (r{\vec {b}}+{\vec {c}})=r({\vec {a}}\cdot {\vec {b}})+({\vec {a}}\cdot {\vec {c}})}</script></span><br />
+<br />  </p>
+</li>
+<li>
+<p>在乘以标量时满足：  </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">(c_1\vec{a}) \cdot (c_2\vec{b}) = (c_1c_2) (\vec{a} \cdot \vec{b})</span><script type="math/tex">(c_1\vec{a}) \cdot (c_2\vec{b}) = (c_1c_2) (\vec{a} \cdot \vec{b})</script></span><br />
+<br />  </p>
+</li>
+<li>
+<p>不满足结合律。
+    因为标量（<span class="arithmatex"><span class="MathJax_Preview">{\displaystyle {\vec {a}}\cdot {\vec {b}}}</span><script type="math/tex">{\displaystyle {\vec {a}}\cdot {\vec {b}}}</script></span>）与向量（<span class="arithmatex"><span class="MathJax_Preview">\vec{c}</span><script type="math/tex">\vec{c}</script></span>）的点积没有定义，所以结合律相关的表达式<span class="arithmatex"><span class="MathJax_Preview">{\displaystyle ({\vec {a}}\cdot {\vec {b}})\cdot {\vec {c}}}</span><script type="math/tex">{\displaystyle ({\vec {a}}\cdot {\vec {b}})\cdot {\vec {c}}}</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">{\displaystyle {\vec {a}}\cdot ({\vec {b}}\cdot {\vec {c}})}</span><script type="math/tex">{\displaystyle {\vec {a}}\cdot ({\vec {b}}\cdot {\vec {c}})}</script></span> 都没有良好的定义<br />
+<br />  </p>
+</li>
+</ul>
+<hr />
+<h3 id="_10">外积（叉积）</h3>
+<p>在数学和向量代数领域，叉积（Cross product）又称向量积（Vector product），是对三维空间中的两个向量的二元运算，使用符号 <span class="arithmatex"><span class="MathJax_Preview">\times</span><script type="math/tex">\times</script></span>。与点积不同，它的运算结果是向量。  </p>
+<p>对于线性无关的两个向量 <span class="arithmatex"><span class="MathJax_Preview">\mathbf {a}</span><script type="math/tex">\mathbf {a}</script></span>  和 <span class="arithmatex"><span class="MathJax_Preview">\mathbf {b}</span><script type="math/tex">\mathbf {b}</script></span> ，它们的叉积写作 <span class="arithmatex"><span class="MathJax_Preview">{\displaystyle \mathbf {a} \times \mathbf {b} }</span><script type="math/tex">{\displaystyle \mathbf {a} \times \mathbf {b} }</script></span>，是 <span class="arithmatex"><span class="MathJax_Preview">\mathbf {a}</span><script type="math/tex">\mathbf {a}</script></span>  和 <span class="arithmatex"><span class="MathJax_Preview">\mathbf {b}</span><script type="math/tex">\mathbf {b}</script></span>  所在平面的法线向量，与 <span class="arithmatex"><span class="MathJax_Preview">\mathbf {a}</span><script type="math/tex">\mathbf {a}</script></span>  和 <span class="arithmatex"><span class="MathJax_Preview">\mathbf {b}</span><script type="math/tex">\mathbf {b}</script></span>  都垂直。  </p>
+<h4 id="_11"><strong><em>代数性质</em></strong></h4>
+<p>对于任意三个向量 <span class="arithmatex"><span class="MathJax_Preview">\mathbf {a}</span><script type="math/tex">\mathbf {a}</script></span> 、<span class="arithmatex"><span class="MathJax_Preview">\mathbf {b}</span><script type="math/tex">\mathbf {b}</script></span> 、<span class="arithmatex"><span class="MathJax_Preview">\mathbf {c}</span><script type="math/tex">\mathbf {c}</script></span> ，  </p>
+<ul>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle \mathbf {a} \times \mathbf {a} =\mathbf {0} }</span><script type="math/tex">{\displaystyle \mathbf {a} \times \mathbf {a} =\mathbf {0} }</script></span><br />
+<br />  </p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle \mathbf {a} \times \mathbf {0} =\mathbf {0} }</span><script type="math/tex">{\displaystyle \mathbf {a} \times \mathbf {0} =\mathbf {0} }</script></span><br />
+<br />  </p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle \mathbf {a} \times \mathbf {b} =-\mathbf {b} \times \mathbf {a} }</span><script type="math/tex">{\displaystyle \mathbf {a} \times \mathbf {b} =-\mathbf {b} \times \mathbf {a} }</script></span>（反交换律）<br />
+<br />  </p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle \mathbf {a} \times (\mathbf {b} +\mathbf {c} )=\mathbf {a} \times \mathbf {b} +\mathbf {a} \times \mathbf {c} }</span><script type="math/tex">{\displaystyle \mathbf {a} \times (\mathbf {b} +\mathbf {c} )=\mathbf {a} \times \mathbf {b} +\mathbf {a} \times \mathbf {c} }</script></span>（加法的左分配律）<br />
+<br />  </p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle (\mathbf {a} +\mathbf {b} )\times \mathbf {c} =\mathbf {a} \times \mathbf {c} +\mathbf {b} \times \mathbf {c} }</span><script type="math/tex">{\displaystyle (\mathbf {a} +\mathbf {b} )\times \mathbf {c} =\mathbf {a} \times \mathbf {c} +\mathbf {b} \times \mathbf {c} }</script></span>（加法的右分配律）<br />
+<br />  </p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle (\lambda \mathbf {a} )\times \mathbf {b} =\lambda (\mathbf {a} \times \mathbf {b} )=\mathbf {a} \times (\lambda \mathbf {b} )}</span><script type="math/tex">{\displaystyle (\lambda \mathbf {a} )\times \mathbf {b} =\lambda (\mathbf {a} \times \mathbf {b} )=\mathbf {a} \times (\lambda \mathbf {b} )}</script></span><br />
+<br />  </p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle \mathbf {a} \times \mathbf {b} +\mathbf {c} \times \mathbf {d} =(\mathbf {a} -\mathbf {c} )\times (\mathbf {b} -\mathbf {d} )+\mathbf {a} \times \mathbf {d} +\mathbf {c} \times \mathbf {b} }</span><script type="math/tex">{\displaystyle \mathbf {a} \times \mathbf {b} +\mathbf {c} \times \mathbf {d} =(\mathbf {a} -\mathbf {c} )\times (\mathbf {b} -\mathbf {d} )+\mathbf {a} \times \mathbf {d} +\mathbf {c} \times \mathbf {b} }</script></span><br />
+<br />  </p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle |\mathbf {a} \times \mathbf {b} |=|\mathbf {b} \times \mathbf {a} |}</span><script type="math/tex">{\displaystyle |\mathbf {a} \times \mathbf {b} |=|\mathbf {b} \times \mathbf {a} |}</script></span><br />
+<br />  </p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle |\mathbf {a} \times \mathbf {b} |^{2}=|\mathbf {a} |^{2}|\mathbf {b} |^{2}-(\mathbf {a} \cdot \mathbf {b} )^{2}={\begin{vmatrix}\mathbf {a} \cdot \mathbf {a} &amp;\mathbf {a} \cdot \mathbf {b} \\\mathbf {a} \cdot \mathbf {b} &amp;\mathbf {b} \cdot \mathbf {b} \\\end{vmatrix}}}</span><script type="math/tex">{\displaystyle |\mathbf {a} \times \mathbf {b} |^{2}=|\mathbf {a} |^{2}|\mathbf {b} |^{2}-(\mathbf {a} \cdot \mathbf {b} )^{2}={\begin{vmatrix}\mathbf {a} \cdot \mathbf {a} &\mathbf {a} \cdot \mathbf {b} \\\mathbf {a} \cdot \mathbf {b} &\mathbf {b} \cdot \mathbf {b} \\\end{vmatrix}}}</script></span>（拉格朗日恒等式）<br />
+<br />  </p>
+</li>
+</ul>
+<p>一般来说，向量叉积不遵守约简律，即 <span class="arithmatex"><span class="MathJax_Preview">{\displaystyle \mathbf {a} \times \mathbf {b} =\mathbf {a} \times \mathbf {c} }</span><script type="math/tex">{\displaystyle \mathbf {a} \times \mathbf {b} =\mathbf {a} \times \mathbf {c} }</script></span> 不表示<span class="arithmatex"><span class="MathJax_Preview">{\displaystyle \mathbf {b} =\mathbf {c} }</span><script type="math/tex">{\displaystyle \mathbf {b} =\mathbf {c} }</script></span>。此外，<span class="arithmatex"><span class="MathJax_Preview">{\displaystyle \mathbf {a} \times \mathbf {b} =\mathbf {0} }</span><script type="math/tex">{\displaystyle \mathbf {a} \times \mathbf {b} =\mathbf {0} }</script></span> 不表示 <span class="arithmatex"><span class="MathJax_Preview">{\displaystyle \mathbf {a} =\mathbf {0} }</span><script type="math/tex">{\displaystyle \mathbf {a} =\mathbf {0} }</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">{\displaystyle \mathbf {b} =\mathbf {0} }</span><script type="math/tex">{\displaystyle \mathbf {b} =\mathbf {0} }</script></span>。  </p>
+<p>但对于两个非零向量 <span class="arithmatex"><span class="MathJax_Preview">\mathbf {a}</span><script type="math/tex">\mathbf {a}</script></span>  和 <span class="arithmatex"><span class="MathJax_Preview">\mathbf {b}</span><script type="math/tex">\mathbf {b}</script></span>:</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">{\displaystyle \mathbf {a} \times \mathbf {b} =\mathbf {0} }</span><script type="math/tex">{\displaystyle \mathbf {a} \times \mathbf {b} =\mathbf {0} }</script></span> 当且仅当 <span class="arithmatex"><span class="MathJax_Preview">\mathbf {a}</span><script type="math/tex">\mathbf {a}</script></span>  平行于 <span class="arithmatex"><span class="MathJax_Preview">\mathbf {b}</span><script type="math/tex">\mathbf {b}</script></span>  </li>
+</ul>
+<hr />
+<h3 id="_12">欧式变换</h3>
+<p>假设存在两个坐标系：一个世界坐标系，定义为某个墙角和它的三条边，并是一个惯性系；一个机器人坐标系，是一个随机器人移动的坐标系。假设机器人观察到了某个向量<span class="arithmatex"><span class="MathJax_Preview">\mathbf {P}</span><script type="math/tex">\mathbf {P}</script></span> , 它在这两个坐标系中分别有一套坐标。前面说了，向量是一个客观存在的实体，那么必然有一个关系能够将这两套坐标联系起来。  </p>
+<p>这个关系就是欧式变换。因为机器人的运动是一个刚体运动，所以同一个向量在不同坐标系下的模长和方向都不会发生变化。这样一个欧式变换就是由一个旋转和一个平移两部分组成。  </p>
+<hr />
+<h3 id="_13">标准正交基</h3>
+<p>在线性代数中，一个内积空间的正交基（orthogonal basis）是元素两两正交的基。称基中的元素为基向量。假若，一个正交基的基向量的模长都是单位长度1，则称这正交基为标准正交基或"规范正交基"（Orthonormal basis）。  </p>
+<p>在欧几里德空间<span class="arithmatex"><span class="MathJax_Preview">{\mathbb{R}}^{{3}}</span><script type="math/tex">{\mathbb{R}}^{{3}}</script></span>中，<br />
+<span class="arithmatex"><span class="MathJax_Preview">e1=\begin{bmatrix}
+1\\ 
+0\\ 
+0
+\end{bmatrix}</span><script type="math/tex">e1=\begin{bmatrix}
+1\\ 
+0\\ 
+0
+\end{bmatrix}</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">e2=\begin{bmatrix}
+0\\ 
+1\\ 
+0
+\end{bmatrix}</span><script type="math/tex">e2=\begin{bmatrix}
+0\\ 
+1\\ 
+0
+\end{bmatrix}</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">e3=\begin{bmatrix}
+0\\ 
+0\\ 
+1
+\end{bmatrix}</span><script type="math/tex">e3=\begin{bmatrix}
+0\\ 
+0\\ 
+1
+\end{bmatrix}</script></span>,<br />
+[e1,e2,e3]组成一个标准正交基,即：<br />
+<span class="arithmatex"><span class="MathJax_Preview">\begin{bmatrix}
+1 &amp;0 &amp;0\\ 
+0 &amp;1 &amp;0\\ 
+0 &amp;0 &amp;1
+\end{bmatrix}</span><script type="math/tex">\begin{bmatrix}
+1 &0 &0\\ 
+0 &1 &0\\ 
+0 &0 &1
+\end{bmatrix}</script></span>  </p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../atouchv3s/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ATouch(V3s)" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              ATouch(V3s)
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../symbol/" class="md-footer__link md-footer__link--next" aria-label="Next: 数学符号" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              数学符号
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 光轮电子 <a href="https://beian.miit.gov.cn">冀ICP备20000720号</a> 
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.709b4209.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

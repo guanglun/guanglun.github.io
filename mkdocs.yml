@@ -36,7 +36,8 @@ nav:
 
 theme:
   name: 'material'
-
+  logo: images/logo.jpg
+  
 markdown_extensions:
   - admonition
   - pymdownx.arithmatex

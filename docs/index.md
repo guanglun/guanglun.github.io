@@ -39,5 +39,10 @@
 
 ## 关于本站
 
-* [关于本站](about/about.md#about)
+* [关于本站](about/about.md#about)  
+
+# 欢迎捐赠支持我的项目！
+* 请备注支持的项目  
+
+![wxzfb](about/img/wxzfb.png) 
 

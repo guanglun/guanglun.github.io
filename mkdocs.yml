@@ -33,7 +33,8 @@ nav:
   - 数学符号: math/symbol.md
 - 关于: 
   - 关于本站: about/about.md
-
+  - 捐赠: about/donate.md
+  
 theme:
   name: 'material'
   logo: images/logo.jpg

@@ -10,6 +10,18 @@ OPENVIO 一款脱胎于OPENMV的智能摄像头。
 
 ## 源码和资料
 
+#### 基础源码(OV7725 MT9V034 MPU6050 LCD USB)  
+
+[OPENVIO源码(github)](https://github.com/guanglun/openvio_board)【开发环境：Keil5】  
+
+[OPENVIO PC上位机(github)](https://github.com/guanglun/openvio_pc)【开发环境：QT5.6.0 qt-opensource-windows-x86-mingw492-5.6.0】  
+
+[OPENVIO ROS源码(github)](https://github.com/guanglun/openvio_ros)
+
+#### 新架构OPENVIO源码用于GLMocap视觉动捕项目  
+
+[新架构OPENVIO 上位机源码(github)](https://github.com/guanglun/GLMocap)【详情查阅[GLMocap](https://guanglundz.com/mocap)项目】  
+
 [新架构OPENVIO-APP源码(github)](https://github.com/guanglun/openvio)【开发环境：Vscode Makefile】  
 
 [新架构OPENVIO-BOOTLOADER源码(github)](https://github.com/guanglun/openvio_bootloader)【开发环境：Vscode Makefile】 
@@ -18,12 +30,10 @@ OPENVIO 一款脱胎于OPENMV的智能摄像头。
 
 [新架构OPENVIO-BOOTLOADER源码(gitee)](https://gitee.com/guanglunking/openvio_bootloader)【开发环境：Vscode Makefile】  
 
-[OPENVIO源码](https://gitee.com/guanglunking/OPENVIO_BOARD)【开发环境：Keil5】  
+#### OPENVIO原理图  
+[OPENVIO V1.6版本硬件原理图(github)](https://github.com/guanglun/openvio_board/blob/master/Doc/OPENVIO_V1.6_SCH.pdf)
 
-[OPENVIO PC上位机](https://gitee.com/guanglunking/OPENVIO_PC)【开发环境：QT5.6.0 qt-opensource-windows-x86-mingw492-5.6.0】  
-
-[OPENVIO ROS源码](https://gitee.com/guanglunking/OPENVIO_ROS)
-
+#### 购买访问  
 [淘宝店铺](https://item.taobao.com/item.htm?id=615919130291)  
 
 ## 与OPENMV固件兼容性说明
@@ -34,6 +44,7 @@ OPENVIO 一款脱胎于OPENMV的智能摄像头。
 | 仅兼容一颗 | 兼容 | 兼容 | 不兼容 |  
 
 </br>
+![OPENVIO](img/openvio_compare.png) 
 
 ## 功能及研发进度
 | 功能 | 进度 |
@@ -41,8 +52,8 @@ OPENVIO 一款脱胎于OPENMV的智能摄像头。
 | OPENMV两款摄像头兼容 | 已完成 |
 | SLAM VIO 单目IMU传感器功能 | 已完成 |
 | 港科大VINS-MONO | 已完成 |
-| PC上位机 | 正在研发 |
-| 小Demo | 正在研发 |
+| PC上位机 | 已完成 |
+| 小Demo | 已完成 |
 | PX4光流 | 正在研发 |
 
 </br>
@@ -54,60 +65,21 @@ OPENVIO 一款脱胎于OPENMV的智能摄像头。
 | OV7725 | 已完成 |
 | MT9V034 | 已完成 |
 | 下载调试器模块 | 已完成 |
-| 正面彩屏模块 | 正在研发 |
-| 背面彩屏及锂电源模块 | 正在研发 |
-| 超声波模块 | 正在研发 |
+| 正面彩屏模块 | 取消研发 |
+| 背面彩屏模块 | 已完成 |
+| 背面彩屏及锂电源模块 | 择机研发 |
+| 超声波模块 | 取消研发 |  
 
+![OPENVIO](img/openvio_module.png)  
 
-## 图片
+## 接口
+![OPENVIO](img/openvio_interface_up.png)  
+![OPENVIO](img/openvio_interface_back.png)  
 
-### V1.0版本
+## USB HS FS 切换
+![OPENVIO](img/openvio_usb.png)  
 
-![OPENVIO](img/v1.0-1.jpg)
-
-![OPENVIO](img/v1.0-2.jpg)
-
-### V1.2版本
-
-![OPENVIO](img/v1.2-1.jpg)
-
-### V1.3版本
-
-![OPENVIO](img/v1.3-1.jpg)
-
-![OPENVIO](img/v1.3-2.jpg)
-
-![OPENVIO](img/v1.3-3.jpg)
-
-### V1.4版本
-
-![OPENVIO](img/v1.4-1.jpg)
-
-![OPENVIO](img/v1.4-2.jpg)
-
-### V1.5版本
-
-![OPENVIO](img/v1.5-1.jpg)
-
-![OPENVIO](img/v1.5-2.jpg)
-
-![OPENVIO](img/OPENVIO.jpg)
-
-![OPENVIO](img/OPENVIO1.jpg)
-
-![OPENVIO](img/OPENVIO2.jpg)
-
-![OPENVIO](img/OPENVIO3.jpg)
-
-### V1.6版本
-
-![OPENVIO](img/v1.6-0.jpg)
-
-![OPENVIO](img/v1.6-1.jpg)
-
-![OPENVIO](img/v1.6-2.jpg)
-
-### PC上位机
+### PC上位机(基础版本)
 
 ![OPENVIO](img/OPENVIO_PC.png)
 
@@ -115,3 +87,11 @@ OPENVIO 一款脱胎于OPENMV的智能摄像头。
 
 ![OPENVIO](img/Screenshot from 2020-08-04 12-59-07.png)
 
+## 图片
+
+### OPENVIO V1.6 正面
+
+![OPENVIO](img/vio2.png)  
+
+### OPENVIO V1.6 背面
+![OPENVIO](img/vio3.png)  

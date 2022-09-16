@@ -2,6 +2,10 @@
 
 <a id = "atouch"></a>
 
+!!! warning
+    ATouch后续版本固件采用了闭源的方式发布（换句话说，后续版本不开源了）。  
+    包括ATouch相关的安卓软件和PC软件也都是闭源。之前已经开源的版本会保持开放。
+
 ## 最新APP和固件下载地址
 
 [最新APP和固件下载地址](http://guanglundz.com/atouch/download.html)  

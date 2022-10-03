@@ -24,10 +24,10 @@ make px4_fmu-v4_default
 make px4_fmu-v4_default
 ```
 提供已经变好的固件(仅供参考！)：  
-[PX4格式](http://guanglundz.com/gldrone/file/px4_fmu-v4_default.px4)  
-[BIN格式](http://guanglundz.com/gldrone/file/px4_fmu-v4_default.bin)  
+[PX4格式](https://github.com/guanglun/guanglun.github.io/blob/master/docs/gldrone/file/px4_fmu-v4_default.px4)  
+[BIN格式](https://github.com/guanglun/guanglun.github.io/blob/master/docs/gldrone/file/px4_fmu-v4_default.bin)  
 配置文件(仅供参考！)：  
-[params](px4-f4-2022-10-3.params)  
+[params](https://github.com/guanglun/guanglun.github.io/blob/master/docs/gldrone/file/px4-f4-2022-10-3.params)  
 
 Bootloader请自行编译，参考地址：  
 [https://docs.px4.io/main/zh/software_update/stm32_bootloader.html](https://docs.px4.io/main/zh/software_update/stm32_bootloader.html)  

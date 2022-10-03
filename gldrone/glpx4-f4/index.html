@@ -418,9 +418,53 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          GLPX4-F4
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         GLPX4-F4
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    方案说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    接口说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp32-wifi" class="md-nav__link">
+    ESP32 WIFI方案
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -799,6 +843,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    方案说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    接口说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp32-wifi" class="md-nav__link">
+    ESP32 WIFI方案
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -811,14 +884,80 @@
                 
                 
                 <h1 id="glpx4-f4">GLPX4-F4</h1>
+<h2 id="_1">方案说明</h2>
+<table>
+<thead>
+<tr>
+<th align="center">类别</th>
+<th align="center">方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">主控</td>
+<td align="center">STM32F427VIT6</td>
+</tr>
+<tr>
+<td align="center">IMU</td>
+<td align="center">ICM-20602 ICM-20602</td>
+</tr>
+<tr>
+<td align="center">磁力计</td>
+<td align="center">LIS3MDL</td>
+</tr>
+<tr>
+<td align="center">气压计</td>
+<td align="center">MS5611</td>
+</tr>
+<tr>
+<td align="center">WIFI</td>
+<td align="center">ESP32-PICO-MINI</td>
+</tr>
+<tr>
+<td align="center">光流(可选模块)</td>
+<td align="center">PMW3901MB</td>
+</tr>
+<tr>
+<td align="center">激光(可选模块)</td>
+<td align="center">VL53L1X</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://oshwhub.com/guanglun/gldrone_px4">GLPX4-F4原理图PCB开源地址</a><br />
+<a href="https://oshwhub.com/guanglun/gldrone_blheli_esc">BLHeli电调原理图PCB开源地址</a>  </p>
+<p>硬件设计参考<a href="https://docs.px4.io/main/en/flight_controller/pixracer.html">pixracer</a>方案，可以直接使用<a href="https://github.com/PX4/PX4-Autopilot">PX4官方源码</a>编译：
+<div class="highlight"><pre><span></span><code>make px4_fmu-v4_default
+</code></pre></div>
+但是有些地方为了兼容我的修改设计进行了部分代码修改，所以推荐使用我修改后的代码编译固件：<br />
+<a href="https://github.com/guanglun/PX4-Autopilot">修改后的源码地址</a>(使用<code>GLPX4_F4</code>分支)<br />
+同样是<br />
+<div class="highlight"><pre><span></span><code>make px4_fmu-v4_default
+</code></pre></div>
+提供已经变好的固件(仅供参考！)：<br />
+<a href="http://guanglundz.com/gldrone/file/px4_fmu-v4_default.px4">PX4格式</a><br />
+<a href="http://guanglundz.com/gldrone/file/px4_fmu-v4_default.bin">BIN格式</a><br />
+配置文件(仅供参考！)：<br />
+<a href="px4-f4-2022-10-3.params">params</a>  </p>
+<p>Bootloader请自行编译，参考地址：<br />
+<a href="https://docs.px4.io/main/zh/software_update/stm32_bootloader.html">https://docs.px4.io/main/zh/software_update/stm32_bootloader.html</a><br />
+<a href="https://github.com/PX4/PX4-Bootloader">https://github.com/PX4/PX4-Bootloader</a>  </p>
+<h2 id="_2">接口说明</h2>
+<p><img alt="select" src="../img/GLPX4-F4.png" />   </p>
+<h2 id="esp32-wifi">ESP32 WIFI方案</h2>
+<p>参考链接：<a href="https://docs.px4.io/main/en/telemetry/esp32_wifi_module.html">https://docs.px4.io/main/en/telemetry/esp32_wifi_module.html</a><br />
+固件地址：<a href="https://github.com/DroneBridge/ESP32/releases">https://github.com/DroneBridge/ESP32/releases</a>  </p>
 <ul>
-<li>主控: STM32F427VIT6</li>
-<li>IMU： MPU9250 ICM-20602</li>
-<li>磁力计：LIS3MDL</li>
-<li>气压计：MS5611</li>
-<li>光流：PMW3901MB</li>
+<li>由于使用的是<code>ESP32-PICO-MINI-02</code>模块，烧写固件请选择<code>UART</code>版本固件<code>DroneBridgeESP32_v1_1_alt_UART_conf</code>  </li>
+</ul>
+<p><img alt="select" src="../img/px4_f4_esp32.png" />  </p>
+<ul>
 <li>
-<p>激光：VL53L1X</p>
+<p>修改固件IO为TX:1 RX:3,其余项目请自行配置<br />
+<img alt="select" src="../img/f4_esp32_2.png" />  </p>
+</li>
+<li>
+<p>烧写请自制下载器直接从ESP32烧写接口进行烧写  <br />
+<img alt="select" src="../img/f4_esp32_flash.jpg" />  </p>
 </li>
 <li>
 <p>new:
@@ -826,10 +965,12 @@
 <br /></p>
 </li>
 <li>
-<p>old:
+<p>远古版本:<br />
 <img alt="px4" src="../../px4/img/px4_0.jpg" /><br />
 <br />  </p>
 </li>
+<li>远古版本光流试飞视频:<br />
+<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=420006883&bvid=BV1d3411q7Dd&cid=394311072&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  </li>
 </ul>
                 
               

@@ -50,11 +50,14 @@ Bootloader请自行编译，参考地址：
 * 烧写请自制下载器直接从ESP32烧写接口进行烧写    
 ![select](img/f4_esp32_flash.jpg)  
 
-* new:
+# 飞控方案视频  
+<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=261213699&bvid=BV1ue411j7M9&cid=851195725&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
+<br />  
+
 ![px4](img/gl6.jpg)  
 <br />
 
-* 远古版本:  
+远古版本:  
 ![px4](../px4/img/px4_0.jpg)  
 <br />  
 * 远古版本光流试飞视频:  

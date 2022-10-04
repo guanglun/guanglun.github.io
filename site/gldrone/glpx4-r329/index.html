@@ -442,9 +442,46 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          GLPX4-R329
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         GLPX4-R329
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    方案说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    接口说明
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -799,6 +836,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    方案说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    接口说明
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -811,17 +870,70 @@
                 
                 
                 <h1 id="glpx4-r329">GLPX4-R329</h1>
-<ul>
-<li>主控：全志R329</li>
-<li>IMU: ICM-20689 ICM-20602</li>
-<li>磁力计：IST8310</li>
-<li>气压计：MS5611</li>
-<li>PWM: PCA9685PW</li>
-</ul>
-<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=847546378&bvid=BV1UL4y1a76o&cid=394305751&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<p><br />  </p>
-<p><img alt="px4" src="../img/gl4.jpg" /><br />
+<h2 id="_1">方案说明</h2>
+<table>
+<thead>
+<tr>
+<th align="center">类别</th>
+<th align="center">方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">主控</td>
+<td align="center">全志R329</td>
+</tr>
+<tr>
+<td align="center">IMU</td>
+<td align="center">ICM-20689 ICM-20602</td>
+</tr>
+<tr>
+<td align="center">磁力计</td>
+<td align="center">IST8310</td>
+</tr>
+<tr>
+<td align="center">气压计</td>
+<td align="center">MS5611</td>
+</tr>
+<tr>
+<td align="center">WIFI</td>
+<td align="center">RTL8723DS</td>
+</tr>
+<tr>
+<td align="center">光流(可选模块)</td>
+<td align="center">PMW3901MB</td>
+</tr>
+<tr>
+<td align="center">激光(可选模块)</td>
+<td align="center">VL53L1X</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="px4" src="../img/GLPX4-R329.png" /><br />
+<br />  </p>
+<p><a href="https://oshwhub.com/guanglun/gldrone_px4_r329">GLPX4-R329原理图PCB开源地址</a><br />
+<a href="https://oshwhub.com/guanglun/gldrone_blheli_esc">BLHeli电调原理图PCB开源地址</a>  </p>
+<p><a href="https://github.com/guanglun/linux">Linux内核源码5.14</a>(使用<code>r329-gldrone</code>分支)<br />
+<a href="https://github.com/guanglun/gldrone-r329-armbian">armbian源码</a>(使用<code>r329-gldrone</code>分支) 
+<a href="https://github.com/guanglun/PX4-Autopilot">PX4源码</a>(使用<code>GLPX4_R329</code>分支<code>make px4_r329_default</code>) </p>
+<p>特别感谢sipeed的<a href="https://github.com/guanglun/PX4-Autopilot">MaixSense R329</a>方案！硬件设计及系统及内核皆参考该<a href="https://dl.sipeed.com/shareURL/MaixII/MaixII-A">R329方案</a>！<br />
+R329: 双核 ARM Cortex™<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#45;&#65;&#53;&#51;&#64;&#49;&#46;&#53;&#71;&#72;&#122;">&#45;&#65;&#53;&#51;&#64;&#49;&#46;&#53;&#71;&#72;&#122;</a>,内置 DDR3 256MB  </p>
+<p><img alt="px4" src="../img/R329_1.png" /><br />
+<br />  </p>
+<h2 id="_2">接口说明</h2>
+<p><img alt="px4" src="../img/GLPX4-R329-pinout.png" /><br />
+<br /><br />
+USB摄像头 MJPG-Streamer:
+<img alt="px4" src="../img/MJPG-Streamer.png" /><br />
+<br /><br />
+同时运行PX4与USB摄像头WIFI图传:
+<img alt="px4" src="../img/htop.png" /><br />
+<br /><br />
+实物靓图:
+<img alt="px4" src="../img/gl4.jpg" /><br />
+<br />  </p>
+<h1 id="r329">老版本R329飞控方案</h1>
+<p><iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=847546378&bvid=BV1UL4y1a76o&cid=394305751&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br />
 <br />  </p>
 <p><img alt="px4" src="../../px4/img/px4_2.jpg" /><br />
 <br />  </p>

@@ -21,7 +21,7 @@
 [armbian源码](https://github.com/guanglun/gldrone-r329-armbian)(使用`r329-gldrone`分支) 
 [PX4源码](https://github.com/guanglun/PX4-Autopilot)(使用`GLPX4_R329`分支`make px4_r329_default`) 
 
-特别感谢sipeed的[MaixSense R329](https://github.com/guanglun/PX4-Autopilot)方案！硬件设计及系统及内核皆参考该[R329方案](https://dl.sipeed.com/shareURL/MaixII/MaixII-A)！  
+特别感谢sipeed的[MaixSense R329](https://wiki.sipeed.com/hardware/zh/maixII/M2A/maixsense.html)方案！硬件设计及系统及内核皆参考该[R329方案](https://dl.sipeed.com/shareURL/MaixII/MaixII-A)！  
 R329: 双核 ARM Cortex™-A53@1.5GHz,内置 DDR3 256MB  
 
 ![px4](img/R329_1.png)  
@@ -39,6 +39,11 @@ USB摄像头 MJPG-Streamer:
 实物靓图:
 ![px4](img/gl4.jpg)  
 <br />  
+
+# GLPX4-R329开源运行在Linux上的PX4飞控讲解+试飞  
+<iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=731132099&bvid=BV1UD4y1C7Jm&cid=851814471&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
+<br />  
+
 # 老版本R329飞控方案  
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?aid=847546378&bvid=BV1UL4y1a76o&cid=394305751&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
 <br />  

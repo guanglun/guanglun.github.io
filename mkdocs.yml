@@ -13,7 +13,8 @@ nav:
   - GLMocap 使用说明: mocap/guide.md
 - GLDrone:
   - 主页: gldrone/index.md    
-  - GLDrone飞行器: gldrone/gldrone.md     
+  - GLDrone飞行器: gldrone/gldrone.md    
+  - GLDRONE-T113: gldrone/gldrone-t113.md   
   - GLPX4-F4: gldrone/glpx4-f4.md    
   - GLPX4-H7: gldrone/glpx4-h7.md     
   - GLPX4-R329: gldrone/glpx4-r329.md    

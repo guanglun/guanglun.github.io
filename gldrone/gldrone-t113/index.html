@@ -519,6 +519,74 @@
       
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
+    编译
+  </a>
+  
+    <nav class="md-nav" aria-label="编译">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#awboot" class="md-nav__link">
+    awboot编译
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buildroot" class="md-nav__link">
+    buildroot编译
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#px4_1" class="md-nav__link">
+    px4编译
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#px4_2" class="md-nav__link">
+    px4程序上传飞控
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    烧写
+  </a>
+  
+    <nav class="md-nav" aria-label="烧写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    准备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    开烧
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
     演示视频
   </a>
   
@@ -1001,6 +1069,74 @@
       
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
+    编译
+  </a>
+  
+    <nav class="md-nav" aria-label="编译">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#awboot" class="md-nav__link">
+    awboot编译
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buildroot" class="md-nav__link">
+    buildroot编译
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#px4_1" class="md-nav__link">
+    px4编译
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#px4_2" class="md-nav__link">
+    px4程序上传飞控
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    烧写
+  </a>
+  
+    <nav class="md-nav" aria-label="烧写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    准备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    开烧
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
     演示视频
   </a>
   
@@ -1213,7 +1349,129 @@ vim修改/etc/wpa_supplicant.conf文件<br />
 将文件末尾两行打开/关闭注释，然后重启即可<br />
 px4的可执行文件和配置文件都在/root/px4目录下，可手动使用run.sh脚本启动程序<br />
 <img alt="px4" src="../img/gldrone-t113/4.png" />  </p>
-<h2 id="_8">演示视频</h2>
+<h2 id="_8">编译</h2>
+<h3 id="awboot">awboot编译</h3>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/guanglun/awboot.git -b gldrone_t113
+cd awboot 
+make spi-boot.img
+</code></pre></div>
+<h3 id="buildroot">buildroot编译</h3>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/guanglun/buildroot-t113.git -b gldrone_t113
+cd buildroot-t113 
+make gldz_t113_defconfig
+make 
+</code></pre></div>
+<h3 id="px4_1">px4编译</h3>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/guanglun/PX4-Autopilot.git --recursive -b GLPX4_T113_V1.14.2
+cd PX4-Autopilot
+make px4_t113_default
+</code></pre></div>
+<h3 id="px4_2">px4程序上传飞控</h3>
+<p>修改<code>PX4-Autopilot/boards/px4/t113/cmake/upload.cmake</code>文件中的此行：<code>set(AUTOPILOT_HOST "10.10.20.1")</code>的IP地址（飞控的IP），然后执行：<br />
+<div class="highlight"><pre><span></span><code>make px4_t113_default upload
+</code></pre></div>
+即可将编译好的飞控可执行文件和配置上传至飞控  </p>
+<h2 id="_9">烧写</h2>
+<h3 id="_10">准备</h3>
+<p>完整烧写需要编译出以下文件：  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">类别</th>
+<th style="text-align: center;">源自</th>
+<th style="text-align: center;">烧写地址</th>
+<th style="text-align: center;">文件名</th>
+<th style="text-align: center;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">awboot</td>
+<td style="text-align: center;">awboot</td>
+<td style="text-align: center;">0x0000000</td>
+<td style="text-align: center;">awboot-boot-spi.bin</td>
+<td style="text-align: center;">boot程序</td>
+</tr>
+<tr>
+<td style="text-align: center;">dtb</td>
+<td style="text-align: center;">buildroot</td>
+<td style="text-align: center;">0x40000</td>
+<td style="text-align: center;">sun8i-gldz-t113.dtb</td>
+<td style="text-align: center;">设备树文件</td>
+</tr>
+<tr>
+<td style="text-align: center;">zImage</td>
+<td style="text-align: center;">buildroot</td>
+<td style="text-align: center;">0x80000</td>
+<td style="text-align: center;">zImage</td>
+<td style="text-align: center;">Linux内核</td>
+</tr>
+<tr>
+<td style="text-align: center;">rootfs</td>
+<td style="text-align: center;">buildroot</td>
+<td style="text-align: center;">0x800000</td>
+<td style="text-align: center;">rootfs.ubi</td>
+<td style="text-align: center;">文件系统</td>
+</tr>
+</tbody>
+</table>
+<p>上面文件所在编译源码后路径： </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">类别</th>
+<th style="text-align: center;">路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">awboot</td>
+<td style="text-align: center;">awboot/awboot-boot-spi.bin</td>
+</tr>
+<tr>
+<td style="text-align: center;">dtb</td>
+<td style="text-align: center;">buildroot-t113/output/images/sun8i-gldz-t113.dtb</td>
+</tr>
+<tr>
+<td style="text-align: center;">zImage</td>
+<td style="text-align: center;">buildroot-t113/output/images/zImage</td>
+</tr>
+<tr>
+<td style="text-align: center;">rootfs</td>
+<td style="text-align: center;">buildroot-t113/output/images/rootfs.ubi</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_11">开烧</h3>
+<p>烧写使用<code>xfel</code>：<a href="https://github.com/xboot/xfel.git">https://github.com/xboot/xfel.git</a><br />
+<code>xfel</code>支持<code>linux</code>和<code>windows</code>，推荐使用linux系统（windows的驱动安装比较麻烦）  </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>烧写请一定拆桨！请仅使用typec供电！  </p>
+</div>
+<p>两种方式进入<code>下载模式</code>（选择一种即可）：  </p>
+<ul>
+<li>飞控接typec上电，按住fel按键不松手，然后按一下rst按键</li>
+<li>按住fel按键不松手，飞控接typec上电  </li>
+</ul>
+<p>进入<code>下载模式</code>后,可以使用下面命令检测设备是否进入下载模式且连接成功：  </p>
+<ul>
+<li>
+<p>输入<code>lsusb</code>，返回内容中有一行: <code>Bus 001 Device 002: ID 1f3a:efe8 Allwinner Technology sunxi SoC OTG connector in FEL/flashing mode</code>  </p>
+</li>
+<li>
+<p>输入<code>sudo xfel spinand</code>,返回：<code>Found spi nand flash 'GD5F1GQ5UExxG' with 134217728 bytes</code>  </p>
+</li>
+</ul>
+<p>如果上面两个命令执行成功，接下来按照下面命令进行烧写即可：<br />
+<div class="highlight"><pre><span></span><code>xfel spinand erase 0 0x8000000
+xfel spinand write 0 awboot-boot-spi.bin
+xfel spinand write 0x40000 sun8i-gldz-t113.dtb
+xfel spinand write 0x80000 zImage
+xfel spinand erase 0x800000 0x7800000
+xfel spinand write 0x800000 rootfs.ubi
+</code></pre></div></p>
+<h2 id="_12">演示视频</h2>
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?isOutside=true&aid=113855522932961&bvid=BV1MWwCePEAb&cid=27962509842&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?isOutside=true&aid=114330267945360&bvid=BV1k6d6YPEs6&cid=29391261176&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?isOutside=true&aid=114342330631917&bvid=BV1hjdfYaEFK&cid=29433069836&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

@@ -1451,8 +1451,8 @@ make px4_t113_default
 </div>
 <p>两种方式进入<code>下载模式</code>（选择一种即可）：  </p>
 <ul>
-<li>飞控接typec上电，按住fel按键不松手，然后按一下rst按键</li>
-<li>按住fel按键不松手，飞控接typec上电  </li>
+<li>飞控接typec上电，按住fel按键不松手，然后按一下rst按键，然后可以松开fel按键  </li>
+<li>按住fel按键不松手，飞控接typec上电，然后可以松开fel按键  </li>
 </ul>
 <p>进入<code>下载模式</code>后,可以使用下面命令检测设备是否进入下载模式且连接成功：  </p>
 <ul>
@@ -1464,12 +1464,12 @@ make px4_t113_default
 </li>
 </ul>
 <p>如果上面两个命令执行成功，接下来按照下面命令进行烧写即可：<br />
-<div class="highlight"><pre><span></span><code>xfel spinand erase 0 0x8000000
-xfel spinand write 0 awboot-boot-spi.bin
-xfel spinand write 0x40000 sun8i-gldz-t113.dtb
-xfel spinand write 0x80000 zImage
-xfel spinand erase 0x800000 0x7800000
-xfel spinand write 0x800000 rootfs.ubi
+<div class="highlight"><pre><span></span><code>sudo xfel spinand erase 0 0x8000000
+sudo xfel spinand write 0 awboot-boot-spi.bin
+sudo xfel spinand write 0x40000 sun8i-gldz-t113.dtb
+sudo xfel spinand write 0x80000 zImage
+sudo xfel spinand erase 0x800000 0x7800000
+sudo xfel spinand write 0x800000 rootfs.ubi
 </code></pre></div></p>
 <h2 id="_12">演示视频</h2>
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?isOutside=true&aid=113855522932961&bvid=BV1MWwCePEAb&cid=27962509842&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>

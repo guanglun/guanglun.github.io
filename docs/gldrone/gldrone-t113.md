@@ -150,8 +150,8 @@ make px4_t113_default upload
     烧写请一定拆桨！请仅使用typec供电！  
 两种方式进入`下载模式`（选择一种即可）：  
 
-* 飞控接typec上电，按住fel按键不松手，然后按一下rst按键
-* 按住fel按键不松手，飞控接typec上电  
+* 飞控接typec上电，按住fel按键不松手，然后按一下rst按键，然后可以松开fel按键  
+* 按住fel按键不松手，飞控接typec上电，然后可以松开fel按键  
 
 进入`下载模式`后,可以使用下面命令检测设备是否进入下载模式且连接成功：  
 
@@ -161,12 +161,12 @@ make px4_t113_default upload
 
 如果上面两个命令执行成功，接下来按照下面命令进行烧写即可：  
 ```  
-xfel spinand erase 0 0x8000000
-xfel spinand write 0 awboot-boot-spi.bin
-xfel spinand write 0x40000 sun8i-gldz-t113.dtb
-xfel spinand write 0x80000 zImage
-xfel spinand erase 0x800000 0x7800000
-xfel spinand write 0x800000 rootfs.ubi
+sudo xfel spinand erase 0 0x8000000
+sudo xfel spinand write 0 awboot-boot-spi.bin
+sudo xfel spinand write 0x40000 sun8i-gldz-t113.dtb
+sudo xfel spinand write 0x80000 zImage
+sudo xfel spinand erase 0x800000 0x7800000
+sudo xfel spinand write 0x800000 rootfs.ubi
 ```  
 
 

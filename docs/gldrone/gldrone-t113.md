@@ -96,6 +96,80 @@ vim修改/etc/wpa_supplicant.conf文件
 px4的可执行文件和配置文件都在/root/px4目录下，可手动使用run.sh脚本启动程序  
 ![px4](./img/gldrone-t113/4.png)  
 
+## 编译  
+### awboot编译  
+```
+git clone https://github.com/guanglun/awboot.git -b gldrone_t113
+cd awboot 
+make spi-boot.img
+```
+### buildroot编译  
+```
+git clone https://github.com/guanglun/buildroot-t113.git -b gldrone_t113
+cd buildroot-t113 
+make gldz_t113_defconfig
+make 
+```
+### px4编译  
+```
+git clone https://github.com/guanglun/PX4-Autopilot.git --recursive -b GLPX4_T113_V1.14.2
+cd PX4-Autopilot
+make px4_t113_default
+```
+### px4程序上传飞控
+修改`PX4-Autopilot/boards/px4/t113/cmake/upload.cmake`文件中的此行：`set(AUTOPILOT_HOST "10.10.20.1")`的IP地址（飞控的IP），然后执行：  
+```
+make px4_t113_default upload
+```  
+即可将编译好的飞控可执行文件和配置上传至飞控  
+
+## 烧写  
+### 准备
+完整烧写需要编译出以下文件：  
+
+| 类别 | 源自 | 烧写地址 | 文件名 | 说明 |  
+|:-----:|:-----:|:-----:|:-----:|:-----:|  
+| awboot | awboot | 0x0000000 | awboot-boot-spi.bin | boot程序 |  
+| dtb | buildroot | 0x40000 | sun8i-gldz-t113.dtb | 设备树文件 |  
+| zImage | buildroot | 0x80000 | zImage | Linux内核 |  
+| rootfs | buildroot | 0x800000 | rootfs.ubi | 文件系统 |  
+  
+上面文件所在编译源码后路径： 
+
+| 类别 | 路径 |  
+|:-----:|:-----:|  
+| awboot | awboot/awboot-boot-spi.bin |  
+| dtb | buildroot-t113/output/images/sun8i-gldz-t113.dtb |  
+| zImage | buildroot-t113/output/images/zImage |  
+| rootfs | buildroot-t113/output/images/rootfs.ubi |  
+
+### 开烧
+烧写使用`xfel`：[https://github.com/xboot/xfel.git](https://github.com/xboot/xfel.git)  
+`xfel`支持`linux`和`windows`，推荐使用linux系统（windows的驱动安装比较麻烦）  
+!!! warning
+    烧写请一定拆桨！请仅使用typec供电！  
+两种方式进入`下载模式`（选择一种即可）：  
+
+* 飞控接typec上电，按住fel按键不松手，然后按一下rst按键
+* 按住fel按键不松手，飞控接typec上电  
+
+进入`下载模式`后,可以使用下面命令检测设备是否进入下载模式且连接成功：  
+
+* 输入`lsusb`，返回内容中有一行: `Bus 001 Device 002: ID 1f3a:efe8 Allwinner Technology sunxi SoC OTG connector in FEL/flashing mode`  
+
+* 输入`sudo xfel spinand`,返回：`Found spi nand flash 'GD5F1GQ5UExxG' with 134217728 bytes`  
+
+如果上面两个命令执行成功，接下来按照下面命令进行烧写即可：  
+```  
+xfel spinand erase 0 0x8000000
+xfel spinand write 0 awboot-boot-spi.bin
+xfel spinand write 0x40000 sun8i-gldz-t113.dtb
+xfel spinand write 0x80000 zImage
+xfel spinand erase 0x800000 0x7800000
+xfel spinand write 0x800000 rootfs.ubi
+```  
+
+
 ## 演示视频  
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?isOutside=true&aid=113855522932961&bvid=BV1MWwCePEAb&cid=27962509842&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
 <iframe height="480" width="100%" src="//player.bilibili.com/player.html?isOutside=true&aid=114330267945360&bvid=BV1k6d6YPEs6&cid=29391261176&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>  
